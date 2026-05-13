@@ -14,10 +14,10 @@
         @apply flex flex-col gap-4 h-fit justify-center items-center;
     }
     .impact-header_title {
-        @apply font-figtree font-medium text-[40px] tracking-normal text-black;
+        @apply font-figtree font-medium text-4xl tracking-normal text-black;
     }
     .impact-header_subtitle {
-        @apply font-figtree font-normal text-[20px] tracking-normal text-black;
+        @apply font-figtree font-normal text-xl tracking-normal text-black;
     }
     .stat-card {
         @apply flex flex-col items-center justify-center gap-3.5 p-6 w-full h-fit border border-[#DEDEDE] rounded-2xl;
@@ -32,15 +32,30 @@
         @apply flex flex-col justify-center items-center gap-3.5;
     }
     .stat-card_label {
-        @apply font-figtree font-normal text-[20px] tracking-normal text-black;
+        @apply font-figtree font-normal text-xl tracking-normal text-black;
     }
     .stat-card_value {
-        @apply font-figtree font-medium text-[36px] tracking-normal text-secondary;
+        @apply font-figtree font-medium text-4xl tracking-normal text-secondary;
     }
     .stat-card_unit {
-        @apply text-[14px] text-black;
+        @apply text-sm text-black;
     }
     .stat-card_desc {
-        @apply font-figtree font-normal text-[14px] tracking-normal text-black;
+        @apply font-figtree font-normal text-sm tracking-normal text-black;
+    }
+    .problem-item {
+        @apply flex gap-4 items-center justify-center;
+    }
+    .problem-item_icon-wrapper {
+        @apply w-10 h-10 bg-[#80C9FF] rounded-full flex items-center justify-center shrink-0;
+    }
+    .problem-item_text-container {
+        @apply flex flex-col gap-4 pb-4 border-b border-[#DEDEDE];
+    }
+    .problem-item_title {
+        @apply font-figtree font-semibold text-xl tracking-normal text-black w-full;
+    }
+    .problem-item_desc {
+        @apply font-figtree font-normal text-sm tracking-normal text-black w-full;
     }
 }

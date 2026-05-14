@@ -17,7 +17,7 @@
         @apply font-figtree font-medium text-4xl tracking-normal text-black;
     }
     .section-header_subtitle {
-        @apply font-figtree font-normal text-xl tracking-normal text-black;
+        @apply font-figtree font-normal text-xl tracking-normal text-[#ABABAB];
     }
     .stat-card {
         @apply flex flex-col items-center justify-center gap-3.5 p-6 w-full h-fit border border-[#DEDEDE] rounded-2xl;
@@ -59,7 +59,7 @@
         @apply font-figtree font-normal text-sm tracking-normal text-black w-full;
     }
     .impact-card {
-        @apply flex flex-col justify-center items-center py-6 px-3 gap-4 border border-[#DEDEDE] rounded-2xl w-71.25 h-full;
+        @apply flex flex-col justify-center items-center pb-6 py-3 px-3 gap-4 border border-[#DEDEDE] rounded-2xl w-71.25 h-full;
     }
     .impact-card_image {
         @apply object-cover object-center w-full h-45.5;
@@ -72,5 +72,47 @@
     }
     .impact-card_desc {
         @apply font-figtree font-normal text-sm tracking-normal text-black max-w-59.25;
+    }
+    .material-card {
+        @apply flex flex-col items-center gap-8 w-full h-fit border border-[#DEDEDE] rounded-2xl overflow-hidden;
+    }
+    .material-card_image {
+        @apply w-full h-full object-cover object-center;
+    }
+    .material-card_body {
+        @apply flex flex-col gap-4 px-8 pb-8 w-full h-fit;
+    }
+    .material-card_info {
+        @apply flex flex-col gap-4 pb-4 border-b border-[#DEDEDE] w-full h-fit;
+    }
+    .material-card_name {
+        @apply font-figtree font-normal text-2xl tracking-normal text-black;
+    }
+    .material-card_location {
+        @apply flex justify-start items-center gap-4;
+    }
+    .material-card_location-text {
+        @apply font-figtree font-normal text-sm tracking-normal text-[#ABABAB];
+    }
+    .material-card_grade-row {
+        @apply flex justify-between items-center;
+    }
+    .material-card_label {
+        @apply font-figtree font-normal text-xl tracking-normal text-[#ABABAB];
+    }
+    .badge-grade {
+        @apply font-figtree font-normal text-xl tracking-normal text-secondary px-4 py-2 bg-[linear-gradient(90deg,#0D99FF4D_0%,#80C9FF_100%)] rounded-2xl w-fit h-fit;
+    }
+    .material-card_stats {
+        @apply flex flex-col gap-4 w-full h-fit;
+    }
+    .material-card_stats-row {
+        @apply flex justify-between items-center;
+    }
+    .material-card_value {
+        @apply font-figtree font-semibold text-xl tracking-normal text-black;
+    }
+    .material-card_time {
+        @apply font-figtree font-normal text-xl tracking-normal text-black;
     }
 }

@@ -205,4 +205,16 @@
     .cta-banner_button-text {
         @apply font-figtree font-normal text-xl tracking-normal text-accent;
     }
+    .main-footer_nav-col {
+        @apply col-span-2;
+    }
+    .main-footer_nav-title {
+        @apply font-figtree font-semibold text-xl tracking-normal text-black mb-5;
+    }
+    .main-footer_nav-list {
+        @apply space-y-4;
+    }
+    .main-footer_nav-link {
+        @apply font-figtree font-normal text-xl tracking-normal text-[#ABABAB] hover:text-primary;
+    }
 }

@@ -234,7 +234,7 @@
                     <div class="flex justify-between items-center">
                         <p class="font-figtree font-normal text-4xl tracking-normal text-black">Our offer</p>
                         <button class="flex justify-center items-center gap-4 p-4 w-fit h-fit border border-[#DEDEDE] rounded-2xl cursor-pointer" title="Newest First" aria-label="Newest First">
-                            <p class="font-figtree font-normal text-xl tracking-normal text-black">Newest First</p>
+                            <span class="font-figtree font-normal text-xl tracking-normal text-black">Newest First</span>
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
                                 <path d="M7.41 8.58008L12 13.1701L16.59 8.58008L18 10.0001L12 16.0001L6 10.0001L7.41 8.58008Z" fill="#222222" />
                             </svg>
@@ -377,24 +377,309 @@
                 </div>
 
                 <button class="p-4 w-fit h-fit border border-primary rounded-2xl cursor-pointer" title="View More Products" aria-label="View More Products">
-                    <p class="font-figtree font-medium text-xl tracking-normal text-primary">View More Products</p>
+                    <span class="font-figtree font-medium text-xl tracking-normal text-primary">View More Products</span>
                 </button>
 
-                <div class="flex justify-between items-center w-full h-fit">
-                    <div class="flex justify-center items-center gap-4 w-fit h-fit">
+                <div class="cta-banner">
+                    <div class="cta-banner_content">
                         <img
                             src="./src/img/recycling-illustration.webp"
                             alt="A flat illustration of a red recycling bin filled with various plastic containers, representing the diverse materials available in the marketplace."
-                            class="w-60 h-45 object-cover object-center"
+                            class="cta-banner_image"
                             loading="lazy"
                         />
-                        <div class="flex flex-col gap-4 w-fit h-fit">
-                            <p class="font-figtree font-semibold text-4xl tracking-normal text-black">Can't find what you're looking for?</p>
-                            <p class="font-figtree font-normal text-xl tracking-normal text-[#ABABAB]">Explore more materials and opportunities in our full marketplace.</p>
+                        <div class="cta-banner_text-group">
+                            <p class="cta-banner_title">Can't find what you're looking for?</p>
+                            <p class="cta-banner_description">Explore more materials and opportunities in our full marketplace.</p>
                         </div>
                     </div>
-                    <button class="p-4 w-fit h-fit bg-primary rounded-2xl cursor-pointer" title="Explore Marketplace" aria-label="Explore Marketplace">
-                        <p class="font-figtree font-normal text-xl tracking-normal text-accent">Explore Marketplace</p>
+                    <button class="cta-banner_button" title="Explore Marketplace" aria-label="Explore Marketplace">
+                        <span class="cta-banner_button-text">Explore Marketplace</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mx-auto py-25 space-y-20">
+            <div class="section-header">
+                <h3 class="section-header_title">Leading the Way Toward a Sustainable Future</h3>
+                <p class="section-header_subtitle">Recognizing UMKM and communities that actively contribute to waste redistribution and environmental impact.</p>
+            </div>
+            <div class="flex flex-col items-center gap-16 w-full h-fit">
+                <div class="grid grid-cols-3 gap-12 w-full h-fit">
+                    <div class="leaderboard-card relative z-0 shadow-lg">
+                        <div class="leaderboard-card_avatar-container">
+                            <div class="leaderboard-card_avatar-frame">
+                                <img src="./src/img/Profile 2.png" alt="Profile GreenLoop Studio" class="leaderboard-card_image" loading="lazy" />
+                                <div class="leaderboard-card_rank-icon">
+                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg transition-transform hover:scale-105">
+                                        <defs>
+                                            <linearGradient id="silverGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stop-color="#F8FAFC" />
+                                                <stop offset="30%" stop-color="#CBD5E1" />
+                                                <stop offset="70%" stop-color="#94A3B8" />
+                                                <stop offset="100%" stop-color="#F1F5F9" />
+                                            </linearGradient>
+                                            <linearGradient id="silverGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" stop-color="#F1F5F9" />
+                                                <stop offset="40%" stop-color="#94A3B8" />
+                                                <stop offset="60%" stop-color="#64748B" />
+                                                <stop offset="100%" stop-color="#F8FAFC" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path d="M28 28 L12 56 L20 52 L28 60 Z" fill="#1E3A8A" />
+                                        <path d="M36 28 L52 56 L44 52 L36 60 Z" fill="#1E3A8A" />
+                                        <path d="M32 32 L16 60 L24 56 L32 64 Z" fill="#2563EB" />
+                                        <path d="M32 32 L48 60 L40 56 L32 64 Z" fill="#2563EB" />
+                                        <circle cx="32" cy="28" r="22" fill="url(#silverGrad1)" />
+                                        <circle cx="32" cy="28" r="22" fill="none" stroke="url(#silverGrad2)" stroke-width="4" />
+                                        <circle cx="32" cy="28" r="17" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.8" />
+                                        <circle cx="32" cy="28" r="16" fill="none" stroke="#64748B" stroke-width="1" opacity="0.4" />
+                                        <text x="32" y="37" text-anchor="middle" class="font-figtree font-semibold text-2xl fill-slate-900 [text-shadow:0px_1px_1px_rgba(255,255,255,0.8)]">2</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="leaderboard-card_profile">
+                            <p class="leaderboard-card_name">GreenLoop Studio</p>
+                            <p class="leaderboard-card_category">Textile Waste Management</p>
+                        </div>
+
+                        <div class="leaderboard-stats">
+                            <div class="leaderboard-stats_item">
+                                <p class="leaderboard-stats_label">Waste Diverted (kg)</p>
+                                <p class="leaderboard-stats_value">9,830 kg</p>
+                            </div>
+                            <div class="leaderboard-stats_item">
+                                <p class="leaderboard-stats_label">Impact</p>
+                                <p class="leaderboard-stats_value">CO<sub>2</sub> 6,5 ton</p>
+                            </div>
+                            <div class="leaderboard-stats_item">
+                                <p class="leaderboard-stats_label">Location</p>
+                                <div class="leaderboard-stats_location">
+                                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                        <path
+                                            d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
+                                            fill="#0D99FF"
+                                        />
+                                    </svg>
+                                    <p class="leaderboard-stats_value">Yogyakarta</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-card relative z-10 lg:scale-105 shadow-2xl shadow-yellow-500/15">
+                        <div
+                            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-linear-to-r from-yellow-500 via-yellow-400 to-yellow-500 text-white font-figtree font-bold text-xs uppercase tracking-widest py-2 px-4 rounded-full shadow-md"
+                        >
+                            Peringkat 1
+                        </div>
+                        <div class="leaderboard-card_avatar-container">
+                            <div class="leaderboard-card_avatar-frame">
+                                <img src="./src/img/Profile EcoCraft Indonesia.png" alt="Profile EcoCraft Indonesia" class="leaderboard-card_image" loading="lazy" />
+                                <div class="leaderboard-card_rank-icon">
+                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg transition-transform hover:scale-105">
+                                        <defs>
+                                            <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stop-color="#FEF08A" />
+                                                <stop offset="40%" stop-color="#D4AF37" />
+                                                <stop offset="100%" stop-color="#8A5A19" />
+                                            </linearGradient>
+                                            <linearGradient id="goldGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" stop-color="#FEF08A" />
+                                                <stop offset="40%" stop-color="#D97706" />
+                                                <stop offset="60%" stop-color="#B45309" />
+                                                <stop offset="100%" stop-color="#FDE047" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path d="M28 28 L12 56 L20 52 L28 60 Z" fill="#991B1B" />
+                                        <path d="M36 28 L52 56 L44 52 L36 60 Z" fill="#991B1B" />
+                                        <path d="M32 32 L16 60 L24 56 L32 64 Z" fill="#DC2626" />
+                                        <path d="M32 32 L48 60 L40 56 L32 64 Z" fill="#DC2626" />
+
+                                        <circle cx="32" cy="28" r="22" fill="url(#goldGrad1)" />
+                                        <circle cx="32" cy="28" r="22" fill="none" stroke="url(#goldGrad2)" stroke-width="4" />
+                                        <circle cx="32" cy="28" r="17" fill="none" stroke="#FEF9C3" stroke-width="1" opacity="0.7" />
+                                        <circle cx="32" cy="28" r="16" fill="none" stroke="#B45309" stroke-width="1" opacity="0.5" />
+                                        <text x="32" y="37" text-anchor="middle" class="font-figtree font-semibold text-2xl fill-slate-900 [text-shadow:0px_1px_1px_rgba(255,255,255,0.8)]">1</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="leaderboard-card_profile">
+                            <p class="leaderboard-card_name">EcoCraft Indonesia</p>
+                            <p class="leaderboard-card_category">Recycle & Upcycle</p>
+                        </div>
+
+                        <div class="leaderboard-stats">
+                            <div class="leaderboard-stats_item">
+                                <p class="leaderboard-stats_label">Waste Diverted (kg)</p>
+                                <p class="leaderboard-stats_value">12,230 kg</p>
+                            </div>
+                            <div class="leaderboard-stats_item">
+                                <p class="leaderboard-stats_label">Impact</p>
+                                <p class="leaderboard-stats_value">CO<sub>2</sub> 8,2 ton</p>
+                            </div>
+                            <div class="leaderboard-stats_item">
+                                <p class="leaderboard-stats_label">Location</p>
+                                <div class="leaderboard-stats_location">
+                                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                        <path
+                                            d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
+                                            fill="#0D99FF"
+                                        />
+                                    </svg>
+                                    <p class="leaderboard-stats_value">Bandung</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-card relative z-0 shadow-lg">
+                        <div class="leaderboard-card_avatar-container">
+                            <div class="leaderboard-card_avatar-frame">
+                                <img src="./src/img/Profile Reborn Plastic.png" alt="Profile Reborn Plastic" class="leaderboard-card_image" loading="lazy" />
+                                <div class="leaderboard-card_rank-icon">
+                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg transition-transform hover:scale-105">
+                                        <defs>
+                                            <linearGradient id="bronzeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stop-color="#FDE6D4" />
+                                                <stop offset="40%" stop-color="#B07D46" />
+                                                <stop offset="100%" stop-color="#5E3219" />
+                                            </linearGradient>
+                                            <linearGradient id="bronzeGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" stop-color="#FED7AA" />
+                                                <stop offset="40%" stop-color="#92400E" />
+                                                <stop offset="60%" stop-color="#78350F" />
+                                                <stop offset="100%" stop-color="#FDBA74" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path d="M28 28 L12 56 L20 52 L28 60 Z" fill="#064E3B" />
+                                        <path d="M36 28 L52 56 L44 52 L36 60 Z" fill="#064E3B" />
+                                        <path d="M32 32 L16 60 L24 56 L32 64 Z" fill="#059669" />
+                                        <path d="M32 32 L48 60 L40 56 L32 64 Z" fill="#059669" />
+
+                                        <circle cx="32" cy="28" r="22" fill="url(#bronzeGrad1)" />
+                                        <circle cx="32" cy="28" r="22" fill="none" stroke="url(#bronzeGrad2)" stroke-width="4" />
+                                        <circle cx="32" cy="28" r="17" fill="none" stroke="#FFEDD5" stroke-width="1" opacity="0.6" />
+                                        <circle cx="32" cy="28" r="16" fill="none" stroke="#78350F" stroke-width="1" opacity="0.5" />
+                                        <text x="32" y="37" text-anchor="middle" class="font-figtree font-semibold text-2xl fill-slate-900 [text-shadow:0px_1px_1px_rgba(255,255,255,0.8)]">3</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="leaderboard-card_profile">
+                            <p class="leaderboard-card_name">Reborn Plastic</p>
+                            <p class="leaderboard-card_category">Plastic Recycling</p>
+                        </div>
+
+                        <div class="leaderboard-stats">
+                            <div class="leaderboard-stats_item">
+                                <p class="leaderboard-stats_label">Waste Diverted (kg)</p>
+                                <p class="leaderboard-stats_value">7,230 kg</p>
+                            </div>
+                            <div class="leaderboard-stats_item">
+                                <p class="leaderboard-stats_label">Impact</p>
+                                <p class="leaderboard-stats_value">CO<sub>2</sub> 4,8 ton</p>
+                            </div>
+                            <div class="leaderboard-stats_item">
+                                <p class="leaderboard-stats_label">Location</p>
+                                <div class="leaderboard-stats_location">
+                                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                        <path
+                                            d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
+                                            fill="#0D99FF"
+                                        />
+                                    </svg>
+                                    <p class="leaderboard-stats_value">Surabaya</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full rounded-2xl border border-[#EEEEEE] overflow-hidden">
+                    <div class="grid grid-cols-[80px_2.5fr_1.5fr_1.5fr_1fr] gap-4 bg-[#EEEEEE] py-4 px-6 font-figtree font-normal text-2xl tracking-normal text-black">
+                        <div class="text-center">Rank</div>
+                        <div>UMKM</div>
+                        <div>Waste Diverted (kg)</div>
+                        <div>Impact</div>
+                        <div>Location</div>
+                    </div>
+
+                    <div class="leaderboard-table_row">
+                        <div class="leaderboard-table_rank-number">4</div>
+                        <div class="leaderboard-table_umkm-info">
+                            <img src="./src/img/Profile 4.png" alt="Profile" class="leaderboard-table_avatar" />
+                            <div class="leaderboard-table_umkm-details">
+                                <h3 class="leaderboard-table_umkm-name">Limbah Jadi Berkah</h3>
+                                <p class="leaderboard-table_umkm-category">Organic Waste Processing</p>
+                            </div>
+                        </div>
+                        <div class="leaderboard-table_stat">12,230 kg</div>
+                        <div class="leaderboard-table_stat">CO<sub>2</sub> 3,7 ton</div>
+                        <div class="leaderboard-table_location">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                <path
+                                    d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
+                                    fill="#0D99FF"
+                                />
+                            </svg>
+                            <p class="leaderboard-table_stat">Yogyakarta</p>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-table_row">
+                        <div class="leaderboard-table_rank-number">5</div>
+                        <div class="leaderboard-table_umkm-info">
+                            <img src="./src/img/Profile 4.png" alt="Profile" class="leaderboard-table_avatar" />
+                            <div class="leaderboard-table_umkm-details">
+                                <h3 class="leaderboard-table_umkm-name">Kain Kita</h3>
+                                <p class="leaderboard-table_umkm-category">Fabric Scrap Reuse</p>
+                            </div>
+                        </div>
+                        <div class="leaderboard-table_stat">4,320 kg</div>
+                        <div class="leaderboard-table_stat">CO<sub>2</sub> 2,9 ton</div>
+                        <div class="leaderboard-table_location">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                <path
+                                    d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
+                                    fill="#0D99FF"
+                                />
+                            </svg>
+                            <p class="leaderboard-table_stat">Jakarta</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#EEEEEE] py-4 px-6 w-full h-fit flex justify-center items-center">
+                        <button class="flex items-center gap-4 w-fit h-fit cursor-pointer" title="View Full Leaderboard" aria-label="View Full Leaderboard">
+                            <span class="font-figtree font-semibold text-xl tracking-normal text-primary">View Full Leaderboard</span>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+                                <path d="M4 11.0001V13.0001H16L10.5 18.5001L11.92 19.9201L19.84 12.0001L11.92 4.08008L10.5 5.50008L16 11.0001H4Z" fill="#0D99FF" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cta-banner">
+                    <div class="cta-banner_content">
+                        <img
+                            src="./src/img/an abstract illustration of partners working together inside supportive giant hands, symbolizing a community journey toward environmental impact.webp"
+                            alt="An abstract illustration of partners working together inside supportive giant hands, symbolizing a community journey toward environmental impact."
+                            class="cta-banner_image"
+                            loading="lazy"
+                        />
+                        <div class="cta-banner_text-group">
+                            <p class="cta-banner_title">Want to be on the next leaderboard?</p>
+                            <p class="cta-banner_description">Join as a partner and start your journey toward a cleaner environment and greater impact.</p>
+                        </div>
+                    </div>
+                    <button class="cta-banner_button" title="Join as a Partner" aria-label="Join as a Partner">
+                        <span class="cta-banner_button-text">Join as a Partner</span>
                     </button>
                 </div>
             </div>

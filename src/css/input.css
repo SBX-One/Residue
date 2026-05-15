@@ -115,4 +115,94 @@
     .material-card_time {
         @apply font-figtree font-normal text-xl tracking-normal text-black;
     }
+    .leaderboard-card {
+        @apply flex flex-col p-8 w-full h-fit border border-[#DEDEDE] rounded-3xl transition-transform duration-300 hover:-translate-y-2;
+    }
+    .leaderboard-card_avatar-container {
+        @apply relative flex justify-center w-full mt-4;
+    }
+    .leaderboard-card_avatar-frame {
+        @apply relative w-24 h-24;
+    }
+    .leaderboard-card_image {
+        @apply w-full h-full object-cover object-center rounded-full border-4 border-white shadow-md bg-white;
+    }
+    .leaderboard-card_rank-icon {
+        @apply absolute -bottom-4 -right-4 w-16 h-16;
+    }
+    .leaderboard-card_profile {
+        @apply flex flex-col items-center gap-2 mt-8 w-full h-fit;
+    }
+    .leaderboard-card_name {
+        @apply font-figtree font-semibold text-xl tracking-normal text-black;
+    }
+    .leaderboard-card_category {
+        @apply font-figtree font-normal text-sm tracking-normal text-[#ABABAB];
+    }
+    .leaderboard-stats {
+        @apply flex flex-col mt-8 p-6 gap-4 w-full h-fit bg-[#F0F9FF] border border-[#E0F2FE] rounded-2xl;
+    }
+    .leaderboard-stats_item {
+        @apply flex justify-between items-center w-full h-fit;
+    }
+    .leaderboard-stats_label {
+        @apply font-figtree font-normal text-xl tracking-normal text-black;
+    }
+    .leaderboard-stats_value {
+        @apply font-figtree font-semibold text-xl tracking-normal text-primary;
+    }
+    .leaderboard-stats_location {
+        @apply flex items-center gap-2;
+    }
+    .leaderboard-table_row {
+        @apply grid grid-cols-[80px_2.5fr_1.5fr_1.5fr_1fr] gap-4 bg-white py-4 px-6 items-center border-b border-gray-100 hover:bg-gray-50 transition-colors;
+    }
+    .leaderboard-table_rank-number {
+        @apply font-figtree font-semibold text-3xl tracking-normal text-black text-center;
+    }
+    .leaderboard-table_umkm-info {
+        @apply flex items-center gap-8 w-full h-fit;
+    }
+    .leaderboard-table_avatar {
+        @apply w-20.5 h-20.5 object-cover object-center border border-[#ABABAB] rounded-full overflow-hidden;
+    }
+    .leaderboard-table_umkm-details {
+        @apply flex flex-col gap-1;
+    }
+    .leaderboard-table_umkm-name {
+        @apply font-figtree font-semibold text-2xl tracking-normal text-black;
+    }
+    .leaderboard-table_umkm-category {
+        @apply font-figtree font-normal text-xl tracking-normal text-[#ABABAB];
+    }
+    .leaderboard-table_stat {
+        @apply font-figtree font-semibold text-xl tracking-normal text-primary;
+    }
+    .leaderboard-table_location {
+        @apply flex items-center gap-2 w-full h-fit;
+    }
+    .cta-banner {
+        @apply flex justify-between items-center w-full h-fit;
+    }
+    .cta-banner_content {
+        @apply flex justify-center items-center gap-4 w-fit h-fit;
+    }
+    .cta-banner_image {
+        @apply w-60 h-45 object-cover object-center;
+    }
+    .cta-banner_text-group {
+        @apply flex flex-col gap-4 w-fit h-fit;
+    }
+    .cta-banner_title {
+        @apply font-figtree font-semibold text-4xl tracking-normal text-black;
+    }
+    .cta-banner_description {
+        @apply font-figtree font-normal text-xl tracking-normal text-[#ABABAB];
+    }
+    .cta-banner_button {
+        @apply p-4 w-fit h-fit bg-primary rounded-2xl cursor-pointer;
+    }
+    .cta-banner_button-text {
+        @apply font-figtree font-normal text-xl tracking-normal text-accent;
+    }
 }

@@ -10,6 +10,56 @@
 }
 
 @layer components {
+    @keyframes header-scroll-effect {
+        to {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    }
+    @keyframes link-color-effect {
+        to {
+            color: #000000;
+        }
+    }
+    .main-header {
+        @apply bg-transparent fixed top-0 left-0 z-99 w-full h-fit;
+        animation: header-scroll-effect linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0px 100px;
+    }
+    .main-header_nav {
+        @apply px-30 py-6 w-full h-fit flex justify-between items-center border-b border-[#EEEEEE]/20;
+    }
+    .main-header_logo {
+        @apply font-manrope font-semibold text-4xl tracking-normal text-primary w-fit h-fit;
+    }
+    .main-header_menu {
+        @apply flex justify-center items-center gap-6 w-fit h-fit;
+    }
+    .main-header_menu-link {
+        @apply font-figtree font-normal text-sm tracking-normal text-[#EEEEEE];
+        animation: link-color-effect linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0px 100px;
+    }
+    .main-header_cta {
+        @apply bg-primary rounded-3xl w-fit h-fit px-6 py-3 cursor-pointer;
+    }
+    .main-header_cta-text {
+        @apply font-figtree font-normal text-base tracking-normal text-white;
+    }
+    .hero-section_btn-text {
+        @apply font-figtree font-normal text-base tracking-normal text-accent;
+    }
+    .hero-section_stat-item {
+        @apply flex flex-col justify-center items-start gap-4 w-fit h-fit;
+    }
+    .hero-section_stat-number {
+        @apply font-figtree font-semibold text-3xl tracking-normal text-[#EEEEEE];
+    }
+    .hero-section_stat-label {
+        @apply font-figtree font-normal text-xl tracking-normal text-[#DEDEDE];
+    }
     .section-header {
         @apply flex flex-col gap-4 h-fit justify-center items-center;
     }
@@ -62,7 +112,7 @@
         @apply flex flex-col justify-center items-center pb-6 py-3 px-3 gap-4 border border-[#DEDEDE] rounded-2xl w-71.25 h-full;
     }
     .impact-card_image {
-        @apply object-cover object-center w-full h-45.5;
+        @apply object-cover object-center w-full h-45.5 rounded-2xl;
     }
     .impact-card_content {
         @apply flex flex-col justify-center items-center gap-2 w-full h-fit text-center;
@@ -125,7 +175,7 @@
         @apply relative w-24 h-24;
     }
     .leaderboard-card_image {
-        @apply w-full h-full object-cover object-center rounded-full border-4 border-white shadow-md bg-white;
+        @apply w-full h-full object-cover object-center rounded-full overflow-hidden border-4 border-white shadow-md bg-white;
     }
     .leaderboard-card_rank-icon {
         @apply absolute -bottom-4 -right-4 w-16 h-16;

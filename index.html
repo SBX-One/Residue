@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth scroll-pt-24.5">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,76 @@
         <link rel="stylesheet" href="./src/css/output.css" />
     </head>
     <body>
+        <header class="main-header">
+            <nav class="main-header_nav">
+                <h1 class="main-header_logo">Residue</h1>
+                <ul class="main-header_menu">
+                    <li><a href="#" class="main-header_menu-link">Home</a></li>
+                    <li><a href="#" class="main-header_menu-link">Store</a></li>
+                    <li><a href="#" class="main-header_menu-link">Leaderboard</a></li>
+                    <li><a href="#" class="main-header_menu-link">About</a></li>
+                    <li><a href="#" class="main-header_menu-link">Detail</a></li>
+                </ul>
+                <button class="main-header_cta" title="Get In Touch" aria-label="Get In Touch">
+                    <span class="main-header_cta-text">Get In Touch</span>
+                </button>
+            </nav>
+        </header>
+
         <main>
+            <section class="h-svh bg-[url(/src/img/hero-section.webp)] bg-cover bg-center bg-no-repeat">
+                <div class="container mx-auto h-full flex flex-col items-start justify-center gap-11">
+                    <div class="flex flex-col gap-11 w-full h-fit">
+                        <div class="flex flex-col gap-8 w-full h-fit">
+                            <h3 class="font-figtree font-semibold text-5xl tracking-normal text-[#EEEEEE] max-w-183.25">
+                                Turning Industrial <span class="text-primary">Residue</span> Into Sustainable Opportunities
+                            </h3>
+                            <p class="font-figtree font-normal text-xl tracking-normal text-[#ABABAB] max-w-183.25">
+                                <span class="text-primary">Residue</span> connects UMKM, communities, and recyclers to transform unmanaged industrial waste into sustainable resources.
+                            </p>
+                        </div>
+                        <div class="flex justify-center items-center gap-6 w-fit h-fit">
+                            <button class="bg-primary rounded-3xl w-fit h-fit px-6 py-3 cursor-pointer" title="Join As Partner" aria-label="Join As Partner">
+                                <span class="hero-section_btn-text">Join As Partner</span>
+                            </button>
+                            <button class="bg-transparent border border-secondary rounded-3xl w-fit h-fit px-6 py-3 cursor-pointer" title="See Market Store" aria-label="See Market Store">
+                                <span class="hero-section_btn-text">See Market Store</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center w-full h-fit">
+                        <div class="flex justify-center items-center gap-10 w-fit h-fit">
+                            <div class="hero-section_stat-item">
+                                <p class="hero-section_stat-number">12k+</p>
+                                <p class="hero-section_stat-label">Tons of CO2 reduced</p>
+                            </div>
+                            <div class="hero-section_stat-item">
+                                <p class="hero-section_stat-number">200k+ kg</p>
+                                <p class="hero-section_stat-label">Of waste collected</p>
+                            </div>
+                            <div class="hero-section_stat-item">
+                                <p class="hero-section_stat-number">22+</p>
+                                <p class="hero-section_stat-label">Partners</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center gap-4 p-4 rounded-2xl bg-[#ABABAB]/48 backdrop-blur-xs w-fit h-fit">
+                            <img
+                                src="./src/img/a person using a trash grabber tool to collect litter into a bag, symbolizing active environmental responsibility toward building a cleaner tomorrow.webp"
+                                alt="A person using a trash grabber tool to collect litter into a bag, symbolizing active environmental responsibility toward building a cleaner tomorrow.S"
+                                class="w-31.25 h-31.25 shrink-0 object-cover object-center rounded-2xl overflow-hidden"
+                            />
+                            <div class="flex flex-col gap-4 max-w-77 h-fit">
+                                <p class="font-figtree font-normal text-2xl tracking-normal text-[#EEEEEE] pb-4 border-b border-[#DEDEDE]">Building a Cleaner Tomorrow</p>
+                                <p class="font-figtree font-normal text-sm tracking-normal text-[#EEEEEE]">
+                                    Transforming industrial residue into sustainable opportunities through collaboration, innovation, and environmental responsibility.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="container mx-auto space-y-20 py-25">
                 <div class="section-header">
                     <h3 class="section-header_title">Let's Create Small Steps For Further Impact</h3>
@@ -43,7 +112,7 @@
                         </div>
 
                         <div class="stat-card_content">
-                            <p class="stat-card_label">CO2 Reduced</p>
+                            <p class="stat-card_label">CO<sub>2</sub> Reduced</p>
                             <p class="stat-card_value">203.324 <span class="stat-card_unit">KG</span></p>
                         </div>
 
@@ -70,8 +139,8 @@
                 </div>
             </section>
 
-            <section class="container mx-auto py-25 flex justify-between items-center">
-                <div class="flex flex-col gap-4 h-fit max-w-135.5">
+            <section class="container mx-auto py-25 flex justify-between items-stretch">
+                <div class="flex flex-col h-fit max-w-135.5">
                     <div class="flex flex-col gap-4">
                         <p class="font-figtree font-normal text-3xl tracking-normal text-secondary">Be Aware Of Surroundings</p>
                         <h3 class="font-figtree font-semibold text-5xl tracking-normal text-black">
@@ -81,7 +150,7 @@
                             Creative industries and UMKM produce thousands of tons of residual waste every day, yet most of it remains unmanaged and underutilized.
                         </p>
                     </div>
-                    <div class="border-b border-secondary w-20.5"></div>
+                    <hr class="border-t border-secondary my-4 w-20.5" />
                     <div class="flex flex-col gap-8 h-fit">
                         <div class="problem-item">
                             <div class="icon-circle-blue">
@@ -129,11 +198,13 @@
                         </div>
                     </div>
                 </div>
-                <img
-                    src="./src/img/people doing community service by collecting trash together.png"
-                    alt="People doing community service by collecting trash together"
-                    class="w-147.5 h-153 object-cover object-center"
-                />
+                <div class="w-147.5 overflow-hidden rounded-2xl">
+                    <img
+                        src="./src/img/people doing community service by collecting trash together.webp"
+                        alt="People doing community service by collecting trash together"
+                        class="w-full h-full object-cover object-center"
+                    />
+                </div>
             </section>
 
             <section class="container mx-auto py-25 space-y-20">
@@ -144,7 +215,7 @@
                 <div class="flex justify-center items-center gap-5 w-full h-fit">
                     <div class="impact-card">
                         <img
-                            src="./src/img/a person carrying a crate of sorted waste materials, including plastic bottles and cans, ready for redistribution to local UMKM for repurposing.png"
+                            src="./src/img/a person carrying a crate of sorted waste materials, including plastic bottles and cans, ready for redistribution to local UMKM for repurposing.webp"
                             alt="A person carrying a crate of sorted waste materials, including plastic bottles and cans, ready for redistribution to local UMKM for repurposing"
                             class="impact-card_image"
                             loading="lazy"
@@ -165,7 +236,7 @@
 
                     <div class="impact-card">
                         <img
-                            src="./src/img/a young woman sorting materials into bags, illustrating the process of preparing waste for a transparent exchange in a circular marketplace.png"
+                            src="./src/img/a young woman sorting materials into bags, illustrating the process of preparing waste for a transparent exchange in a circular marketplace.webp"
                             alt="A young woman sorting materials into bags, illustrating the process of preparing waste for a transparent exchange in a circular marketplace."
                             class="impact-card_image"
                             loading="lazy"
@@ -186,7 +257,7 @@
 
                     <div class="impact-card">
                         <img
-                            src="./src/img/a professional using a tablet to monitor real-time environmental impact data and waste metrics.png"
+                            src="./src/img/a professional using a tablet to monitor real-time environmental impact data and waste metrics.webp"
                             alt="A professional using a tablet to monitor real-time environmental impact data and waste metrics"
                             class="impact-card_image"
                             loading="lazy"
@@ -204,7 +275,7 @@
 
                     <div class="impact-card">
                         <img
-                            src="./src/img/a professional handshake symbolizing a collaborative partnership between businesses, environmental communities, and local creators.png"
+                            src="./src/img/a professional handshake symbolizing a collaborative partnership between businesses, environmental communities, and local creators.webp"
                             alt="A professional handshake symbolizing a collaborative partnership between businesses, environmental communities, and local creators."
                             class="impact-card_image"
                             loading="lazy"
@@ -407,11 +478,11 @@
                     <p class="section-header_subtitle">Recognizing UMKM and communities that actively contribute to waste redistribution and environmental impact.</p>
                 </div>
                 <div class="flex flex-col items-center gap-16 w-full h-fit">
-                    <div class="grid grid-cols-3 gap-12 w-full h-fit">
+                    <div class="grid grid-cols-3 gap-16 w-full h-fit">
                         <div class="leaderboard-card relative z-0 shadow-lg">
                             <div class="leaderboard-card_avatar-container">
                                 <div class="leaderboard-card_avatar-frame">
-                                    <img src="./src/img/Profile 2.png" alt="Profile GreenLoop Studio" class="leaderboard-card_image" loading="lazy" />
+                                    <img src="./src/img/Profile GreenLoop Studio.webp" alt="Profile GreenLoop Studio" class="leaderboard-card_image" loading="lazy" />
                                     <div class="leaderboard-card_rank-icon">
                                         <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg transition-transform hover:scale-105">
                                             <defs>
@@ -471,15 +542,15 @@
                             </div>
                         </div>
 
-                        <div class="leaderboard-card relative z-10 lg:scale-105 shadow-2xl shadow-yellow-500/15">
+                        <div class="leaderboard-card relative z-10 lg:scale-110 shadow-xl shadow-yellow-500/15">
                             <div
-                                class="absolute -top-4 left-1/2 -translate-x-1/2 bg-linear-to-r from-yellow-500 via-yellow-400 to-yellow-500 text-white font-figtree font-bold text-xs uppercase tracking-widest py-2 px-4 rounded-full shadow-md"
+                                class="absolute -top-4 left-1/2 -translate-x-1/2 bg-linear-to-r from-yellow-500 via-yellow-400 to-yellow-500 text-white font-figtree font-semibold text-sm uppercase tracking-widest py-2.5 px-5 rounded-full shadow-md"
                             >
                                 Peringkat 1
                             </div>
                             <div class="leaderboard-card_avatar-container">
                                 <div class="leaderboard-card_avatar-frame">
-                                    <img src="./src/img/Profile EcoCraft Indonesia.png" alt="Profile EcoCraft Indonesia" class="leaderboard-card_image" loading="lazy" />
+                                    <img src="./src/img/Profile EcoCraft Indonesia.webp" alt="Profile EcoCraft Indonesia" class="leaderboard-card_image" loading="lazy" />
                                     <div class="leaderboard-card_rank-icon">
                                         <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg transition-transform hover:scale-105">
                                             <defs>
@@ -542,7 +613,7 @@
                         <div class="leaderboard-card relative z-0 shadow-lg">
                             <div class="leaderboard-card_avatar-container">
                                 <div class="leaderboard-card_avatar-frame">
-                                    <img src="./src/img/Profile Reborn Plastic.png" alt="Profile Reborn Plastic" class="leaderboard-card_image" loading="lazy" />
+                                    <img src="./src/img/Profile Reborn Plastic.webp" alt="Profile Reborn Plastic" class="leaderboard-card_image" loading="lazy" />
                                     <div class="leaderboard-card_rank-icon">
                                         <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg transition-transform hover:scale-105">
                                             <defs>
@@ -615,7 +686,7 @@
                         <div class="leaderboard-table_row">
                             <div class="leaderboard-table_rank-number">4</div>
                             <div class="leaderboard-table_umkm-info">
-                                <img src="./src/img/Profile 4.png" alt="Profile" class="leaderboard-table_avatar" />
+                                <img src="./src/img/Profile Limbah Jadi Berkah.webp" alt="Profile Limbah Jadi Berkah" class="leaderboard-table_avatar" />
                                 <div class="leaderboard-table_umkm-details">
                                     <h3 class="leaderboard-table_umkm-name">Limbah Jadi Berkah</h3>
                                     <p class="leaderboard-table_umkm-category">Organic Waste Processing</p>
@@ -637,7 +708,7 @@
                         <div class="leaderboard-table_row">
                             <div class="leaderboard-table_rank-number">5</div>
                             <div class="leaderboard-table_umkm-info">
-                                <img src="./src/img/Profile 4.png" alt="Profile" class="leaderboard-table_avatar" />
+                                <img src="./src/img/Profile Kain Kita.webp" alt="Profile Kain Kita" class="leaderboard-table_avatar" />
                                 <div class="leaderboard-table_umkm-details">
                                     <h3 class="leaderboard-table_umkm-name">Kain Kita</h3>
                                     <p class="leaderboard-table_umkm-category">Fabric Scrap Reuse</p>
@@ -686,6 +757,7 @@
                 </div>
             </section>
         </main>
+
         <footer class="container mx-auto py-25">
             <div class="grid grid-cols-12 gap-x-8 gap-y-12">
                 <div class="col-span-3 pr-4">

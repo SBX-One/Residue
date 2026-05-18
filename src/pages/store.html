@@ -1,12 +1,558 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store</title>
-    <link rel="stylesheet" href="../css/output.css">
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Store</title>
+        <link rel="stylesheet" href="../css/output.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    </head>
+    <body class="overflow-x-hidden">
+        <header class="main-header">
+            <nav class="main-header_nav">
+                <h1 class="main-header_logo">Residue</h1>
+                <ul class="main-header_menu">
+                    <li><a href="#" class="main-header_menu-link-default">Home</a></li>
+                    <li><a href="#" class="main-header_menu-link-default">Store</a></li>
+                    <li><a href="#" class="main-header_menu-link-default">Leaderboard</a></li>
+                    <li><a href="#" class="main-header_menu-link-default">About</a></li>
+                </ul>
+                <div class="flex items-center gap-4">
+                    <button class="main-header_cta" title="Get In Touch" aria-label="Get In Touch">
+                        <span class="main-header_cta-text">Get In Touch</span>
+                    </button>
+                    <button class="lg:hidden text-primary p-2" title="Menu" aria-label="Menu">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
+                            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- header hero -->
+            <section class="container mx-auto flex flex-col lg:flex-row w-full justify-between items-center mt-24 lg:mt-32 my-6 px-4 lg:px-0">
+                <div class="space-y-4 flex-2 text-center lg:text-left">
+                    <h1 class="text-3xl lg:text-5xl font-semibold text-gradient-blue"><span class="text-text-default">Find Materials</span>. Reduce Waste. Create Impact</h1>
+                    <p class="text-base lg:text-lg font-normal">Dicvover industrial residue and give it a second life through circular collaborations.</p>
+                </div>
+                <div class="flex justify-center lg:justify-end items-center flex-3 mt-8 lg:mt-0">
+                    <img src="/src/img/image-header.png" alt="" class="w-full max-w-sm lg:max-w-fit h-fit" />
+                </div>
+            </section>
+            <section class="container mx-auto px-4 lg:px-0">
+                <!-- Search landing -->
+                <div class="flex flex-col lg:flex-row gap-4 items-center px-4 lg:px-8 py-6 border border-[#DEDEDE] rounded-2xl">
+                    <div class="w-full lg:flex-1 relative">
+                        <input type="text" class="rounded-2xl w-full py-4 pl-14 pr-4 border border-[#DEDEDE]" placeholder="Search materials, waste type or location" />
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.5 3C11.2239 3 12.8772 3.68482 14.0962 4.90381C15.3152 6.12279 16 7.77609 16 9.5C16 11.11 15.41 12.59 14.44 13.73L14.71 14H15.5L20.5 19L19 20.5L14 15.5V14.71L13.73 14.44C12.5504 15.4465 11.0506 15.9996 9.5 16C7.77609 16 6.12279 15.3152 4.90381 14.0962C3.68482 12.8772 3 11.2239 3 9.5C3 7.77609 3.68482 6.12279 4.90381 4.90381C6.12279 3.68482 7.77609 3 9.5 3ZM9.5 5C7 5 5 7 5 9.5C5 12 7 14 9.5 14C12 14 14 12 14 9.5C14 7 12 5 9.5 5Z"
+                                    fill="#222222"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-auto relative">
+                        <select name="select" id="select" class="appearance-none w-full lg:w-auto pl-6 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer">
+                            <option value="">All Location</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-400">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="w-full lg:w-auto px-6 py-4 bg-gradient-button rounded-2xl text-lg font-semibold text-center cursor-pointer">Search</button>
+                </div>
+                <!-- Filter -->
+                <div class="p-4 lg:p-8 mt-8 border-[#dedede] border rounded-2xl">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-xl lg:text-2xl text-text-default">Select Filter</h2>
+                        <p class="text-xl lg:text-2xl text-primary cursor-pointer">Reset</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+                        <!-- Category Filter -->
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M7 7h.01M7 3h5c.5 0 1 .2 1.4.6l7 7c.8.8.8 2 0 2.8l-7 7c-.8.8-2 .8-2.8 0l-7-7c-.4-.4-.6-.9-.6-1.4V7c0-2.2 1.8-4 4-4z"
+                                    />
+                                </svg>
+                            </div>
+                            <select
+                                class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                            >
+                                <option value="">Category</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Grade Filter -->
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <select
+                                class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                            >
+                                <option value="">Grade</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Volume Filter -->
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                                    />
+                                </svg>
+                            </div>
+                            <select
+                                class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                            >
+                                <option value="">Volume</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Location Filter -->
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <select
+                                class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                            >
+                                <option value="">Location</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Featured Product -->
+            <section class="my-25 container mx-auto px-4 lg:px-0">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-2xl text-text-default">Featured Product</h3>
+                    <div class="flex gap-4 items-center cursor-pointer group">
+                        <p class="text-xl lg:text-2xl text-primary font-medium">See All</p>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform group-hover:translate-x-1">
+                            <path d="M4 11.0001V13.0001H16L10.5 18.5001L11.92 19.9201L19.84 12.0001L11.92 4.08008L10.5 5.50008L16 11.0001H4Z" fill="#085C99" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-4">
+                    <div class="product-card">
+                        <img src="/src/img/product/cutton-fabric.webp" alt="" />
+                        <div class="flex flex-col gap-3 justify-center text-center">
+                            <p class="product-card_title">Cotton Fabric Offcut</p>
+                            <div class="flex gap-4 justify-center items-center">
+                                <img src="/src/img/Profile EcoCraft Indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-[#dedede] rounded-full" loading="lazy" />
+                                <p class="text-lg text-text-default">Kain Kita</p>
+                            </div>
+                            <div class="flex gap-4 justify-center items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.0003 5.4165C10.5529 5.4165 11.0828 5.636 11.4735 6.0267C11.8642 6.4174 12.0837 6.9473 12.0837 7.49984C12.0837 7.77342 12.0298 8.04433 11.9251 8.29709C11.8204 8.54986 11.6669 8.77952 11.4735 8.97298C11.28 9.16643 11.0503 9.31989 10.7976 9.42459C10.5448 9.52928 10.2739 9.58317 10.0003 9.58317C9.44779 9.58317 8.91789 9.36368 8.52719 8.97298C8.13649 8.58228 7.91699 8.05237 7.91699 7.49984C7.91699 6.9473 8.13649 6.4174 8.52719 6.0267C8.91789 5.636 9.44779 5.4165 10.0003 5.4165ZM10.0003 1.6665C11.5474 1.6665 13.0312 2.28109 14.1251 3.37505C15.2191 4.46901 15.8337 5.95274 15.8337 7.49984C15.8337 11.8748 10.0003 18.3332 10.0003 18.3332C10.0003 18.3332 4.16699 11.8748 4.16699 7.49984C4.16699 5.95274 4.78157 4.46901 5.87554 3.37505C6.9695 2.28109 8.45323 1.6665 10.0003 1.6665ZM10.0003 3.33317C8.89526 3.33317 7.83545 3.77216 7.05405 4.55356C6.27265 5.33496 5.83366 6.39477 5.83366 7.49984C5.83366 8.33317 5.83366 9.99984 10.0003 15.5915C14.167 9.99984 14.167 8.33317 14.167 7.49984C14.167 6.39477 13.728 5.33496 12.9466 4.55356C12.1652 3.77216 11.1054 3.33317 10.0003 3.33317Z"
+                                        fill="#ABABAB"
+                                    />
+                                </svg>
+                                <p class="text-lg text-zinc-400">Bandung, Jawa Barat (2,4 km)</p>
+                            </div>
+                            <p class="text-2xl font-bold text-text-default">Rp 12.000/kg</p>
+                        </div>
+                        <div class="product-card_button">Buy Product</div>
+                    </div>
+                    <div class="product-card">
+                        <img src="/src/img/product/pet-flakes.webp" alt="" />
+                        <div class="flex flex-col gap-3 justify-center text-center">
+                            <p class="product-card_title">PET Flakes Mix Color</p>
+                            <div class="flex gap-4 justify-center items-center">
+                                <img src="/src/img/Profile EcoCraft Indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-[#dedede] rounded-full" loading="lazy" />
+                                <p class="text-lg text-text-default">EcoCraft Indonesia</p>
+                            </div>
+                            <div class="flex gap-4 justify-center items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.0003 5.4165C10.5529 5.4165 11.0828 5.636 11.4735 6.0267C11.8642 6.4174 12.0837 6.9473 12.0837 7.49984C12.0837 7.77342 12.0298 8.04433 11.9251 8.29709C11.8204 8.54986 11.6669 8.77952 11.4735 8.97298C11.28 9.16643 11.0503 9.31989 10.7976 9.42459C10.5448 9.52928 10.2739 9.58317 10.0003 9.58317C9.44779 9.58317 8.91789 9.36368 8.52719 8.97298C8.13649 8.58228 7.91699 8.05237 7.91699 7.49984C7.91699 6.9473 8.13649 6.4174 8.52719 6.0267C8.91789 5.636 9.44779 5.4165 10.0003 5.4165ZM10.0003 1.6665C11.5474 1.6665 13.0312 2.28109 14.1251 3.37505C15.2191 4.46901 15.8337 5.95274 15.8337 7.49984C15.8337 11.8748 10.0003 18.3332 10.0003 18.3332C10.0003 18.3332 4.16699 11.8748 4.16699 7.49984C4.16699 5.95274 4.78157 4.46901 5.87554 3.37505C6.9695 2.28109 8.45323 1.6665 10.0003 1.6665ZM10.0003 3.33317C8.89526 3.33317 7.83545 3.77216 7.05405 4.55356C6.27265 5.33496 5.83366 6.39477 5.83366 7.49984C5.83366 8.33317 5.83366 9.99984 10.0003 15.5915C14.167 9.99984 14.167 8.33317 14.167 7.49984C14.167 6.39477 13.728 5.33496 12.9466 4.55356C12.1652 3.77216 11.1054 3.33317 10.0003 3.33317Z"
+                                        fill="#ABABAB"
+                                    />
+                                </svg>
+                                <p class="text-lg text-zinc-400">Bandung, Jawa Barat (2,4 km)</p>
+                            </div>
+                            <p class="text-2xl font-bold text-text-default">Rp 8.500/kg</p>
+                        </div>
+                        <div class="product-card_button">Buy Product</div>
+                    </div>
+                    <div class="product-card">
+                        <img src="/src/img/product/wood-offcut.webp" alt="" />
+                        <div class="flex flex-col gap-3 justify-center text-center">
+                            <p class="product-card_title">Wood Offcut</p>
+                            <div class="flex gap-4 justify-center items-center">
+                                <img src="/src/img/Profile EcoCraft Indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-[#dedede] rounded-full" loading="lazy" />
+                                <p class="text-lg text-text-default">EcoCraft Indonesia</p>
+                            </div>
+                            <div class="flex gap-4 justify-center items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.0003 5.4165C10.5529 5.4165 11.0828 5.636 11.4735 6.0267C11.8642 6.4174 12.0837 6.9473 12.0837 7.49984C12.0837 7.77342 12.0298 8.04433 11.9251 8.29709C11.8204 8.54986 11.6669 8.77952 11.4735 8.97298C11.28 9.16643 11.0503 9.31989 10.7976 9.42459C10.5448 9.52928 10.2739 9.58317 10.0003 9.58317C9.44779 9.58317 8.91789 9.36368 8.52719 8.97298C8.13649 8.58228 7.91699 8.05237 7.91699 7.49984C7.91699 6.9473 8.13649 6.4174 8.52719 6.0267C8.91789 5.636 9.44779 5.4165 10.0003 5.4165ZM10.0003 1.6665C11.5474 1.6665 13.0312 2.28109 14.1251 3.37505C15.2191 4.46901 15.8337 5.95274 15.8337 7.49984C15.8337 11.8748 10.0003 18.3332 10.0003 18.3332C10.0003 18.3332 4.16699 11.8748 4.16699 7.49984C4.16699 5.95274 4.78157 4.46901 5.87554 3.37505C6.9695 2.28109 8.45323 1.6665 10.0003 1.6665ZM10.0003 3.33317C8.89526 3.33317 7.83545 3.77216 7.05405 4.55356C6.27265 5.33496 5.83366 6.39477 5.83366 7.49984C5.83366 8.33317 5.83366 9.99984 10.0003 15.5915C14.167 9.99984 14.167 8.33317 14.167 7.49984C14.167 6.39477 13.728 5.33496 12.9466 4.55356C12.1652 3.77216 11.1054 3.33317 10.0003 3.33317Z"
+                                        fill="#ABABAB"
+                                    />
+                                </svg>
+                                <p class="text-lg text-zinc-400">Bandung, Jawa Barat (2,4 km)</p>
+                            </div>
+                            <p class="text-2xl font-bold text-text-default">Rp 4.200/kg</p>
+                        </div>
+                        <div class="product-card_button">Buy Product</div>
+                    </div>
+                    <div class="product-card">
+                        <img src="/src/img/product/resin-waste.webp" alt="" />
+                        <div class="flex flex-col gap-3 justify-center text-center">
+                            <p class="product-card_title">Resin Waste</p>
+                            <div class="flex gap-4 justify-center items-center">
+                                <img src="/src/img/Profile EcoCraft Indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-[#dedede] rounded-full" loading="lazy" />
+                                <p class="text-lg text-text-default">CV. Makmur Jaya</p>
+                            </div>
+                            <div class="flex gap-4 justify-center items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.0003 5.4165C10.5529 5.4165 11.0828 5.636 11.4735 6.0267C11.8642 6.4174 12.0837 6.9473 12.0837 7.49984C12.0837 7.77342 12.0298 8.04433 11.9251 8.29709C11.8204 8.54986 11.6669 8.77952 11.4735 8.97298C11.28 9.16643 11.0503 9.31989 10.7976 9.42459C10.5448 9.52928 10.2739 9.58317 10.0003 9.58317C9.44779 9.58317 8.91789 9.36368 8.52719 8.97298C8.13649 8.58228 7.91699 8.05237 7.91699 7.49984C7.91699 6.9473 8.13649 6.4174 8.52719 6.0267C8.91789 5.636 9.44779 5.4165 10.0003 5.4165ZM10.0003 1.6665C11.5474 1.6665 13.0312 2.28109 14.1251 3.37505C15.2191 4.46901 15.8337 5.95274 15.8337 7.49984C15.8337 11.8748 10.0003 18.3332 10.0003 18.3332C10.0003 18.3332 4.16699 11.8748 4.16699 7.49984C4.16699 5.95274 4.78157 4.46901 5.87554 3.37505C6.9695 2.28109 8.45323 1.6665 10.0003 1.6665ZM10.0003 3.33317C8.89526 3.33317 7.83545 3.77216 7.05405 4.55356C6.27265 5.33496 5.83366 6.39477 5.83366 7.49984C5.83366 8.33317 5.83366 9.99984 10.0003 15.5915C14.167 9.99984 14.167 8.33317 14.167 7.49984C14.167 6.39477 13.728 5.33496 12.9466 4.55356C12.1652 3.77216 11.1054 3.33317 10.0003 3.33317Z"
+                                        fill="#ABABAB"
+                                    />
+                                </svg>
+                                <p class="text-lg text-zinc-400">Bandung, Jawa Barat (2,4 km)</p>
+                            </div>
+                            <p class="text-2xl font-bold text-text-default">Rp 12.000/kg</p>
+                        </div>
+                        <div class="product-card_button">Buy Product</div>
+                    </div>
+                    <div class="product-card">
+                        <img src="/src/img/product/denim-fabric.webp" alt="" />
+                        <div class="flex flex-col gap-3 justify-center text-center">
+                            <p class="product-card_title">Denim Fabric Offcut</p>
+                            <div class="flex gap-4 justify-center items-center">
+                                <img src="/src/img/Profile EcoCraft Indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-[#dedede] rounded-full" loading="lazy" />
+                                <p class="text-lg text-text-default">CV. Makmur Jaya</p>
+                            </div>
+                            <div class="flex gap-4 justify-center items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.0003 5.4165C10.5529 5.4165 11.0828 5.636 11.4735 6.0267C11.8642 6.4174 12.0837 6.9473 12.0837 7.49984C12.0837 7.77342 12.0298 8.04433 11.9251 8.29709C11.8204 8.54986 11.6669 8.77952 11.4735 8.97298C11.28 9.16643 11.0503 9.31989 10.7976 9.42459C10.5448 9.52928 10.2739 9.58317 10.0003 9.58317C9.44779 9.58317 8.91789 9.36368 8.52719 8.97298C8.13649 8.58228 7.91699 8.05237 7.91699 7.49984C7.91699 6.9473 8.13649 6.4174 8.52719 6.0267C8.91789 5.636 9.44779 5.4165 10.0003 5.4165ZM10.0003 1.6665C11.5474 1.6665 13.0312 2.28109 14.1251 3.37505C15.2191 4.46901 15.8337 5.95274 15.8337 7.49984C15.8337 11.8748 10.0003 18.3332 10.0003 18.3332C10.0003 18.3332 4.16699 11.8748 4.16699 7.49984C4.16699 5.95274 4.78157 4.46901 5.87554 3.37505C6.9695 2.28109 8.45323 1.6665 10.0003 1.6665ZM10.0003 3.33317C8.89526 3.33317 7.83545 3.77216 7.05405 4.55356C6.27265 5.33496 5.83366 6.39477 5.83366 7.49984C5.83366 8.33317 5.83366 9.99984 10.0003 15.5915C14.167 9.99984 14.167 8.33317 14.167 7.49984C14.167 6.39477 13.728 5.33496 12.9466 4.55356C12.1652 3.77216 11.1054 3.33317 10.0003 3.33317Z"
+                                        fill="#ABABAB"
+                                    />
+                                </svg>
+                                <p class="text-lg text-zinc-400">Bandung, Jawa Barat (2,4 km)</p>
+                            </div>
+                            <p class="text-2xl font-bold text-text-default">Rp 12.000/kg</p>
+                        </div>
+                        <div class="product-card_button">Buy Product</div>
+                    </div>
+                    <div class="product-card">
+                        <img src="/src/img/product/aluminium.webp" alt="" />
+                        <div class="flex flex-col gap-3 justify-center text-center">
+                            <p class="product-card_title">Aluminium Scraps</p>
+                            <div class="flex gap-4 justify-center items-center">
+                                <img src="/src/img/Profile EcoCraft Indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-[#dedede] rounded-full" loading="lazy" />
+                                <p class="text-lg text-text-default">PT. Yudha Berencana</p>
+                            </div>
+                            <div class="flex gap-4 justify-center items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.0003 5.4165C10.5529 5.4165 11.0828 5.636 11.4735 6.0267C11.8642 6.4174 12.0837 6.9473 12.0837 7.49984C12.0837 7.77342 12.0298 8.04433 11.9251 8.29709C11.8204 8.54986 11.6669 8.77952 11.4735 8.97298C11.28 9.16643 11.0503 9.31989 10.7976 9.42459C10.5448 9.52928 10.2739 9.58317 10.0003 9.58317C9.44779 9.58317 8.91789 9.36368 8.52719 8.97298C8.13649 8.58228 7.91699 8.05237 7.91699 7.49984C7.91699 6.9473 8.13649 6.4174 8.52719 6.0267C8.91789 5.636 9.44779 5.4165 10.0003 5.4165ZM10.0003 1.6665C11.5474 1.6665 13.0312 2.28109 14.1251 3.37505C15.2191 4.46901 15.8337 5.95274 15.8337 7.49984C15.8337 11.8748 10.0003 18.3332 10.0003 18.3332C10.0003 18.3332 4.16699 11.8748 4.16699 7.49984C4.16699 5.95274 4.78157 4.46901 5.87554 3.37505C6.9695 2.28109 8.45323 1.6665 10.0003 1.6665ZM10.0003 3.33317C8.89526 3.33317 7.83545 3.77216 7.05405 4.55356C6.27265 5.33496 5.83366 6.39477 5.83366 7.49984C5.83366 8.33317 5.83366 9.99984 10.0003 15.5915C14.167 9.99984 14.167 8.33317 14.167 7.49984C14.167 6.39477 13.728 5.33496 12.9466 4.55356C12.1652 3.77216 11.1054 3.33317 10.0003 3.33317Z"
+                                        fill="#ABABAB"
+                                    />
+                                </svg>
+                                <p class="text-lg text-zinc-400">Bandung, Jawa Barat (2,4 km)</p>
+                            </div>
+                            <p class="text-2xl font-bold text-text-default">Rp 13.500/kg</p>
+                        </div>
+                        <div class="product-card_button">Buy Product</div>
+                    </div>
+                </div>
+            </section>
+            <!-- browse by category -->
+            <section class="container mx-auto px-4 lg:px-0">
+                <div class="text-center space-y-3">
+                    <h3 class="text-2xl lg:text-4xl text-text-default font-semibold">Discover Sustainable Materials for Every Creative Need</h3>
+                    <p class="text-base text-text-default font-normal">Browse categorized industrial residue and reusable materials from trusted UMKM and sustainability partners across Indonesia.</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-4 mt-14 justify-center">
+                    <div class="font-semibold text-text-default p-4 w-fit h-fit border border-[#dedede] rounded-2xl cursor-pointer hover:bg-accent transition-colors">
+                        <p>Resin</p>
+                    </div>
+                    <div class="font-semibold text-text-default p-4 w-fit h-fit border border-[#dedede] rounded-2xl cursor-pointer hover:bg-accent transition-colors">
+                        <p>Plastic</p>
+                    </div>
+                    <div class="font-semibold text-text-default p-4 w-fit h-fit border border-[#dedede] rounded-2xl cursor-pointer hover:bg-accent transition-colors">
+                        <p>Wood</p>
+                    </div>
+                    <div class="font-semibold text-text-default p-4 w-fit h-fit border border-[#dedede] rounded-2xl cursor-pointer hover:bg-accent transition-colors">
+                        <p>Metal</p>
+                    </div>
+                    <div class="font-semibold text-text-default p-4 w-fit h-fit border border-[#dedede] rounded-2xl cursor-pointer hover:bg-accent transition-colors">
+                        <p>Other</p>
+                    </div>
+                </div>
+                <!-- Apply swiper js here -->
+                <div class="swiper product-swiper mt-14">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="/src/img/product/cutton-fabric.webp" alt="" />
+                                <div class="flex flex-col gap-3 justify-center text-center">
+                                    <p class="product-card_title">Cotton Fabric Offcut</p>
+                                    <div class="flex gap-4 justify-center items-center">
+                                        <img src="/src/img/Profile EcoCraft Indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-[#dedede] rounded-full" loading="lazy" />
+                                        <p class="text-lg text-text-default">Kain Kita</p>
+                                    </div>
+                                    <div class="flex gap-4 justify-center items-center">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0003 5.4165C10.5529 5.4165 11.0828 5.636 11.4735 6.0267C11.8642 6.4174 12.0837 6.9473 12.0837 7.49984C12.0837 7.77342 12.0298 8.04433 11.9251 8.29709C11.8204 8.54986 11.6669 8.77952 11.4735 8.97298C11.28 9.16643 11.0503 9.31989 10.7976 9.42459C10.5448 9.52928 10.2739 9.58317 10.0003 9.58317C9.44779 9.58317 8.91789 9.36368 8.52719 8.97298C8.13649 8.58228 7.91699 8.05237 7.91699 7.49984C7.91699 6.9473 8.13649 6.4174 8.52719 6.0267C8.91789 5.636 9.44779 5.4165 10.0003 5.4165ZM10.0003 1.6665C11.5474 1.6665 13.0312 2.28109 14.1251 3.37505C15.2191 4.46901 15.8337 5.95274 15.8337 7.49984C15.8337 11.8748 10.0003 18.3332 10.0003 18.3332C10.0003 18.3332 4.16699 11.8748 4.16699 7.49984C4.16699 5.95274 4.78157 4.46901 5.87554 3.37505C6.9695 2.28109 8.45323 1.6665 10.0003 1.6665ZM10.0003 3.33317C8.89526 3.33317 7.83545 3.77216 7.05405 4.55356C6.27265 5.33496 5.83366 6.39477 5.83366 7.49984C5.83366 8.33317 5.83366 9.99984 10.0003 15.5915C14.167 9.99984 14.167 8.33317 14.167 7.49984C14.167 6.39477 13.728 5.33496 12.9466 4.55356C12.1652 3.77216 11.1054 3.33317 10.0003 3.33317Z"
+                                                fill="#ABABAB"
+                                            />
+                                        </svg>
+                                        <p class="text-lg text-zinc-400">Bandung, Jawa Barat</p>
+                                    </div>
+                                    <p class="text-2xl font-bold text-text-default">Rp 12.000/kg</p>
+                                </div>
+                                <div class="product-card_button">Buy Product</div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="/src/img/product/pet-flakes.webp" alt="" />
+                                <div class="flex flex-col gap-3 justify-center text-center">
+                                    <p class="product-card_title">PET Flakes Mix Color</p>
+                                    <div class="flex gap-4 justify-center items-center">
+                                        <img src="/src/img/Profile EcoCraft Indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-[#dedede] rounded-full" loading="lazy" />
+                                        <p class="text-lg text-text-default">EcoCraft Indonesia</p>
+                                    </div>
+                                    <div class="flex gap-4 justify-center items-center">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0003 5.4165C10.5529 5.4165 11.0828 5.636 11.4735 6.0267C11.8642 6.4174 12.0837 6.9473 12.0837 7.49984C12.0837 7.77342 12.0298 8.04433 11.9251 8.29709C11.8204 8.54986 11.6669 8.77952 11.4735 8.97298C11.28 9.16643 11.0503 9.31989 10.7976 9.42459C10.5448 9.52928 10.2739 9.58317 10.0003 9.58317C9.44779 9.58317 8.91789 9.36368 8.52719 8.97298C8.13649 8.58228 7.91699 8.05237 7.91699 7.49984C7.91699 6.9473 8.13649 6.4174 8.52719 6.0267C8.91789 5.636 9.44779 5.4165 10.0003 5.4165ZM10.0003 1.6665C11.5474 1.6665 13.0312 2.28109 14.1251 3.37505C15.2191 4.46901 15.8337 5.95274 15.8337 7.49984C15.8337 11.8748 10.0003 18.3332 10.0003 18.3332C10.0003 18.3332 4.16699 11.8748 4.16699 7.49984C4.16699 5.95274 4.78157 4.46901 5.87554 3.37505C6.9695 2.28109 8.45323 1.6665 10.0003 1.6665ZM10.0003 3.33317C8.89526 3.33317 7.83545 3.77216 7.05405 4.55356C6.27265 5.33496 5.83366 6.39477 5.83366 7.49984C5.83366 8.33317 5.83366 9.99984 10.0003 15.5915C14.167 9.99984 14.167 8.33317 14.167 7.49984C14.167 6.39477 13.728 5.33496 12.9466 4.55356C12.1652 3.77216 11.1054 3.33317 10.0003 3.33317Z"
+                                                fill="#ABABAB"
+                                            />
+                                        </svg>
+                                        <p class="text-lg text-zinc-400">Bandung, Jawa Barat</p>
+                                    </div>
+                                    <p class="text-2xl font-bold text-text-default">Rp 8.500/kg</p>
+                                </div>
+                                <div class="product-card_button">Buy Product</div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="/src/img/product/wood-offcut.webp" alt="" />
+                                <div class="flex flex-col gap-3 justify-center text-center">
+                                    <p class="product-card_title">Wood Offcut</p>
+                                    <div class="flex gap-4 justify-center items-center">
+                                        <img src="/src/img/Profile EcoCraft Indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-[#dedede] rounded-full" loading="lazy" />
+                                        <p class="text-lg text-text-default">EcoCraft Indonesia</p>
+                                    </div>
+                                    <div class="flex gap-4 justify-center items-center">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0003 5.4165C10.5529 5.4165 11.0828 5.636 11.4735 6.0267C11.8642 6.4174 12.0837 6.9473 12.0837 7.49984C12.0837 7.77342 12.0298 8.04433 11.9251 8.29709C11.8204 8.54986 11.6669 8.77952 11.4735 8.97298C11.28 9.16643 11.0503 9.31989 10.7976 9.42459C10.5448 9.52928 10.2739 9.58317 10.0003 9.58317C9.44779 9.58317 8.91789 9.36368 8.52719 8.97298C8.13649 8.58228 7.91699 8.05237 7.91699 7.49984C7.91699 6.9473 8.13649 6.4174 8.52719 6.0267C8.91789 5.636 9.44779 5.4165 10.0003 5.4165ZM10.0003 1.6665C11.5474 1.6665 13.0312 2.28109 14.1251 3.37505C15.2191 4.46901 15.8337 5.95274 15.8337 7.49984C15.8337 11.8748 10.0003 18.3332 10.0003 18.3332C10.0003 18.3332 4.16699 11.8748 4.16699 7.49984C4.16699 5.95274 4.78157 4.46901 5.87554 3.37505C6.9695 2.28109 8.45323 1.6665 10.0003 1.6665ZM10.0003 3.33317C8.89526 3.33317 7.83545 3.77216 7.05405 4.55356C6.27265 5.33496 5.83366 6.39477 5.83366 7.49984C5.83366 8.33317 5.83366 9.99984 10.0003 15.5915C14.167 9.99984 14.167 8.33317 14.167 7.49984C14.167 6.39477 13.728 5.33496 12.9466 4.55356C12.1652 3.77216 11.1054 3.33317 10.0003 3.33317Z"
+                                                fill="#ABABAB"
+                                            />
+                                        </svg>
+                                        <p class="text-lg text-zinc-400">Bandung, Jawa Barat</p>
+                                    </div>
+                                    <p class="text-2xl font-bold text-text-default">Rp 4.200/kg</p>
+                                </div>
+                                <div class="product-card_button">Buy Product</div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <img src="/src/img/product/resin-waste.webp" alt="" />
+                                <div class="flex flex-col gap-3 justify-center text-center">
+                                    <p class="product-card_title">Resin Waste</p>
+                                    <div class="flex gap-4 justify-center items-center">
+                                        <img src="/src/img/Profile EcoCraft Indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-[#dedede] rounded-full" loading="lazy" />
+                                        <p class="text-lg text-text-default">CV. Makmur Jaya</p>
+                                    </div>
+                                    <div class="flex gap-4 justify-center items-center">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.0003 5.4165C10.5529 5.4165 11.0828 5.636 11.4735 6.0267C11.8642 6.4174 12.0837 6.9473 12.0837 7.49984C12.0837 7.77342 12.0298 8.04433 11.9251 8.29709C11.8204 8.54986 11.6669 8.77952 11.4735 8.97298C11.28 9.16643 11.0503 9.31989 10.7976 9.42459C10.5448 9.52928 10.2739 9.58317 10.0003 9.58317C9.44779 9.58317 8.91789 9.36368 8.52719 8.97298C8.13649 8.58228 7.91699 8.05237 7.91699 7.49984C7.91699 6.9473 8.13649 6.4174 8.52719 6.0267C8.91789 5.636 9.44779 5.4165 10.0003 5.4165ZM10.0003 1.6665C11.5474 1.6665 13.0312 2.28109 14.1251 3.37505C15.2191 4.46901 15.8337 5.95274 15.8337 7.49984C15.8337 11.8748 10.0003 18.3332 10.0003 18.3332C10.0003 18.3332 4.16699 11.8748 4.16699 7.49984C4.16699 5.95274 4.78157 4.46901 5.87554 3.37505C6.9695 2.28109 8.45323 1.6665 10.0003 1.6665ZM10.0003 3.33317C8.89526 3.33317 7.83545 3.77216 7.05405 4.55356C6.27265 5.33496 5.83366 6.39477 5.83366 7.49984C5.83366 8.33317 5.83366 9.99984 10.0003 15.5915C14.167 9.99984 14.167 8.33317 14.167 7.49984C14.167 6.39477 13.728 5.33496 12.9466 4.55356C12.1652 3.77216 11.1054 3.33317 10.0003 3.33317Z"
+                                                fill="#ABABAB"
+                                            />
+                                        </svg>
+                                        <p class="text-lg text-zinc-400">Bandung, Jawa Barat</p>
+                                    </div>
+                                    <p class="text-2xl font-bold text-text-default">Rp 12.000/kg</p>
+                                </div>
+                                <div class="product-card_button">Buy Product</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-pagination mt-8 relative!"></div>
+                </div>
+            </section>
+            <footer class="container mx-auto py-16 lg:py-25 px-4 lg:px-0">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-12">
+                    <div class="col-span-1 md:col-span-2 lg:col-span-3 pr-4">
+                        <h2 class="font-manrope font-semibold text-4xl lg:text-5xl tracking-normal text-primary mb-2">Residue</h2>
+                        <p class="font-figtree font-normal text-lg lg:text-xl tracking-normal text-[#ABABAB] mb-6 lg:mb-3">
+                            Connecting people, technology, and resources to turn industrial residue into sustainable value.
+                        </p>
+                        <div class="flex justify-start items-center w-fit h-fit gap-4">
+                            <a href="#" class="p-3 w-fit h-fit border border-[#DEDEDE] rounded-full">
+                                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                    <path
+                                        d="M5.8 0H14.2C17.4 0 20 2.6 20 5.8V14.2C20 15.7383 19.3889 17.2135 18.3012 18.3012C17.2135 19.3889 15.7383 20 14.2 20H5.8C2.6 20 0 17.4 0 14.2V5.8C0 4.26174 0.61107 2.78649 1.69878 1.69878C2.78649 0.61107 4.26174 0 5.8 0ZM5.6 2C4.64522 2 3.72955 2.37928 3.05442 3.05442C2.37928 3.72955 2 4.64522 2 5.6V14.4C2 16.39 3.61 18 5.6 18H14.4C15.3548 18 16.2705 17.6207 16.9456 16.9456C17.6207 16.2705 18 15.3548 18 14.4V5.6C18 3.61 16.39 2 14.4 2H5.6ZM15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.33496 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7Z"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#" class="p-3 w-fit h-fit border border-[#DEDEDE] rounded-full">
+                                <svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                    <path
+                                        d="M18 4L10 9L2 4V2L10 7L18 2M18 0H2C0.89 0 0 0.89 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H18C18.5304 16 19.0391 15.7893 19.4142 15.4142C19.7893 15.0391 20 14.5304 20 14V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#" class="p-3 w-fit h-fit border border-[#DEDEDE] rounded-full">
+                                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                    <path
+                                        d="M9.99999 0C4.49999 0 0 4.50803 0 10.0602C0 15.0803 3.65999 19.247 8.43999 20V12.9719H5.89999V10.0602H8.43999V7.84137C8.43999 5.32129 9.92999 3.93574 12.22 3.93574C13.31 3.93574 14.45 4.12651 14.45 4.12651V6.60643H13.19C11.95 6.60643 11.56 7.37952 11.56 8.17269V10.0602H14.34L13.89 12.9719H11.56V20C13.9164 19.6264 16.0622 18.4192 17.6099 16.5964C19.1576 14.7737 20.0053 12.4555 20 10.0602C20 4.50803 15.5 0 9.99999 0Z"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1 lg:col-span-2">
+                        <h3 class="main-footer_nav-title">Platform</h3>
+                        <ul class="main-footer_nav-list">
+                            <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Home</a></li>
+                            <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Store</a></li>
+                            <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Leaderboard</a></li>
+                            <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">About</a></li>
+                            <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Detail</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-span-1 lg:col-span-2">
+                        <h3 class="main-footer_nav-title">Partner</h3>
+                        <ul class="main-footer_nav-list">
+                            <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">EcoCraft</a></li>
+                            <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Reborn Plastic</a></li>
+                            <li><a href="#" class="main-header_menu-link text-sm lg:text-xl !text-[#ABABAB] hover:!text-primary">GreenLoop</a></li>
+                            <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Limbah Jadi Berkah</a></li>
+                            <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Kain Kita</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-span-1 lg:col-span-2">
+                        <h3 class="main-footer_nav-title">Support</h3>
+                        <ul class="main-footer_nav-list">
+                            <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Help Center</a></li>
+                            <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Contact Us</a></li>
+                            <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Terms of Use</a></li>
+                            <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Privacy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-span-1 md:col-span-2 lg:col-span-3">
+                        <h3 class="main-footer_nav-title">Stay Updated</h3>
+                        <p class="font-figtree font-normal text-lg lg:text-xl tracking-normal text-[#ABABAB] mb-5">Be one of us to get the latest updates on impact and opportunities.</p>
+                        <form class="flex justify-center w-full h-fit border border-[#DEDEDE] rounded-2xl overflow-hidden focus-within:border-primary transition-colors">
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                                required
+                                class="flex-1 w-full font-figtree font-normal text-base lg:text-xl px-4 py-2 outline-none placeholder-[#DEDEDE]"
+                            />
+                            <button type="submit" class="bg-primary px-4 py-2 flex justify-center items-center cursor-pointer">
+                                <svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-4">
+                                    <path d="M0 16V0L19 8M2 13L13.85 8L2 3V6.5L8 8L2 9.5M2 13V3V9.5V13Z" fill="#EEEEEE" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <hr class="border-t border-[#DEDEDE] my-8" />
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <small class="font-figtree font-normal text-base lg:text-xl tracking-normal text-black text-center md:text-left"
+                        >&copy; 2026 <span class="text-primary">Residue</span>. All rights reserved.</small
+                    >
+                    <div class="flex justify-center items-center gap-2 w-fit h-fit">
+                        <div class="bg-[#80C9FF] rounded-full p-1 w-6 h-6 flex justify-center items-center">
+                            <svg viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3.25 h-3.25">
+                                <path
+                                    d="M9.6 3.2C3.84 4.48 2.496 8.4288 1.1648 11.7376L2.3744 12.16L2.9824 10.688C3.2896 10.7968 3.6096 10.88 3.84 10.88C10.88 10.88 12.8 0 12.8 0C12.16 1.28 7.68 1.44 4.48 2.08C1.28 2.72 0 5.44 0 6.72C0 8 1.12 9.12 1.12 9.12C3.2 3.2 9.6 3.2 9.6 3.2Z"
+                                    fill="#085C99"
+                                />
+                            </svg>
+                        </div>
+                        <p class="font-figtree font-normal text-base lg:text-xl tracking-normal text-black text-center">Build for a better tomorrow.</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.product-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                },
+            });
+        </script>
+    </body>
 </html>

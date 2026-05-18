@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Manrope:wght@200..800&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
     --font-manrope: 'Manrope', sans-serif;
     --font-figtree: 'Figtree', sans-serif;
-    --color-primary: #0D99FF;
-    --color-secondary: #085C99;
-    --color-accent: #FAFAF8;
+    --color-primary: #0d99ff;
+    --color-secondary: #085c99;
+    --color-accent: #fafaf8;
+    --color-text-default: #222222;
 }
 
 @layer components {
@@ -20,6 +21,15 @@
         to {
             color: #000000;
         }
+    }
+    .text-gradient-blue {
+        @apply bg-clip-text text-transparent bg-[linear-gradient(90deg,#0D99FF_60%,#80C9FF_100%)];
+    }
+    .bg-gradient-default {
+        @apply bg-[linear-gradient(90deg,#0D99FF4D_0%,#80C9FF_100%)];
+    }
+    .bg-gradient-button{
+        @apply bg-[linear-gradient(90deg,#80C9FF_0%,#0D99FF_100%)];
     }
     .main-header {
         @apply bg-transparent fixed top-0 left-0 z-99 w-full h-fit;
@@ -41,6 +51,9 @@
         animation: link-color-effect linear both;
         animation-timeline: scroll(root);
         animation-range: 0px 100px;
+    }
+    .main-header_menu-link-default {
+        @apply font-figtree font-normal text-sm tracking-normal text-text-default;
     }
     .main-header_cta {
         @apply hidden lg:block bg-primary rounded-3xl w-fit h-fit px-6 py-3 cursor-pointer;
@@ -267,4 +280,17 @@
     .main-footer_nav-link {
         @apply font-figtree font-normal text-xl tracking-normal text-[#ABABAB] hover:text-primary;
     }
+    .product-card{
+        @apply p-4 border border-[#DEDEDE] rounded-2xl flex flex-col gap-2 lg:gap-4 cursor-pointer w-full h-fit;
+    }
+    .product-card_title{
+        @apply text-2xl text-text-default font-semibold;
+    }
+    .product-card_button{
+        @apply p-4 rounded-4xl bg-primary text-white text-lg w-full flex items-center justify-center mt-4;
+    }
+}
+
+body{
+    font-family: 'Figtree', sans-serif;
 }

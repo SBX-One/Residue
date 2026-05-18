@@ -44,7 +44,7 @@
                 <!-- Search landing -->
                 <div class="flex flex-col lg:flex-row gap-4 items-center px-4 lg:px-8 py-6 border border-[#DEDEDE] rounded-2xl">
                     <div class="w-full lg:flex-1 relative">
-                        <input type="text" class="rounded-2xl w-full py-4 pl-14 pr-4 border border-[#DEDEDE]" placeholder="Search materials, waste type or location" />
+                        <input type="text" id="searchInput" class="rounded-2xl w-full py-4 pl-14 pr-4 border border-[#DEDEDE]" placeholder="Search materials, waste type or location" />
                         <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -55,8 +55,12 @@
                         </div>
                     </div>
                     <div class="w-full lg:w-auto relative">
-                        <select name="select" id="select" class="appearance-none w-full lg:w-auto pl-6 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer">
+                        <select name="select" id="locationSearch" class="appearance-none w-full lg:w-auto pl-6 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer">
                             <option value="">All Location</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Surabaya">Surabaya</option>
+                            <option value="Semarang">Semarang</option>
                         </select>
                         <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-400">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,13 +68,13 @@
                             </svg>
                         </div>
                     </div>
-                    <button class="w-full lg:w-auto px-6 py-4 bg-gradient-button rounded-2xl text-lg font-semibold text-center cursor-pointer">Search</button>
+                    <button id="searchButton" class="w-full lg:w-auto px-6 py-4 bg-gradient-button rounded-2xl text-lg font-semibold text-center cursor-pointer">Search</button>
                 </div>
                 <!-- Filter -->
                 <div class="p-4 lg:p-8 mt-8 border-[#dedede] border rounded-2xl">
                     <div class="flex justify-between items-center">
                         <h2 class="text-xl lg:text-2xl text-text-default">Select Filter</h2>
-                        <p class="text-xl lg:text-2xl text-primary cursor-pointer">Reset</p>
+                        <p id="resetFilters" class="text-xl lg:text-2xl text-primary cursor-pointer hover:underline">Reset</p>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
                         <!-- Category Filter -->
@@ -86,9 +90,15 @@
                                 </svg>
                             </div>
                             <select
+                                id="filterCategory"
                                 class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                             >
                                 <option value="">Category</option>
+                                <option value="Resin">Resin</option>
+                                <option value="Plastic">Plastic</option>
+                                <option value="Wood">Wood</option>
+                                <option value="Metal">Metal</option>
+                                <option value="Fabric">Fabric</option>
                             </select>
                             <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-400">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -104,9 +114,13 @@
                                 </svg>
                             </div>
                             <select
+                                id="filterGrade"
                                 class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                             >
                                 <option value="">Grade</option>
+                                <option value="Grade A">Grade A</option>
+                                <option value="Grade B">Grade B</option>
+                                <option value="Grade C">Grade C</option>
                             </select>
                             <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-400">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,9 +141,13 @@
                                 </svg>
                             </div>
                             <select
+                                id="filterVolume"
                                 class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                             >
                                 <option value="">Volume</option>
+                                <option value="small">0 - 100 kg</option>
+                                <option value="medium">101 - 500 kg</option>
+                                <option value="large">> 500 kg</option>
                             </select>
                             <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-400">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -146,9 +164,14 @@
                                 </svg>
                             </div>
                             <select
+                                id="filterLocation"
                                 class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                             >
                                 <option value="">Location</option>
+                                <option value="Bandung">Bandung</option>
+                                <option value="Jakarta">Jakarta</option>
+                                <option value="Surabaya">Surabaya</option>
+                                <option value="Semarang">Semarang</option>
                             </select>
                             <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-400">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -170,8 +193,8 @@
                         </svg>
                     </div>
                 </div>
-                <div class="py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-4">
-                    <div class="product-card">
+                <div id="productGrid" class="py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-4">
+                    <div class="product-card" data-name="Cotton Fabric Offcut" data-category="Fabric" data-location="Bandung" data-grade="Grade C" data-volume="150">
                         <img src="/src/img/product/cutton-fabric.webp" alt="" />
                         <div class="flex flex-col gap-3 justify-center text-center">
                             <p class="product-card_title">Cotton Fabric Offcut</p>
@@ -192,7 +215,7 @@
                         </div>
                         <div class="product-card_button">Buy Product</div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-name="PET Flakes Mix Color" data-category="Plastic" data-location="Bandung" data-grade="Grade A" data-volume="512">
                         <img src="/src/img/product/pet-flakes.webp" alt="" />
                         <div class="flex flex-col gap-3 justify-center text-center">
                             <p class="product-card_title">PET Flakes Mix Color</p>
@@ -213,7 +236,7 @@
                         </div>
                         <div class="product-card_button">Buy Product</div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-name="Wood Offcut" data-category="Wood" data-location="Bandung" data-grade="Grade B" data-volume="313">
                         <img src="/src/img/product/wood-offcut.webp" alt="" />
                         <div class="flex flex-col gap-3 justify-center text-center">
                             <p class="product-card_title">Wood Offcut</p>
@@ -234,7 +257,7 @@
                         </div>
                         <div class="product-card_button">Buy Product</div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-name="Resin Waste" data-category="Resin" data-location="Jakarta" data-grade="Grade A" data-volume="240">
                         <img src="/src/img/product/resin-waste.webp" alt="" />
                         <div class="flex flex-col gap-3 justify-center text-center">
                             <p class="product-card_title">Resin Waste</p>
@@ -255,7 +278,7 @@
                         </div>
                         <div class="product-card_button">Buy Product</div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-name="Denim Fabric Offcut" data-category="Fabric" data-location="Surabaya" data-grade="Grade C" data-volume="80">
                         <img src="/src/img/product/denim-fabric.webp" alt="" />
                         <div class="flex flex-col gap-3 justify-center text-center">
                             <p class="product-card_title">Denim Fabric Offcut</p>
@@ -276,7 +299,7 @@
                         </div>
                         <div class="product-card_button">Buy Product</div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card" data-name="Aluminium Scraps" data-category="Metal" data-location="Semarang" data-grade="Grade A" data-volume="600">
                         <img src="/src/img/product/aluminium.webp" alt="" />
                         <div class="flex flex-col gap-3 justify-center text-center">
                             <p class="product-card_title">Aluminium Scraps</p>
@@ -327,7 +350,7 @@
                     <div class="swiper-wrapper">
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
-                            <div class="product-card">
+                            <div class="product-card" data-name="Cotton Fabric Offcut" data-category="Fabric" data-location="Bandung" data-grade="Grade C" data-volume="150">
                                 <img src="/src/img/product/cutton-fabric.webp" alt="" />
                                 <div class="flex flex-col gap-3 justify-center text-center">
                                     <p class="product-card_title">Cotton Fabric Offcut</p>
@@ -351,7 +374,7 @@
                         </div>
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
-                            <div class="product-card">
+                            <div class="product-card" data-name="PET Flakes Mix Color" data-category="Plastic" data-location="Bandung" data-grade="Grade A" data-volume="512">
                                 <img src="/src/img/product/pet-flakes.webp" alt="" />
                                 <div class="flex flex-col gap-3 justify-center text-center">
                                     <p class="product-card_title">PET Flakes Mix Color</p>
@@ -375,7 +398,7 @@
                         </div>
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
-                            <div class="product-card">
+                            <div class="product-card" data-name="Wood Offcut" data-category="Wood" data-location="Bandung" data-grade="Grade B" data-volume="313">
                                 <img src="/src/img/product/wood-offcut.webp" alt="" />
                                 <div class="flex flex-col gap-3 justify-center text-center">
                                     <p class="product-card_title">Wood Offcut</p>
@@ -399,7 +422,7 @@
                         </div>
                         <!-- Slide 4 -->
                         <div class="swiper-slide">
-                            <div class="product-card">
+                            <div class="product-card" data-name="Resin Waste" data-category="Resin" data-location="Jakarta" data-grade="Grade A" data-volume="240">
                                 <img src="/src/img/product/resin-waste.webp" alt="" />
                                 <div class="flex flex-col gap-3 justify-center text-center">
                                     <p class="product-card_title">Resin Waste</p>
@@ -532,6 +555,7 @@
         </main>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
+            // Swiper Initialization
             const swiper = new Swiper('.product-swiper', {
                 slidesPerView: 1,
                 spaceBetween: 20,
@@ -552,6 +576,115 @@
                         slidesPerView: 3,
                     },
                 },
+            });
+
+            // Search and Filter Logic
+            const searchInput = document.getElementById('searchInput');
+            const locationSearch = document.getElementById('locationSearch');
+            const searchButton = document.getElementById('searchButton');
+            const filterCategory = document.getElementById('filterCategory');
+            const filterGrade = document.getElementById('filterGrade');
+            const filterVolume = document.getElementById('filterVolume');
+            const filterLocation = document.getElementById('filterLocation');
+            const resetFilters = document.getElementById('resetFilters');
+            const productCards = document.querySelectorAll('.product-card');
+
+            function filterProducts() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const locSearchVal = locationSearch.value;
+                const catVal = filterCategory.value;
+                const gradeVal = filterGrade.value;
+                const volVal = filterVolume.value;
+                const locVal = filterLocation.value;
+
+                productCards.forEach((card) => {
+                    const name = card.getAttribute('data-name').toLowerCase();
+                    const category = card.getAttribute('data-category');
+                    const location = card.getAttribute('data-location');
+                    const grade = card.getAttribute('data-grade');
+                    const volume = parseInt(card.getAttribute('data-volume'));
+
+                    let isMatch = true;
+
+                    // Search Term (matches name or location)
+                    if (searchTerm && !name.includes(searchTerm) && !location.toLowerCase().includes(searchTerm)) {
+                        isMatch = false;
+                    }
+
+                    // Top Location Search
+                    if (locSearchVal && location !== locSearchVal) {
+                        isMatch = false;
+                    }
+
+                    // Category Filter
+                    if (catVal && category !== catVal) {
+                        isMatch = false;
+                    }
+
+                    // Grade Filter
+                    if (gradeVal && grade !== gradeVal) {
+                        isMatch = false;
+                    }
+
+                    // Location Filter
+                    if (locVal && location !== locVal) {
+                        isMatch = false;
+                    }
+
+                    // Volume Filter
+                    if (volVal) {
+                        if (volVal === 'small' && volume > 100) isMatch = false;
+                        if (volVal === 'medium' && (volume < 101 || volume > 500)) isMatch = false;
+                        if (volVal === 'large' && volume <= 500) isMatch = false;
+                    }
+
+                    // Toggle Visibility
+                    if (isMatch) {
+                        card.style.display = '';
+                        // If it's a swiper slide, we might need to show the parent
+                        if (card.closest('.swiper-slide')) {
+                            card.closest('.swiper-slide').style.display = '';
+                        }
+                    } else {
+                        card.style.display = 'none';
+                        if (card.closest('.swiper-slide')) {
+                            card.closest('.swiper-slide').style.display = 'none';
+                        }
+                    }
+                });
+
+                // Update Swiper after filtering to fix layout
+                swiper.update();
+            }
+
+            // Event Listeners
+            searchButton.addEventListener('click', filterProducts);
+            searchInput.addEventListener('input', filterProducts);
+            locationSearch.addEventListener('change', filterProducts);
+            filterCategory.addEventListener('change', filterProducts);
+            filterGrade.addEventListener('change', filterProducts);
+            filterVolume.addEventListener('change', filterProducts);
+            filterLocation.addEventListener('change', filterProducts);
+
+            resetFilters.addEventListener('click', () => {
+                searchInput.value = '';
+                locationSearch.value = '';
+                filterCategory.value = '';
+                filterGrade.value = '';
+                filterVolume.value = '';
+                filterLocation.value = '';
+                filterProducts();
+            });
+
+            // Category tag click logic (bonus feature)
+            document.querySelectorAll('.cursor-pointer.hover\\:bg-accent').forEach(tag => {
+                tag.addEventListener('click', () => {
+                    const category = tag.querySelector('p').textContent;
+                    filterCategory.value = category === 'Other' ? '' : category;
+                    filterProducts();
+                    // Scroll to products
+                    document.getElementById('productGrid').scrollIntoView({ behavior: 'smooth' });
+                });
             });
         </script>
     </body>

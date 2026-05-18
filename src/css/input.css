@@ -28,13 +28,13 @@
         animation-range: 0px 100px;
     }
     .main-header_nav {
-        @apply px-30 py-6 w-full h-fit flex justify-between items-center border-b border-[#EEEEEE]/20;
+        @apply px-4 lg:px-30 py-4 lg:py-6 w-full h-fit flex justify-between items-center border-b border-[#EEEEEE]/20;
     }
     .main-header_logo {
-        @apply font-manrope font-semibold text-4xl tracking-normal text-primary w-fit h-fit;
+        @apply font-manrope font-semibold text-2xl lg:text-4xl tracking-normal text-primary w-fit h-fit;
     }
     .main-header_menu {
-        @apply flex justify-center items-center gap-6 w-fit h-fit;
+        @apply hidden lg:flex justify-center items-center gap-6 w-fit h-fit;
     }
     .main-header_menu-link {
         @apply font-figtree font-normal text-sm tracking-normal text-[#EEEEEE];
@@ -43,217 +43,217 @@
         animation-range: 0px 100px;
     }
     .main-header_cta {
-        @apply bg-primary rounded-3xl w-fit h-fit px-6 py-3 cursor-pointer;
+        @apply hidden lg:block bg-primary rounded-3xl w-fit h-fit px-6 py-3 cursor-pointer;
     }
     .main-header_cta-text {
         @apply font-figtree font-normal text-base tracking-normal text-white;
     }
     .hero-section_btn-text {
-        @apply font-figtree font-normal text-base tracking-normal text-accent;
+        @apply font-figtree font-normal text-sm lg:text-base tracking-normal text-accent;
     }
     .hero-section_stat-item {
-        @apply flex flex-col justify-center items-start gap-4 w-fit h-fit;
+        @apply flex flex-col justify-center items-center lg:items-start gap-2 lg:gap-4 w-fit h-fit;
     }
     .hero-section_stat-number {
-        @apply font-figtree font-semibold text-3xl tracking-normal text-[#EEEEEE];
+        @apply font-figtree font-semibold text-2xl lg:text-3xl tracking-normal text-[#EEEEEE];
     }
     .hero-section_stat-label {
-        @apply font-figtree font-normal text-xl tracking-normal text-[#DEDEDE];
+        @apply font-figtree font-normal text-sm lg:text-xl tracking-normal text-[#DEDEDE] text-center lg:text-left;
     }
     .section-header {
-        @apply flex flex-col gap-4 h-fit justify-center items-center;
+        @apply flex flex-col gap-4 h-fit justify-center items-center text-center;
     }
     .section-header_title {
-        @apply font-figtree font-medium text-4xl tracking-normal text-black;
+        @apply font-figtree font-medium text-2xl lg:text-4xl tracking-normal text-black;
     }
     .section-header_subtitle {
-        @apply font-figtree font-normal text-xl tracking-normal text-[#ABABAB];
+        @apply font-figtree font-normal text-base lg:text-xl tracking-normal text-[#ABABAB];
     }
     .stat-card {
         @apply flex flex-col items-center justify-center gap-3.5 p-6 w-full h-fit border border-[#DEDEDE] rounded-2xl;
     }
     .stat-card_icon-wrapper {
-        @apply w-15.5 h-15.5 bg-[#80C9FF] p-3.5 rounded-full flex items-center justify-center;
+        @apply w-12 h-12 lg:w-15.5 lg:h-15.5 bg-[#80C9FF] p-3 lg:p-3.5 rounded-full flex items-center justify-center;
     }
     .stat-card_icon-svg {
-        @apply w-8 h-7.75;
+        @apply w-6 h-6 lg:w-8 lg:h-7.75;
     }
     .stat-card_content {
-        @apply flex flex-col justify-center items-center gap-3.5;
+        @apply flex flex-col justify-center items-center gap-2 lg:gap-3.5;
     }
     .stat-card_label {
-        @apply font-figtree font-normal text-xl tracking-normal text-black;
+        @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-black;
     }
     .stat-card_value {
-        @apply font-figtree font-medium text-4xl tracking-normal text-secondary;
+        @apply font-figtree font-medium text-2xl lg:text-4xl tracking-normal text-secondary;
     }
     .stat-card_unit {
-        @apply text-sm text-black;
+        @apply text-xs lg:text-sm text-black;
     }
     .stat-card_desc {
-        @apply font-figtree font-normal text-sm tracking-normal text-black;
+        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-black text-center;
     }
     .problem-item {
-        @apply flex gap-4 items-center justify-center;
+        @apply flex gap-4 items-start lg:items-center justify-center;
     }
     .icon-circle-blue {
-        @apply w-10 h-10 bg-[#80C9FF] rounded-full flex items-center justify-center shrink-0;
+        @apply w-8 h-8 lg:w-10 lg:h-10 bg-[#80C9FF] rounded-full flex items-center justify-center shrink-0;
     }
     .problem-item_text-container {
-        @apply flex flex-col gap-4 pb-4 border-b border-[#DEDEDE];
+        @apply flex flex-col gap-2 lg:gap-4 pb-4 border-b border-[#DEDEDE] w-full;
     }
     .problem-item_title {
-        @apply font-figtree font-semibold text-xl tracking-normal text-black w-full;
+        @apply font-figtree font-semibold text-lg lg:text-xl tracking-normal text-black w-full;
     }
     .problem-item_desc {
-        @apply font-figtree font-normal text-sm tracking-normal text-black w-full;
+        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-black w-full;
     }
     .impact-card {
-        @apply flex flex-col justify-center items-center pb-6 py-3 px-3 gap-4 border border-[#DEDEDE] rounded-2xl w-71.25 h-full;
+        @apply flex flex-col justify-center items-center pb-6 py-3 px-3 gap-4 border border-[#DEDEDE] rounded-2xl w-full sm:w-71.25 h-full;
     }
     .impact-card_image {
-        @apply object-cover object-center w-full h-45.5 rounded-2xl;
+        @apply object-cover object-center w-full h-40 lg:h-45.5 rounded-2xl;
     }
     .impact-card_content {
         @apply flex flex-col justify-center items-center gap-2 w-full h-fit text-center;
     }
     .impact-card_title {
-        @apply font-figtree font-medium text-xl tracking-normal text-black w-fit;
+        @apply font-figtree font-medium text-lg lg:text-xl tracking-normal text-black w-fit;
     }
     .impact-card_desc {
-        @apply font-figtree font-normal text-sm tracking-normal text-black max-w-59.25;
+        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-black max-w-59.25;
     }
     .material-card {
-        @apply flex flex-col items-center gap-8 w-full h-fit border border-[#DEDEDE] rounded-2xl overflow-hidden;
+        @apply flex flex-col items-center gap-4 lg:gap-8 w-full h-fit border border-[#DEDEDE] rounded-2xl overflow-hidden;
     }
     .material-card_image {
-        @apply w-full h-full object-cover object-center;
+        @apply w-full h-48 lg:h-full object-cover object-center;
     }
     .material-card_body {
-        @apply flex flex-col gap-4 px-8 pb-8 w-full h-fit;
+        @apply flex flex-col gap-4 px-4 lg:px-8 pb-4 lg:pb-8 w-full h-fit;
     }
     .material-card_info {
-        @apply flex flex-col gap-4 pb-4 border-b border-[#DEDEDE] w-full h-fit;
+        @apply flex flex-col gap-2 lg:gap-4 pb-4 border-b border-[#DEDEDE] w-full h-fit;
     }
     .material-card_name {
-        @apply font-figtree font-normal text-2xl tracking-normal text-black;
+        @apply font-figtree font-normal text-xl lg:text-2xl tracking-normal text-black;
     }
     .material-card_location {
-        @apply flex justify-start items-center gap-4;
+        @apply flex justify-start items-center gap-2 lg:gap-4;
     }
     .material-card_location-text {
-        @apply font-figtree font-normal text-sm tracking-normal text-[#ABABAB];
+        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-[#ABABAB];
     }
     .material-card_grade-row {
         @apply flex justify-between items-center;
     }
     .material-card_label {
-        @apply font-figtree font-normal text-xl tracking-normal text-[#ABABAB];
+        @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-[#ABABAB];
     }
     .badge-grade {
-        @apply font-figtree font-normal text-xl tracking-normal text-secondary px-4 py-2 bg-[linear-gradient(90deg,#0D99FF4D_0%,#80C9FF_100%)] rounded-2xl w-fit h-fit;
+        @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-secondary px-3 lg:px-4 py-1 lg:py-2 bg-[linear-gradient(90deg,#0D99FF4D_0%,#80C9FF_100%)] rounded-2xl w-fit h-fit;
     }
     .material-card_stats {
-        @apply flex flex-col gap-4 w-full h-fit;
+        @apply flex flex-col gap-2 lg:gap-4 w-full h-fit;
     }
     .material-card_stats-row {
         @apply flex justify-between items-center;
     }
     .material-card_value {
-        @apply font-figtree font-semibold text-xl tracking-normal text-black;
+        @apply font-figtree font-semibold text-lg lg:text-xl tracking-normal text-black;
     }
     .material-card_time {
-        @apply font-figtree font-normal text-xl tracking-normal text-black;
+        @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-black;
     }
     .leaderboard-card {
-        @apply flex flex-col p-8 w-full h-fit border border-[#DEDEDE] rounded-3xl transition-transform duration-300 hover:-translate-y-2;
+        @apply flex flex-col p-6 lg:p-8 w-full h-fit border border-[#DEDEDE] rounded-3xl transition-transform duration-300 hover:-translate-y-2;
     }
     .leaderboard-card_avatar-container {
         @apply relative flex justify-center w-full mt-4;
     }
     .leaderboard-card_avatar-frame {
-        @apply relative w-24 h-24;
+        @apply relative w-20 h-20 lg:w-24 lg:h-24;
     }
     .leaderboard-card_image {
         @apply w-full h-full object-cover object-center rounded-full overflow-hidden border-4 border-white shadow-md bg-white;
     }
     .leaderboard-card_rank-icon {
-        @apply absolute -bottom-4 -right-4 w-16 h-16;
+        @apply absolute -bottom-2 -right-2 lg:-bottom-4 lg:-right-4 w-12 h-12 lg:w-16 lg:h-16;
     }
     .leaderboard-card_profile {
-        @apply flex flex-col items-center gap-2 mt-8 w-full h-fit;
+        @apply flex flex-col items-center gap-1 lg:gap-2 mt-6 lg:mt-8 w-full h-fit;
     }
     .leaderboard-card_name {
-        @apply font-figtree font-semibold text-xl tracking-normal text-black;
+        @apply font-figtree font-semibold text-lg lg:text-xl tracking-normal text-black text-center;
     }
     .leaderboard-card_category {
-        @apply font-figtree font-normal text-sm tracking-normal text-[#ABABAB];
+        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-[#ABABAB] text-center;
     }
     .leaderboard-stats {
-        @apply flex flex-col mt-8 p-6 gap-4 w-full h-fit bg-[#F0F9FF] border border-[#E0F2FE] rounded-2xl;
+        @apply flex flex-col mt-6 lg:mt-8 p-4 lg:p-6 gap-3 lg:gap-4 w-full h-fit bg-[#F0F9FF] border border-[#E0F2FE] rounded-2xl;
     }
     .leaderboard-stats_item {
         @apply flex justify-between items-center w-full h-fit;
     }
     .leaderboard-stats_label {
-        @apply font-figtree font-normal text-xl tracking-normal text-black;
+        @apply font-figtree font-normal text-base lg:text-xl tracking-normal text-black;
     }
     .leaderboard-stats_value {
-        @apply font-figtree font-semibold text-xl tracking-normal text-primary;
+        @apply font-figtree font-semibold text-base lg:text-xl tracking-normal text-primary;
     }
     .leaderboard-stats_location {
-        @apply flex items-center gap-2;
+        @apply flex items-center gap-1 lg:gap-2;
     }
     .leaderboard-table_row {
-        @apply grid grid-cols-[80px_2.5fr_1.5fr_1.5fr_1fr] gap-4 bg-white py-4 px-6 items-center border-b border-gray-100 hover:bg-gray-50 transition-colors;
+        @apply grid grid-cols-[50px_1fr_1fr] lg:grid-cols-[80px_2.5fr_1.5fr_1.5fr_1fr] gap-2 lg:gap-4 bg-white py-4 px-4 lg:px-6 items-center border-b border-gray-100 hover:bg-gray-50 transition-colors;
     }
     .leaderboard-table_rank-number {
-        @apply font-figtree font-semibold text-3xl tracking-normal text-black text-center;
+        @apply font-figtree font-semibold text-xl lg:text-3xl tracking-normal text-black text-center;
     }
     .leaderboard-table_umkm-info {
-        @apply flex items-center gap-8 w-full h-fit;
+        @apply flex items-center gap-4 lg:gap-8 w-full h-fit;
     }
     .leaderboard-table_avatar {
-        @apply w-20.5 h-20.5 object-cover object-center border border-[#ABABAB] rounded-full overflow-hidden;
+        @apply w-12 h-12 lg:w-20.5 lg:h-20.5 object-cover object-center border border-[#ABABAB] rounded-full overflow-hidden shrink-0;
     }
     .leaderboard-table_umkm-details {
-        @apply flex flex-col gap-1;
+        @apply flex flex-col gap-0.5 lg:gap-1;
     }
     .leaderboard-table_umkm-name {
-        @apply font-figtree font-semibold text-2xl tracking-normal text-black;
+        @apply font-figtree font-semibold text-base lg:text-2xl tracking-normal text-black;
     }
     .leaderboard-table_umkm-category {
-        @apply font-figtree font-normal text-xl tracking-normal text-[#ABABAB];
+        @apply font-figtree font-normal text-xs lg:text-xl tracking-normal text-[#ABABAB];
     }
     .leaderboard-table_stat {
-        @apply font-figtree font-semibold text-xl tracking-normal text-primary;
+        @apply font-figtree font-semibold text-sm lg:text-xl tracking-normal text-primary;
     }
     .leaderboard-table_location {
-        @apply flex items-center gap-2 w-full h-fit;
+        @apply hidden lg:flex items-center gap-2 w-full h-fit;
     }
     .cta-banner {
-        @apply flex justify-between items-center w-full h-fit;
+        @apply flex flex-col lg:flex-row justify-between items-center gap-8 w-full h-fit p-6 lg:p-0;
     }
     .cta-banner_content {
-        @apply flex justify-center items-center gap-4 w-fit h-fit;
+        @apply flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-4 w-fit h-fit text-center lg:text-left;
     }
     .cta-banner_image {
-        @apply w-60 h-45 object-cover object-center;
+        @apply w-full lg:w-60 h-auto lg:h-45 object-contain lg:object-cover object-center max-w-xs;
     }
     .cta-banner_text-group {
-        @apply flex flex-col gap-4 w-fit h-fit;
+        @apply flex flex-col gap-2 lg:gap-4 w-fit h-fit;
     }
     .cta-banner_title {
-        @apply font-figtree font-semibold text-4xl tracking-normal text-black;
+        @apply font-figtree font-semibold text-2xl lg:text-4xl tracking-normal text-black;
     }
     .cta-banner_description {
-        @apply font-figtree font-normal text-xl tracking-normal text-[#ABABAB];
+        @apply font-figtree font-normal text-base lg:text-xl tracking-normal text-[#ABABAB];
     }
     .cta-banner_button {
-        @apply p-4 w-fit h-fit bg-primary rounded-2xl cursor-pointer;
+        @apply p-4 w-full lg:w-fit h-fit bg-primary rounded-2xl cursor-pointer;
     }
     .cta-banner_button-text {
-        @apply font-figtree font-normal text-xl tracking-normal text-accent;
+        @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-accent;
     }
     .main-footer_nav-col {
         @apply col-span-2;

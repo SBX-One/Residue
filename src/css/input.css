@@ -217,9 +217,6 @@
     .leaderboard-stats_location {
         @apply flex items-center gap-1 lg:gap-2;
     }
-    .leaderboard-table_row {
-        @apply grid grid-cols-[50px_1fr_1fr] lg:grid-cols-[80px_2.5fr_1.5fr_1.5fr_1fr] gap-2 lg:gap-4 bg-white py-4 px-4 lg:px-6 items-center border-b border-gray-100 hover:bg-gray-50 transition-colors;
-    }
     .leaderboard-table_rank-number {
         @apply font-figtree font-semibold text-xl lg:text-3xl tracking-normal text-black text-center;
     }
@@ -242,7 +239,7 @@
         @apply font-figtree font-semibold text-sm lg:text-xl tracking-normal text-primary;
     }
     .leaderboard-table_location {
-        @apply hidden lg:flex items-center gap-2 w-full h-fit;
+        @apply font-figtree font-normal text-sm lg:text-xl tracking-normal text-black;
     }
     .cta-banner {
         @apply flex flex-col lg:flex-row justify-between items-center gap-8 w-full h-fit p-6 lg:p-0;

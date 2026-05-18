@@ -65,13 +65,13 @@
         @apply font-figtree font-normal text-sm lg:text-base tracking-normal text-accent;
     }
     .hero-section_stat-item {
-        @apply flex flex-col justify-center items-center lg:items-start gap-2 lg:gap-4 w-fit h-fit;
+        @apply flex flex-col justify-center items-center md:items-start gap-2 lg:gap-4 w-fit h-fit;
     }
     .hero-section_stat-number {
         @apply font-figtree font-semibold text-2xl lg:text-3xl tracking-normal text-[#EEEEEE];
     }
     .hero-section_stat-label {
-        @apply font-figtree font-normal text-sm lg:text-xl tracking-normal text-[#DEDEDE] text-center lg:text-left;
+        @apply font-figtree font-normal text-sm lg:text-xl tracking-normal text-[#DEDEDE] text-center md:text-left;
     }
     .section-header {
         @apply flex flex-col gap-4 h-fit justify-center items-center text-center;

@@ -6,7 +6,7 @@
         <title>Residue</title>
         <link rel="stylesheet" href="./src/css/output.css" />
     </head>
-    <body>
+    <body class="overflow-x-hidden">
         <header class="main-header">
             <nav class="main-header_nav">
                 <h1 class="main-header_logo">Residue</h1>
@@ -17,58 +17,66 @@
                     <li><a href="#" class="main-header_menu-link">About</a></li>
                     <li><a href="#" class="main-header_menu-link">Detail</a></li>
                 </ul>
-                <button class="main-header_cta" title="Get In Touch" aria-label="Get In Touch">
-                    <span class="main-header_cta-text">Get In Touch</span>
-                </button>
+                <div class="flex items-center gap-4">
+                    <button class="main-header_cta" title="Get In Touch" aria-label="Get In Touch">
+                        <span class="main-header_cta-text">Get In Touch</span>
+                    </button>
+                    <button class="lg:hidden text-primary p-2" title="Menu" aria-label="Menu">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
+                            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
             </nav>
         </header>
 
         <main>
-            <section class="h-svh bg-[url(/src/img/hero-section.webp)] bg-cover bg-center bg-no-repeat">
-                <div class="container mx-auto h-full flex flex-col items-start justify-center gap-11">
-                    <div class="flex flex-col gap-11 w-full h-fit">
-                        <div class="flex flex-col gap-8 w-full h-fit">
-                            <h3 class="font-figtree font-semibold text-5xl tracking-normal text-[#EEEEEE] max-w-183.25">
+            <!-- 1. Hero Section -->
+            <section class="min-h-svh lg:h-svh bg-[url(/src/img/hero-section.webp)] bg-cover bg-center bg-no-repeat py-20 lg:py-0">
+                <div class="container mx-auto h-full flex flex-col items-start justify-center gap-11 px-4 lg:px-0">
+                    <div class="flex flex-col gap-8 lg:gap-11 w-full h-fit mt-10 lg:mt-0">
+                        <div class="flex flex-col gap-6 lg:gap-8 w-full h-fit">
+                            <h3 class="font-figtree font-semibold text-3xl lg:text-5xl tracking-normal text-[#EEEEEE] max-w-full lg:max-w-183.25">
                                 Turning Industrial <span class="text-primary">Residue</span> Into Sustainable Opportunities
                             </h3>
-                            <p class="font-figtree font-normal text-xl tracking-normal text-[#ABABAB] max-w-183.25">
+                            <p class="font-figtree font-normal text-base lg:text-xl tracking-normal text-[#ABABAB] max-w-full lg:max-w-183.25">
                                 <span class="text-primary">Residue</span> connects UMKM, communities, and recyclers to transform unmanaged industrial waste into sustainable resources.
                             </p>
                         </div>
-                        <div class="flex justify-center items-center gap-6 w-fit h-fit">
-                            <button class="bg-primary rounded-3xl w-fit h-fit px-6 py-3 cursor-pointer" title="Join As Partner" aria-label="Join As Partner">
-                                <span class="hero-section_btn-text">Join As Partner</span>
+                        <div class="flex flex-col sm:flex-row justify-start items-center gap-4 lg:gap-6 w-full lg:w-fit h-fit">
+                            <button class="bg-primary rounded-3xl w-full lg:w-fit h-fit px-6 py-3 cursor-pointer" title="Join As Partner" aria-label="Join As Partner">
+                                <span class="hero-section_btn-text text-white">Join As Partner</span>
                             </button>
-                            <button class="bg-transparent border border-secondary rounded-3xl w-fit h-fit px-6 py-3 cursor-pointer" title="See Market Store" aria-label="See Market Store">
-                                <span class="hero-section_btn-text">See Market Store</span>
+                            <button class="bg-transparent border border-secondary rounded-3xl w-full lg:w-fit h-fit px-6 py-3 cursor-pointer" title="See Market Store" aria-label="See Market Store">
+                                <span class="hero-section_btn-text text-white">See Market Store</span>
                             </button>
                         </div>
                     </div>
 
-                    <div class="flex justify-between items-center w-full h-fit">
-                        <div class="flex justify-center items-center gap-10 w-fit h-fit">
+                    <div class="flex flex-col lg:flex-row justify-between items-center w-full h-fit gap-8 lg:gap-0">
+                        <div class="flex flex-wrap justify-center lg:justify-start items-center gap-6 lg:gap-10 w-full lg:w-fit h-fit">
                             <div class="hero-section_stat-item">
-                                <p class="hero-section_stat-number">12k+</p>
-                                <p class="hero-section_stat-label">Tons of CO2 reduced</p>
+                                <p class="hero-section_stat-number text-[#EEEEEE] font-semibold text-2xl lg:text-3xl">12k+</p>
+                                <p class="hero-section_stat-label text-[#DEDEDE] text-sm lg:text-xl text-center lg:text-left">Tons of CO2 reduced</p>
                             </div>
                             <div class="hero-section_stat-item">
-                                <p class="hero-section_stat-number">200k+ kg</p>
-                                <p class="hero-section_stat-label">Of waste collected</p>
+                                <p class="hero-section_stat-number text-[#EEEEEE] font-semibold text-2xl lg:text-3xl">200k+ kg</p>
+                                <p class="hero-section_stat-label text-[#DEDEDE] text-sm lg:text-xl text-center lg:text-left">Of waste collected</p>
                             </div>
                             <div class="hero-section_stat-item">
-                                <p class="hero-section_stat-number">22+</p>
-                                <p class="hero-section_stat-label">Partners</p>
+                                <p class="hero-section_stat-number text-[#EEEEEE] font-semibold text-2xl lg:text-3xl">22+</p>
+                                <p class="hero-section_stat-label text-[#DEDEDE] text-sm lg:text-xl text-center lg:text-left">Partners</p>
                             </div>
                         </div>
-                        <div class="flex justify-center items-center gap-4 p-4 rounded-2xl bg-[#ABABAB]/48 backdrop-blur-xs w-fit h-fit">
+                        <div class="flex justify-center items-center gap-4 p-4 lg:p-4 rounded-2xl bg-[#ABABAB]/48 backdrop-blur-xs w-full lg:w-fit h-fit max-w-md lg:max-w-none">
                             <img
                                 src="./src/img/a person using a trash grabber tool to collect litter into a bag, symbolizing active environmental responsibility toward building a cleaner tomorrow.webp"
-                                alt="A person using a trash grabber tool to collect litter into a bag, symbolizing active environmental responsibility toward building a cleaner tomorrow.S"
-                                class="w-31.25 h-31.25 shrink-0 object-cover object-center rounded-2xl overflow-hidden"
+                                alt="A person using a trash grabber tool to collect litter into a bag"
+                                class="w-20 h-20 lg:w-31.25 lg:h-31.25 shrink-0 object-cover object-center rounded-2xl overflow-hidden"
                             />
-                            <div class="flex flex-col gap-4 max-w-77 h-fit">
-                                <p class="font-figtree font-normal text-2xl tracking-normal text-[#EEEEEE] pb-4 border-b border-[#DEDEDE]">Building a Cleaner Tomorrow</p>
-                                <p class="font-figtree font-normal text-sm tracking-normal text-[#EEEEEE]">
+                            <div class="flex flex-col gap-2 lg:gap-4 max-w-full lg:max-w-77 h-fit">
+                                <p class="font-figtree font-normal text-lg lg:text-2xl tracking-normal text-[#EEEEEE] pb-2 lg:pb-4 border-b border-[#DEDEDE]">Building a Cleaner Tomorrow</p>
+                                <p class="font-figtree font-normal text-xs lg:text-sm tracking-normal text-[#EEEEEE]">
                                     Transforming industrial residue into sustainable opportunities through collaboration, innovation, and environmental responsibility.
                                 </p>
                             </div>
@@ -77,88 +85,72 @@
                 </div>
             </section>
 
-            <section class="container mx-auto space-y-20 py-25">
+            <!-- 2. Small Steps Section (Stat Cards) -->
+            <section class="container mx-auto space-y-12 lg:space-y-20 py-16 lg:py-25 px-4 lg:px-0">
                 <div class="section-header">
                     <h3 class="section-header_title">Let's Create Small Steps For Further Impact</h3>
                     <p class="section-header_subtitle">With Us, Create A Better Environment</p>
                 </div>
-                <div class="flex items-center justify-center gap-8 h-fit w-full">
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-8 h-fit w-full">
                     <div class="stat-card">
                         <div class="stat-card_icon-wrapper">
                             <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="stat-card_icon-svg">
-                                <path
-                                    d="M24 8C9.6 11.2 6.24 21.072 2.912 29.344L5.936 30.4L7.456 26.72C8.224 26.992 9.024 27.2 9.6 27.2C27.2 27.2 32 0 32 0C30.4 3.2 19.2 3.6 11.2 5.2C3.2 6.8 0 13.6 0 16.8C0 20 2.8 22.8 2.8 22.8C8 8 24 8 24 8Z"
-                                    fill="#085C99"
-                                />
+                                <path d="M24 8C9.6 11.2 6.24 21.072 2.912 29.344L5.936 30.4L7.456 26.72C8.224 26.992 9.024 27.2 9.6 27.2C27.2 27.2 32 0 32 0C30.4 3.2 19.2 3.6 11.2 5.2C3.2 6.8 0 13.6 0 16.8C0 20 2.8 22.8 2.8 22.8C8 8 24 8 24 8Z" fill="#085C99"/>
                             </svg>
                         </div>
-
                         <div class="stat-card_content">
                             <p class="stat-card_label">Trash Collected</p>
                             <p class="stat-card_value">123.212 <span class="stat-card_unit">KG</span></p>
                         </div>
-
                         <p class="stat-card_desc">total waste that is successfully managed</p>
                     </div>
 
                     <div class="stat-card">
                         <div class="stat-card_icon-wrapper">
                             <svg viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="stat-card_icon-svg">
-                                <path
-                                    d="M3.65714 0C2.68721 0 1.757 0.385305 1.07115 1.07115C0.385305 1.757 0 2.68721 0 3.65714V14.6286C0 15.5985 0.385305 16.5287 1.07115 17.2146C1.757 17.9004 2.68721 18.2857 3.65714 18.2857H9.14286V14.6286H3.65714V3.65714H9.14286V0H3.65714ZM14.6286 0C13.6586 0 12.7284 0.385305 12.0426 1.07115C11.3567 1.757 10.9714 2.68721 10.9714 3.65714V14.6286C10.9714 15.5985 11.3567 16.5287 12.0426 17.2146C12.7284 17.9004 13.6586 18.2857 14.6286 18.2857H18.2857C19.2556 18.2857 20.1859 17.9004 20.8717 17.2146C21.5576 16.5287 21.9429 15.5985 21.9429 14.6286V3.65714C21.9429 2.68721 21.5576 1.757 20.8717 1.07115C20.1859 0.385305 19.2556 0 18.2857 0H14.6286ZM14.6286 3.65714H18.2857V14.6286H14.6286V3.65714ZM23.7714 6.4V9.14286H29.2571V11.8857H26.5143C25.7868 11.8857 25.0892 12.1747 24.5748 12.6891C24.0604 13.2035 23.7714 13.9011 23.7714 14.6286V20.1143H32V17.3714H26.5143V14.6286H29.2571C29.9846 14.6286 30.6822 14.3396 31.1966 13.8252C31.711 13.3108 32 12.6132 32 11.8857V9.14286C32 8.41541 31.711 7.71775 31.1966 7.20336C30.6822 6.68898 29.9846 6.4 29.2571 6.4H23.7714Z"
-                                    fill="#085C99"
-                                />
+                                <path d="M3.65714 0C2.68721 0 1.757 0.385305 1.07115 1.07115C0.385305 1.757 0 2.68721 0 3.65714V14.6286C0 15.5985 0.385305 16.5287 1.07115 17.2146C1.757 17.9004 2.68721 18.2857 3.65714 18.2857H9.14286V14.6286H3.65714V3.65714H9.14286V0H3.65714ZM14.6286 0C13.6586 0 12.7284 0.385305 12.0426 1.07115C11.3567 1.757 10.9714 2.68721 10.9714 3.65714V14.6286C10.9714 15.5985 11.3567 16.5287 12.0426 17.2146C12.7284 17.9004 13.6586 18.2857 14.6286 18.2857H18.2857C19.2556 18.2857 20.1859 17.9004 20.8717 17.2146C21.5576 16.5287 21.9429 15.5985 21.9429 14.6286V3.65714C21.9429 2.68721 21.5576 1.757 20.8717 1.07115C20.8717 0.385305 19.2556 0 18.2857 0H14.6286ZM14.6286 3.65714H18.2857V14.6286H14.6286V3.65714ZM23.7714 6.4V9.14286H29.2571V11.8857H26.5143C25.7868 11.8857 25.0892 12.1747 24.5748 12.6891C24.0604 13.2035 23.7714 13.9011 23.7714 14.6286V20.1143H32V17.3714H26.5143V14.6286H29.2571C29.9846 14.6286 30.6822 14.3396 31.1966 13.8252C31.711 13.3108 32 12.6132 32 11.8857V9.14286C32 8.41541 31.711 7.71775 31.1966 7.20336C30.6822 6.68898 29.9846 6.4 29.2571 6.4H23.7714Z" fill="#085C99"/>
                             </svg>
                         </div>
-
                         <div class="stat-card_content">
                             <p class="stat-card_label">CO<sub>2</sub> Reduced</p>
                             <p class="stat-card_value">203.324 <span class="stat-card_unit">KG</span></p>
                         </div>
-
                         <p class="stat-card_desc">total carbon emissions successfully eliminated</p>
                     </div>
 
                     <div class="stat-card">
                         <div class="stat-card_icon-wrapper">
                             <svg viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg" class="stat-card_icon-svg">
-                                <path
-                                    d="M16 24.8889H5.33333V17.7778H16M32 17.7778V14.2222L30.2222 5.33333H1.77778L0 14.2222V17.7778H1.77778V28.4444H19.5556V17.7778H26.6667V28.4444H30.2222V17.7778M30.2222 0H1.77778V3.55556H30.2222V0Z"
-                                    fill="#085C99"
-                                />
+                                <path d="M16 24.8889H5.33333V17.7778H16M32 17.7778V14.2222L30.2222 5.33333H1.77778L0 14.2222V17.7778H1.77778V28.4444H19.5556V17.7778H26.6667V28.4444H30.2222V17.7778M30.2222 0H1.77778V3.55556H30.2222V0Z" fill="#085C99"/>
                             </svg>
                         </div>
-
                         <div class="stat-card_content">
                             <p class="stat-card_label">UMKM Supported</p>
                             <p class="stat-card_value">1.233</p>
                         </div>
-
                         <p class="stat-card_desc">total number of UMKM involved in this action</p>
                     </div>
                 </div>
             </section>
 
-            <section class="container mx-auto py-25 flex justify-between items-stretch">
-                <div class="flex flex-col h-fit max-w-135.5">
-                    <div class="flex flex-col gap-4">
-                        <p class="font-figtree font-normal text-3xl tracking-normal text-secondary">Be Aware Of Surroundings</p>
-                        <h3 class="font-figtree font-semibold text-5xl tracking-normal text-black">
+            <!-- 3. Awareness Section -->
+            <section class="container mx-auto py-16 lg:py-25 flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-12 lg:gap-0 px-4 lg:px-0">
+                <div class="flex flex-col h-fit max-w-full lg:max-w-135.5">
+                    <div class="flex flex-col gap-4 text-center lg:text-left items-center lg:items-start">
+                        <p class="font-figtree font-normal text-xl lg:text-3xl tracking-normal text-secondary">Be Aware Of Surroundings</p>
+                        <h3 class="font-figtree font-semibold text-3xl lg:text-5xl tracking-normal text-black">
                             Indonesia's Growing Micro-Waste <span class="bg-clip-text text-transparent bg-[linear-gradient(90deg,#0D99FF4D_60%,#085C99_100%)]">Problem</span>
                         </h3>
-                        <p class="font-figtree font-normal text-xl tracking-normal text-black w-full">
+                        <p class="font-figtree font-normal text-base lg:text-xl tracking-normal text-black w-full">
                             Creative industries and UMKM produce thousands of tons of residual waste every day, yet most of it remains unmanaged and underutilized.
                         </p>
                     </div>
-                    <hr class="border-t border-secondary my-4 w-20.5" />
-                    <div class="flex flex-col gap-8 h-fit">
+                    <hr class="border-t border-secondary my-6 lg:my-4 w-20.5 mx-auto lg:mx-0" />
+                    <div class="flex flex-col gap-6 lg:gap-8 h-fit">
                         <div class="problem-item">
                             <div class="icon-circle-blue">
                                 <svg viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4.5">
-                                    <path
-                                        d="M4.83871 0V0.967742H0V2.90323H0.967742V15.4839C0.967742 15.9972 1.17166 16.4895 1.53463 16.8525C1.89761 17.2154 2.3899 17.4194 2.90323 17.4194H12.5806C13.094 17.4194 13.5863 17.2154 13.9492 16.8525C14.3122 16.4895 14.5161 15.9972 14.5161 15.4839V2.90323H15.4839V0.967742H10.6452V0H4.83871ZM2.90323 2.90323H12.5806V15.4839H2.90323V2.90323ZM4.83871 4.83871V13.5484H6.77419V4.83871H4.83871ZM8.70968 4.83871V13.5484H10.6452V4.83871H8.70968Z"
-                                        fill="#085C99"
-                                    />
+                                    <path d="M4.83871 0V0.967742H0V2.90323H0.967742V15.4839C0.967742 15.9972 1.17166 16.4895 1.53463 16.8525C1.89761 17.2154 2.3899 17.4194 2.90323 17.4194H12.5806C13.094 17.4194 13.5863 17.2154 13.9492 16.8525C14.3122 16.4895 14.5161 15.9972 14.5161 15.4839V2.90323H15.4839V0.967742H10.6452V0H4.83871ZM2.90323 2.90323H12.5806V15.4839H2.90323V2.90323ZM4.83871 4.83871V13.5484H6.77419V4.83871H4.83871ZM8.70968 4.83871V13.5484H10.6452V4.83871H8.70968Z" fill="#085C99"/>
                                 </svg>
                             </div>
                             <div class="problem-item_text-container">
@@ -170,10 +162,7 @@
                         <div class="problem-item">
                             <div class="icon-circle-blue">
                                 <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-4">
-                                    <path
-                                        d="M2.74286 0C2.01541 0 1.31775 0.288979 0.803364 0.803364C0.288979 1.31775 0 2.01541 0 2.74286V10.9714C0 11.6989 0.288979 12.3965 0.803364 12.9109C1.31775 13.4253 2.01541 13.7143 2.74286 13.7143H6.85714V10.9714H2.74286V2.74286H6.85714V0H2.74286ZM10.9714 0C10.244 0 9.54632 0.288979 9.03194 0.803364C8.51755 1.31775 8.22857 2.01541 8.22857 2.74286V10.9714C8.22857 11.6989 8.51755 12.3965 9.03194 12.9109C9.54632 13.4253 10.244 13.7143 10.9714 13.7143H13.7143C14.4417 13.7143 15.1394 13.4253 15.6538 12.9109C16.1682 12.3965 16.4571 11.6989 16.4571 10.9714V2.74286C16.4571 2.01541 16.1682 1.31775 15.6538 0.803364C15.1394 0.288979 14.4417 0 13.7143 0H10.9714ZM10.9714 2.74286H13.7143V10.9714H10.9714V2.74286ZM17.8286 4.8V6.85714H21.9429V8.91429H19.8857C19.3401 8.91429 18.8169 9.13102 18.4311 9.51681C18.0453 9.9026 17.8286 10.4258 17.8286 10.9714V15.0857H24V13.0286H19.8857V10.9714H21.9429C22.4884 10.9714 23.0117 10.7547 23.3975 10.3689C23.7833 9.98312 24 9.45987 24 8.91429V6.85714C24 6.31155 23.7833 5.78831 23.3975 5.40252C23.0117 5.01673 22.4884 4.8 21.9429 4.8H17.8286Z"
-                                        fill="#085C99"
-                                    />
+                                    <path d="M2.74286 0C2.01541 0 1.31775 0.288979 0.803364 0.803364C0.288979 1.31775 0 2.01541 0 2.74286V10.9714C0 11.6989 0.288979 12.3965 0.803364 12.9109C1.31775 13.4253 2.01541 13.7143 2.74286 13.7143H6.85714V10.9714H2.74286V2.74286H6.85714V0H2.74286ZM10.9714 0C10.244 0 9.54632 0.288979 9.03194 0.803364C8.51755 1.31775 8.22857 2.01541 8.22857 2.74286V10.9714C8.22857 11.6989 8.51755 12.3965 9.03194 12.9109C9.54632 13.4253 10.244 13.7143 10.9714 13.7143H13.7143C14.4417 13.7143 15.1394 13.4253 15.6538 12.9109C16.1682 12.3965 16.4571 11.6989 16.4571 10.9714V2.74286C16.4571 2.01541 16.1682 1.31775 15.6538 0.803364C15.1394 0.288979 14.4417 0 13.7143 0H10.9714ZM10.9714 2.74286H13.7143V10.9714H10.9714V2.74286ZM17.8286 4.8V6.85714H21.9429V8.91429H19.8857C19.3401 8.91429 18.8169 9.13102 18.4311 9.51681C18.0453 9.9026 17.8286 10.4258 17.8286 10.9714V15.0857H24V13.0286H19.8857V10.9714H21.9429C22.4884 10.9714 23.0117 10.7547 23.3975 10.3689C23.7833 9.98312 24 9.45987 24 8.91429V6.85714C24 6.31155 23.7833 5.78831 23.3975 5.40252C23.0117 5.01673 22.4884 4.8 21.9429 4.8H17.8286Z" fill="#085C99"/>
                                 </svg>
                             </div>
                             <div class="problem-item_text-container">
@@ -185,10 +174,7 @@
                         <div class="problem-item">
                             <div class="icon-circle-blue">
                                 <svg viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-2.5">
-                                    <path
-                                        d="M10.8387 9.29032L12.6116 7.51742L8.83355 3.73935L5.73677 6.83613L0 1.09161L1.09161 0L5.73677 4.64516L8.83355 1.54839L13.711 6.41806L15.4839 4.64516V9.29032H10.8387Z"
-                                        fill="#085C99"
-                                    />
+                                    <path d="M10.8387 9.29032L12.6116 7.51742L8.83355 3.73935L5.73677 6.83613L0 1.09161L1.09161 0L5.73677 4.64516L8.83355 1.54839L13.711 6.41806L15.4839 4.64516V9.29032H10.8387Z" fill="#085C99"/>
                                 </svg>
                             </div>
                             <div class="problem-item_text-container">
@@ -198,7 +184,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-147.5 overflow-hidden rounded-2xl">
+                <div class="w-full lg:w-147.5 overflow-hidden rounded-2xl h-64 lg:h-auto">
                     <img
                         src="./src/img/people doing community service by collecting trash together.webp"
                         alt="People doing community service by collecting trash together"
@@ -207,87 +193,36 @@
                 </div>
             </section>
 
-            <section class="container mx-auto py-25 space-y-20">
+            <!-- 4. Impact Section -->
+            <section class="container mx-auto py-16 lg:py-25 space-y-12 lg:space-y-20 px-4 lg:px-0">
                 <div class="section-header">
                     <h3 class="section-header_title">How Residue Creates Sustainable Impact</h3>
                     <p class="section-header_subtitle">We connect people, technology, and resources to turn industrial residue into sustainable value</p>
                 </div>
-                <div class="flex justify-center items-center gap-5 w-full h-fit">
+                <div class="flex flex-wrap lg:flex-nowrap justify-center items-stretch gap-6 lg:gap-5 w-full h-fit">
                     <div class="impact-card">
-                        <img
-                            src="./src/img/a person carrying a crate of sorted waste materials, including plastic bottles and cans, ready for redistribution to local UMKM for repurposing.webp"
-                            alt="A person carrying a crate of sorted waste materials, including plastic bottles and cans, ready for redistribution to local UMKM for repurposing"
-                            class="impact-card_image"
-                            loading="lazy"
-                        />
-                        <div class="icon-circle-blue">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
-                                <path
-                                    d="M23.5972 14.649L20.6342 19.7809C20.0535 20.8002 18.975 21.3335 17.8846 21.2624H15.5142V23.6328L12.5512 18.2994L15.5142 12.966V15.3364H18.8564L16.2253 10.7734L21.3572 7.81043L23.4905 11.5082C24.1069 12.4208 24.1898 13.6416 23.5972 14.649ZM8.65192 0H14.5779C15.7394 0 16.7468 0.675561 17.2327 1.64742L18.4179 3.70966L20.4683 2.52446L17.3394 7.75117L11.2356 7.85784L13.286 6.67264L11.6149 3.76892L8.99562 8.33192L3.85188 5.36893L5.98523 1.67112C6.47116 0.687413 7.47858 0 8.65192 0ZM3.72151 19.7927L0.758524 14.6609C0.177779 13.6534 0.260743 12.4445 0.865192 11.5319L2.05039 9.48155L0 8.29636L6.0919 8.39118L9.23266 13.6297L7.18228 12.4445L5.51115 15.3364H10.7734V21.2624H6.50672C5.95146 21.3026 5.39607 21.1861 4.9037 20.9263C4.41133 20.6665 4.00174 20.2738 3.72151 19.7927Z"
-                                    fill="#085C99"
-                                />
-                            </svg>
-                        </div>
+                        <img src="./src/img/a person carrying a crate of sorted waste materials, including plastic bottles and cans, ready for redistribution to local UMKM for repurposing.webp" alt="Waste Redistribution" class="impact-card_image" loading="lazy" />
                         <div class="impact-card_content">
                             <p class="impact-card_title">Waste Redistribution</p>
                             <p class="impact-card_desc">Connect unused industrial waste with recyclers and local UMKM that can repurpose materials sustainably.</p>
                         </div>
                     </div>
-
                     <div class="impact-card">
-                        <img
-                            src="./src/img/a young woman sorting materials into bags, illustrating the process of preparing waste for a transparent exchange in a circular marketplace.webp"
-                            alt="A young woman sorting materials into bags, illustrating the process of preparing waste for a transparent exchange in a circular marketplace."
-                            class="impact-card_image"
-                            loading="lazy"
-                        />
-                        <div class="icon-circle-blue">
-                            <svg viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
-                                <path
-                                    d="M12 18.6667H4V13.3333H12M24 13.3333V10.6667L22.6667 4H1.33333L0 10.6667V13.3333H1.33333V21.3333H14.6667V13.3333H20V21.3333H22.6667V13.3333M22.6667 0H1.33333V2.66667H22.6667V0Z"
-                                    fill="#085C99"
-                                />
-                            </svg>
-                        </div>
+                        <img src="./src/img/a young woman sorting materials into bags, illustrating the process of preparing waste for a transparent exchange in a circular marketplace.webp" alt="Circular Marketplace" class="impact-card_image" loading="lazy" />
                         <div class="impact-card_content">
                             <p class="impact-card_title">Circular Marketplace</p>
                             <p class="impact-card_desc">A Smart marketplace that enables transparent waste exchange and sustainable material sourcing.</p>
                         </div>
                     </div>
-
                     <div class="impact-card">
-                        <img
-                            src="./src/img/a professional using a tablet to monitor real-time environmental impact data and waste metrics.webp"
-                            alt="A professional using a tablet to monitor real-time environmental impact data and waste metrics"
-                            class="impact-card_image"
-                            loading="lazy"
-                        />
-                        <div class="icon-circle-blue">
-                            <svg viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
-                                <path d="M16.8 0L19.548 2.748L13.692 8.604L8.892 3.804L0 12.708L1.692 14.4L8.892 7.2L13.692 12L21.252 4.452L24 7.2V0H16.8Z" fill="#085C99" />
-                            </svg>
-                        </div>
+                        <img src="./src/img/a professional using a tablet to monitor real-time environmental impact data and waste metrics.webp" alt="Impact Tracking" class="impact-card_image" loading="lazy" />
                         <div class="impact-card_content">
                             <p class="impact-card_title">Impact Tracking</p>
                             <p class="impact-card_desc">Monitor environmental impact through real-time waste, carbon, and community contribution data.</p>
                         </div>
                     </div>
-
                     <div class="impact-card">
-                        <img
-                            src="./src/img/a professional handshake symbolizing a collaborative partnership between businesses, environmental communities, and local creators.webp"
-                            alt="A professional handshake symbolizing a collaborative partnership between businesses, environmental communities, and local creators."
-                            class="impact-card_image"
-                            loading="lazy"
-                        />
-                        <div class="icon-circle-blue">
-                            <svg viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
-                                <path
-                                    d="M16.8 15.6V18H0V15.6C0 15.6 0 10.8 8.4 10.8C16.8 10.8 16.8 15.6 16.8 15.6ZM12.6 4.20004C12.6 3.36936 12.3537 2.55734 11.8922 1.86665C11.4307 1.17596 10.7747 0.637638 10.0073 0.31975C9.23982 0.00186228 8.39534 -0.0813117 7.58062 0.0807462C6.7659 0.242804 6.01753 0.642815 5.43015 1.2302C4.84277 1.81758 4.44276 2.56594 4.2807 3.38066C4.11864 4.19538 4.20182 5.03986 4.51971 5.80731C4.83759 6.57476 5.37592 7.23071 6.06661 7.69222C6.75729 8.15372 7.56932 8.40004 8.4 8.40004C9.51391 8.40004 10.5822 7.95754 11.3698 7.16989C12.1575 6.38224 12.6 5.31395 12.6 4.20004ZM16.728 10.8C17.4657 11.3709 18.0693 12.0966 18.4964 12.9259C18.9235 13.7551 19.1637 14.6679 19.2 15.6V18H24V15.6C24 15.6 24 11.244 16.728 10.8ZM15.6 4.41558e-05C14.7741 -0.00379721 13.9666 0.243081 13.284 0.708044C14.0129 1.72653 14.4049 2.94759 14.4049 4.20004C14.4049 5.4525 14.0129 6.67356 13.284 7.69204C13.9666 8.15701 14.7741 8.40388 15.6 8.40004C16.7139 8.40004 17.7822 7.95754 18.5699 7.16989C19.3575 6.38224 19.8 5.31395 19.8 4.20004C19.8 3.08613 19.3575 2.01785 18.5699 1.2302C17.7822 0.442543 16.7139 4.41558e-05 15.6 4.41558e-05Z"
-                                    fill="#085C99"
-                                />
-                            </svg>
-                        </div>
+                        <img src="./src/img/a professional handshake symbolizing a collaborative partnership between businesses, environmental communities, and local creators.webp" alt="Community Collaboration" class="impact-card_image" loading="lazy" />
                         <div class="impact-card_content">
                             <p class="impact-card_title">Community Collaboration</p>
                             <p class="impact-card_desc">Build partnerships between businesses, environmental communities, and local creators.</p>
@@ -296,36 +231,32 @@
                 </div>
             </section>
 
-            <section class="container mx-auto py-25 space-y-20">
+            <!-- 5. Material Offer Section -->
+            <section class="container mx-auto py-16 lg:py-25 space-y-12 lg:space-y-20 px-4 lg:px-0">
                 <div class="section-header">
                     <h3 class="section-header_title">Find <span class="bg-clip-text text-transparent bg-[linear-gradient(90deg,#0D99FF4D_20%,#085C99_80%)]">Recyclable</span> Materials From Us</h3>
                     <p class="section-header_subtitle">Discover materials ready to be processed and reused by local businesses and creators.</p>
                 </div>
                 <div class="flex flex-col items-center gap-10 w-full h-fit">
                     <div class="flex flex-col gap-6 w-full h-fit">
-                        <div class="flex justify-between items-center">
-                            <p class="font-figtree font-normal text-4xl tracking-normal text-black">Our offer</p>
-                            <button class="flex justify-center items-center gap-4 p-4 w-fit h-fit border border-[#DEDEDE] rounded-2xl cursor-pointer" title="Newest First" aria-label="Newest First">
-                                <span class="font-figtree font-normal text-xl tracking-normal text-black">Newest First</span>
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+                        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                            <p class="font-figtree font-normal text-2xl lg:text-4xl tracking-normal text-black text-center sm:text-left">Our offer</p>
+                            <button class="flex justify-center items-center gap-4 p-3 lg:p-4 w-full sm:w-fit h-fit border border-[#DEDEDE] rounded-2xl cursor-pointer" title="Newest First" aria-label="Newest First">
+                                <span class="font-figtree font-normal text-lg lg:text-xl tracking-normal text-black">Newest First</span>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 lg:w-6 lg:h-6">
                                     <path d="M7.41 8.58008L12 13.1701L16.59 8.58008L18 10.0001L12 16.0001L6 10.0001L7.41 8.58008Z" fill="#222222" />
                                 </svg>
                             </button>
                         </div>
-
-                        <div class="grid grid-cols-4 gap-5 w-full h-fit">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-5 w-full h-fit">
+                            <!-- Material Cards 1-4 -->
                             <div class="material-card">
                                 <img src="./src/img/PET Flakes Mix Color.webp" alt="PET Flakes Mix Color" class="material-card_image" loading="lazy" />
                                 <div class="material-card_body">
                                     <div class="material-card_info">
                                         <p class="material-card_name">PET Flakes Mix Color</p>
                                         <div class="material-card_location">
-                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                                                <path
-                                                    d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
-                                                    fill="#ABABAB"
-                                                />
-                                            </svg>
+                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"><path d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z" fill="#ABABAB"/></svg>
                                             <p class="material-card_location-text">Jakarta, DKI Jakarta</p>
                                         </div>
                                         <div class="material-card_grade-row">
@@ -333,32 +264,25 @@
                                             <p class="badge-grade">Grade A</p>
                                         </div>
                                     </div>
-
                                     <div class="material-card_stats">
                                         <div class="material-card_stats-row">
                                             <p class="material-card_label">Available</p>
                                             <p class="material-card_label">Added</p>
                                         </div>
                                         <div class="material-card_stats-row">
-                                            <p class="material-card_value">512 kg</p>
-                                            <p class="material-card_time">4 hours ago</p>
+                                            <p class="material-card_value text-black font-semibold">512 kg</p>
+                                            <p class="material-card_time text-black">4 hours ago</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="material-card">
                                 <img src="./src/img/Cotton Fabric Offcut.webp" alt="Cotton Fabric Offcut" class="material-card_image" loading="lazy" />
                                 <div class="material-card_body">
                                     <div class="material-card_info">
                                         <p class="material-card_name">Cotton Fabric Offcut</p>
                                         <div class="material-card_location">
-                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                                                <path
-                                                    d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
-                                                    fill="#ABABAB"
-                                                />
-                                            </svg>
+                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"><path d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z" fill="#ABABAB"/></svg>
                                             <p class="material-card_location-text">Bandung, Jawa Barat</p>
                                         </div>
                                         <div class="material-card_grade-row">
@@ -366,32 +290,25 @@
                                             <p class="badge-grade">Grade C</p>
                                         </div>
                                     </div>
-
                                     <div class="material-card_stats">
                                         <div class="material-card_stats-row">
                                             <p class="material-card_label">Available</p>
                                             <p class="material-card_label">Added</p>
                                         </div>
                                         <div class="material-card_stats-row">
-                                            <p class="material-card_value">150 kg</p>
-                                            <p class="material-card_time">2 hours ago</p>
+                                            <p class="material-card_value text-black font-semibold">150 kg</p>
+                                            <p class="material-card_time text-black">2 hours ago</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="material-card">
                                 <img src="./src/img/Cardboard Scrap.webp" alt="Cardboard Scrap" class="material-card_image" loading="lazy" />
                                 <div class="material-card_body">
                                     <div class="material-card_info">
                                         <p class="material-card_name">Cardboard Scrap</p>
                                         <div class="material-card_location">
-                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                                                <path
-                                                    d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
-                                                    fill="#ABABAB"
-                                                />
-                                            </svg>
+                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"><path d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z" fill="#ABABAB"/></svg>
                                             <p class="material-card_location-text">Surabaya, Jawa Timur</p>
                                         </div>
                                         <div class="material-card_grade-row">
@@ -399,32 +316,25 @@
                                             <p class="badge-grade">Grade B</p>
                                         </div>
                                     </div>
-
                                     <div class="material-card_stats">
                                         <div class="material-card_stats-row">
                                             <p class="material-card_label">Available</p>
                                             <p class="material-card_label">Added</p>
                                         </div>
                                         <div class="material-card_stats-row">
-                                            <p class="material-card_value">313 kg</p>
-                                            <p class="material-card_time">3 hours ago</p>
+                                            <p class="material-card_value text-black font-semibold">313 kg</p>
+                                            <p class="material-card_time text-black">3 hours ago</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="material-card">
                                 <img src="./src/img/LDPE Plastic Film.webp" alt="LDPE Plastic Film" class="material-card_image" loading="lazy" />
                                 <div class="material-card_body">
                                     <div class="material-card_info">
                                         <p class="material-card_name">LDPE Plastic Film</p>
                                         <div class="material-card_location">
-                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                                                <path
-                                                    d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
-                                                    fill="#ABABAB"
-                                                />
-                                            </svg>
+                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"><path d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z" fill="#ABABAB"/></svg>
                                             <p class="material-card_location-text">Semarang, Jawa Tengah</p>
                                         </div>
                                         <div class="material-card_grade-row">
@@ -432,15 +342,14 @@
                                             <p class="badge-grade">Grade A</p>
                                         </div>
                                     </div>
-
                                     <div class="material-card_stats">
                                         <div class="material-card_stats-row">
                                             <p class="material-card_label">Available</p>
                                             <p class="material-card_label">Added</p>
                                         </div>
                                         <div class="material-card_stats-row">
-                                            <p class="material-card_value">240 kg</p>
-                                            <p class="material-card_time">8 hours ago</p>
+                                            <p class="material-card_value text-black font-semibold">240 kg</p>
+                                            <p class="material-card_time text-black">8 hours ago</p>
                                         </div>
                                     </div>
                                 </div>
@@ -448,412 +357,258 @@
                         </div>
                     </div>
 
-                    <button class="p-4 w-fit h-fit border border-primary rounded-2xl cursor-pointer" title="View More Products" aria-label="View More Products">
-                        <span class="font-figtree font-medium text-xl tracking-normal text-primary">View More Products</span>
+                    <button class="p-3 lg:p-4 w-full sm:w-fit h-fit border border-primary rounded-2xl cursor-pointer" title="View More Products" aria-label="View More Products">
+                        <span class="font-figtree font-medium text-lg lg:text-xl tracking-normal text-primary">View More Products</span>
                     </button>
 
                     <div class="cta-banner">
                         <div class="cta-banner_content">
-                            <img
-                                src="./src/img/recycling-illustration.webp"
-                                alt="A flat illustration of a red recycling bin filled with various plastic containers, representing the diverse materials available in the marketplace."
-                                class="cta-banner_image"
-                                loading="lazy"
-                            />
+                            <img src="./src/img/recycling-illustration.webp" alt="Recycling Illustration" class="cta-banner_image" loading="lazy" />
                             <div class="cta-banner_text-group">
                                 <p class="cta-banner_title">Can't find what you're looking for?</p>
-                                <p class="cta-banner_description">Explore more materials and opportunities in our full marketplace.</p>
+                                <p class="cta-banner_description text-base lg:text-xl text-[#ABABAB]">Explore more materials and opportunities in our full marketplace.</p>
                             </div>
                         </div>
                         <button class="cta-banner_button" title="Explore Marketplace" aria-label="Explore Marketplace">
-                            <span class="cta-banner_button-text">Explore Marketplace</span>
+                            <span class="cta-banner_button-text text-white">Explore Marketplace</span>
                         </button>
                     </div>
                 </div>
             </section>
 
-            <section class="container mx-auto py-25 space-y-20">
+            <!-- 6. Leaderboard Section -->
+            <section class="container mx-auto py-16 lg:py-25 space-y-12 lg:space-y-20 px-4 lg:px-0">
                 <div class="section-header">
                     <h3 class="section-header_title">Leading the Way Toward a Sustainable Future</h3>
                     <p class="section-header_subtitle">Recognizing UMKM and communities that actively contribute to waste redistribution and environmental impact.</p>
                 </div>
-                <div class="flex flex-col items-center gap-16 w-full h-fit">
-                    <div class="grid grid-cols-3 gap-16 w-full h-fit">
-                        <div class="leaderboard-card relative z-0 shadow-lg">
+                <div class="flex flex-col items-center gap-8 lg:gap-16 w-full h-fit">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 w-full h-fit">
+                        <!-- Rank 2 -->
+                        <div class="leaderboard-card order-2 lg:order-1 relative z-0 shadow-lg">
                             <div class="leaderboard-card_avatar-container">
                                 <div class="leaderboard-card_avatar-frame">
-                                    <img src="./src/img/Profile GreenLoop Studio.webp" alt="Profile GreenLoop Studio" class="leaderboard-card_image" loading="lazy" />
+                                    <img src="./src/img/Profile GreenLoop Studio.webp" alt="GreenLoop Studio" class="leaderboard-card_image" loading="lazy" />
                                     <div class="leaderboard-card_rank-icon">
-                                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg transition-transform hover:scale-105">
-                                            <defs>
-                                                <linearGradient id="silverGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                    <stop offset="0%" stop-color="#F8FAFC" />
-                                                    <stop offset="30%" stop-color="#CBD5E1" />
-                                                    <stop offset="70%" stop-color="#94A3B8" />
-                                                    <stop offset="100%" stop-color="#F1F5F9" />
-                                                </linearGradient>
-                                                <linearGradient id="silverGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
-                                                    <stop offset="0%" stop-color="#F1F5F9" />
-                                                    <stop offset="40%" stop-color="#94A3B8" />
-                                                    <stop offset="60%" stop-color="#64748B" />
-                                                    <stop offset="100%" stop-color="#F8FAFC" />
-                                                </linearGradient>
-                                            </defs>
-                                            <path d="M28 28 L12 56 L20 52 L28 60 Z" fill="#1E3A8A" />
-                                            <path d="M36 28 L52 56 L44 52 L36 60 Z" fill="#1E3A8A" />
-                                            <path d="M32 32 L16 60 L24 56 L32 64 Z" fill="#2563EB" />
-                                            <path d="M32 32 L48 60 L40 56 L32 64 Z" fill="#2563EB" />
-                                            <circle cx="32" cy="28" r="22" fill="url(#silverGrad1)" />
-                                            <circle cx="32" cy="28" r="22" fill="none" stroke="url(#silverGrad2)" stroke-width="4" />
-                                            <circle cx="32" cy="28" r="17" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.8" />
-                                            <circle cx="32" cy="28" r="16" fill="none" stroke="#64748B" stroke-width="1" opacity="0.4" />
-                                            <text x="32" y="37" text-anchor="middle" class="font-figtree font-semibold text-2xl fill-slate-900 [text-shadow:0px_1px_1px_rgba(255,255,255,0.8)]">2</text>
+                                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg">
+                                            <circle cx="32" cy="32" r="30" fill="#CBD5E1" stroke="#94A3B8" stroke-width="2"/>
+                                            <text x="32" y="42" text-anchor="middle" class="font-figtree font-bold text-3xl fill-slate-900">2</text>
                                         </svg>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="leaderboard-card_profile">
                                 <p class="leaderboard-card_name">GreenLoop Studio</p>
                                 <p class="leaderboard-card_category">Textile Waste Management</p>
                             </div>
-
                             <div class="leaderboard-stats">
                                 <div class="leaderboard-stats_item">
-                                    <p class="leaderboard-stats_label">Waste Diverted (kg)</p>
+                                    <p class="leaderboard-stats_label">Waste Diverted</p>
                                     <p class="leaderboard-stats_value">9,830 kg</p>
                                 </div>
                                 <div class="leaderboard-stats_item">
                                     <p class="leaderboard-stats_label">Impact</p>
-                                    <p class="leaderboard-stats_value">CO<sub>2</sub> 6,5 ton</p>
-                                </div>
-                                <div class="leaderboard-stats_item">
-                                    <p class="leaderboard-stats_label">Location</p>
-                                    <div class="leaderboard-stats_location">
-                                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                                            <path
-                                                d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
-                                                fill="#0D99FF"
-                                            />
-                                        </svg>
-                                        <p class="leaderboard-stats_value">Yogyakarta</p>
-                                    </div>
+                                    <p class="leaderboard-stats_value">CO<sub>2</sub> 6.5 ton</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="leaderboard-card relative z-10 lg:scale-110 shadow-xl shadow-yellow-500/15">
-                            <div
-                                class="absolute -top-4 left-1/2 -translate-x-1/2 bg-linear-to-r from-yellow-500 via-yellow-400 to-yellow-500 text-white font-figtree font-semibold text-sm uppercase tracking-widest py-2.5 px-5 rounded-full shadow-md"
-                            >
+                        <!-- Rank 1 -->
+                        <div class="leaderboard-card order-1 lg:order-2 relative z-10 lg:scale-110 shadow-xl shadow-yellow-500/15 border-yellow-200">
+                            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-white font-figtree font-semibold text-xs lg:text-sm uppercase tracking-widest py-2 px-4 rounded-full shadow-md">
                                 Peringkat 1
                             </div>
                             <div class="leaderboard-card_avatar-container">
                                 <div class="leaderboard-card_avatar-frame">
-                                    <img src="./src/img/Profile EcoCraft Indonesia.webp" alt="Profile EcoCraft Indonesia" class="leaderboard-card_image" loading="lazy" />
+                                    <img src="./src/img/Profile EcoCraft Indonesia.webp" alt="EcoCraft Indonesia" class="leaderboard-card_image" loading="lazy" />
                                     <div class="leaderboard-card_rank-icon">
-                                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg transition-transform hover:scale-105">
-                                            <defs>
-                                                <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                    <stop offset="0%" stop-color="#FEF08A" />
-                                                    <stop offset="40%" stop-color="#D4AF37" />
-                                                    <stop offset="100%" stop-color="#8A5A19" />
-                                                </linearGradient>
-                                                <linearGradient id="goldGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
-                                                    <stop offset="0%" stop-color="#FEF08A" />
-                                                    <stop offset="40%" stop-color="#D97706" />
-                                                    <stop offset="60%" stop-color="#B45309" />
-                                                    <stop offset="100%" stop-color="#FDE047" />
-                                                </linearGradient>
-                                            </defs>
-                                            <path d="M28 28 L12 56 L20 52 L28 60 Z" fill="#991B1B" />
-                                            <path d="M36 28 L52 56 L44 52 L36 60 Z" fill="#991B1B" />
-                                            <path d="M32 32 L16 60 L24 56 L32 64 Z" fill="#DC2626" />
-                                            <path d="M32 32 L48 60 L40 56 L32 64 Z" fill="#DC2626" />
-
-                                            <circle cx="32" cy="28" r="22" fill="url(#goldGrad1)" />
-                                            <circle cx="32" cy="28" r="22" fill="none" stroke="url(#goldGrad2)" stroke-width="4" />
-                                            <circle cx="32" cy="28" r="17" fill="none" stroke="#FEF9C3" stroke-width="1" opacity="0.7" />
-                                            <circle cx="32" cy="28" r="16" fill="none" stroke="#B45309" stroke-width="1" opacity="0.5" />
-                                            <text x="32" y="37" text-anchor="middle" class="font-figtree font-semibold text-2xl fill-slate-900 [text-shadow:0px_1px_1px_rgba(255,255,255,0.8)]">1</text>
+                                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg">
+                                            <circle cx="32" cy="32" r="30" fill="#FDE047" stroke="#EAB308" stroke-width="2"/>
+                                            <text x="32" y="42" text-anchor="middle" class="font-figtree font-bold text-3xl fill-slate-900">1</text>
                                         </svg>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="leaderboard-card_profile">
                                 <p class="leaderboard-card_name">EcoCraft Indonesia</p>
                                 <p class="leaderboard-card_category">Recycle & Upcycle</p>
                             </div>
-
                             <div class="leaderboard-stats">
                                 <div class="leaderboard-stats_item">
-                                    <p class="leaderboard-stats_label">Waste Diverted (kg)</p>
+                                    <p class="leaderboard-stats_label">Waste Diverted</p>
                                     <p class="leaderboard-stats_value">12,230 kg</p>
                                 </div>
                                 <div class="leaderboard-stats_item">
                                     <p class="leaderboard-stats_label">Impact</p>
-                                    <p class="leaderboard-stats_value">CO<sub>2</sub> 8,2 ton</p>
-                                </div>
-                                <div class="leaderboard-stats_item">
-                                    <p class="leaderboard-stats_label">Location</p>
-                                    <div class="leaderboard-stats_location">
-                                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                                            <path
-                                                d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
-                                                fill="#0D99FF"
-                                            />
-                                        </svg>
-                                        <p class="leaderboard-stats_value">Bandung</p>
-                                    </div>
+                                    <p class="leaderboard-stats_value">CO<sub>2</sub> 8.2 ton</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="leaderboard-card relative z-0 shadow-lg">
+                        <!-- Rank 3 -->
+                        <div class="leaderboard-card order-3 relative z-0 shadow-lg">
                             <div class="leaderboard-card_avatar-container">
                                 <div class="leaderboard-card_avatar-frame">
-                                    <img src="./src/img/Profile Reborn Plastic.webp" alt="Profile Reborn Plastic" class="leaderboard-card_image" loading="lazy" />
+                                    <img src="./src/img/Profile Reborn Plastic.webp" alt="Reborn Plastic" class="leaderboard-card_image" loading="lazy" />
                                     <div class="leaderboard-card_rank-icon">
-                                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg transition-transform hover:scale-105">
-                                            <defs>
-                                                <linearGradient id="bronzeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                    <stop offset="0%" stop-color="#FDE6D4" />
-                                                    <stop offset="40%" stop-color="#B07D46" />
-                                                    <stop offset="100%" stop-color="#5E3219" />
-                                                </linearGradient>
-                                                <linearGradient id="bronzeGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
-                                                    <stop offset="0%" stop-color="#FED7AA" />
-                                                    <stop offset="40%" stop-color="#92400E" />
-                                                    <stop offset="60%" stop-color="#78350F" />
-                                                    <stop offset="100%" stop-color="#FDBA74" />
-                                                </linearGradient>
-                                            </defs>
-                                            <path d="M28 28 L12 56 L20 52 L28 60 Z" fill="#064E3B" />
-                                            <path d="M36 28 L52 56 L44 52 L36 60 Z" fill="#064E3B" />
-                                            <path d="M32 32 L16 60 L24 56 L32 64 Z" fill="#059669" />
-                                            <path d="M32 32 L48 60 L40 56 L32 64 Z" fill="#059669" />
-
-                                            <circle cx="32" cy="28" r="22" fill="url(#bronzeGrad1)" />
-                                            <circle cx="32" cy="28" r="22" fill="none" stroke="url(#bronzeGrad2)" stroke-width="4" />
-                                            <circle cx="32" cy="28" r="17" fill="none" stroke="#FFEDD5" stroke-width="1" opacity="0.6" />
-                                            <circle cx="32" cy="28" r="16" fill="none" stroke="#78350F" stroke-width="1" opacity="0.5" />
-                                            <text x="32" y="37" text-anchor="middle" class="font-figtree font-semibold text-2xl fill-slate-900 [text-shadow:0px_1px_1px_rgba(255,255,255,0.8)]">3</text>
+                                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg">
+                                            <circle cx="32" cy="32" r="30" fill="#FB923C" stroke="#EA580C" stroke-width="2"/>
+                                            <text x="32" y="42" text-anchor="middle" class="font-figtree font-bold text-3xl fill-slate-900">3</text>
                                         </svg>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="leaderboard-card_profile">
                                 <p class="leaderboard-card_name">Reborn Plastic</p>
                                 <p class="leaderboard-card_category">Plastic Recycling</p>
                             </div>
-
                             <div class="leaderboard-stats">
                                 <div class="leaderboard-stats_item">
-                                    <p class="leaderboard-stats_label">Waste Diverted (kg)</p>
+                                    <p class="leaderboard-stats_label">Waste Diverted</p>
                                     <p class="leaderboard-stats_value">7,230 kg</p>
                                 </div>
                                 <div class="leaderboard-stats_item">
                                     <p class="leaderboard-stats_label">Impact</p>
-                                    <p class="leaderboard-stats_value">CO<sub>2</sub> 4,8 ton</p>
-                                </div>
-                                <div class="leaderboard-stats_item">
-                                    <p class="leaderboard-stats_label">Location</p>
-                                    <div class="leaderboard-stats_location">
-                                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                                            <path
-                                                d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
-                                                fill="#0D99FF"
-                                            />
-                                        </svg>
-                                        <p class="leaderboard-stats_value">Surabaya</p>
-                                    </div>
+                                    <p class="leaderboard-stats_value">CO<sub>2</sub> 4.8 ton</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-full rounded-2xl border border-[#EEEEEE] overflow-hidden">
-                        <div class="grid grid-cols-[80px_2.5fr_1.5fr_1.5fr_1fr] gap-4 bg-[#EEEEEE] py-4 px-6 font-figtree font-normal text-2xl tracking-normal text-black">
-                            <div class="text-center">Rank</div>
-                            <div>UMKM</div>
-                            <div>Waste Diverted (kg)</div>
-                            <div>Impact</div>
-                            <div>Location</div>
-                        </div>
+                    <div class="w-full rounded-2xl border border-[#EEEEEE] overflow-x-auto">
+                        <div class="min-w-[800px]">
+                            <div class="grid grid-cols-[80px_2.5fr_1.5fr_1.5fr_1fr] gap-4 bg-[#EEEEEE] py-4 px-6 font-figtree font-normal text-xl text-black">
+                                <div class="text-center">Rank</div>
+                                <div>UMKM</div>
+                                <div>Waste Diverted (kg)</div>
+                                <div>Impact</div>
+                                <div>Location</div>
+                            </div>
 
-                        <div class="leaderboard-table_row">
-                            <div class="leaderboard-table_rank-number">4</div>
-                            <div class="leaderboard-table_umkm-info">
-                                <img src="./src/img/Profile Limbah Jadi Berkah.webp" alt="Profile Limbah Jadi Berkah" class="leaderboard-table_avatar" />
-                                <div class="leaderboard-table_umkm-details">
-                                    <h3 class="leaderboard-table_umkm-name">Limbah Jadi Berkah</h3>
-                                    <p class="leaderboard-table_umkm-category">Organic Waste Processing</p>
+                            <div class="leaderboard-table_row">
+                                <div class="leaderboard-table_rank-number">4</div>
+                                <div class="leaderboard-table_umkm-info">
+                                    <img src="./src/img/Profile Limbah Jadi Berkah.webp" alt="Limbah Jadi Berkah" class="leaderboard-table_avatar" />
+                                    <div class="leaderboard-table_umkm-details">
+                                        <h3 class="leaderboard-table_umkm-name">Limbah Jadi Berkah</h3>
+                                        <p class="leaderboard-table_umkm-category text-sm text-[#ABABAB]">Organic Waste Processing</p>
+                                    </div>
                                 </div>
+                                <div class="leaderboard-table_stat">12,230 kg</div>
+                                <div class="leaderboard-table_stat">CO<sub>2</sub> 3,7 ton</div>
+                                <div class="leaderboard-table_location">Yogyakarta</div>
                             </div>
-                            <div class="leaderboard-table_stat">12,230 kg</div>
-                            <div class="leaderboard-table_stat">CO<sub>2</sub> 3,7 ton</div>
-                            <div class="leaderboard-table_location">
-                                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                                    <path
-                                        d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
-                                        fill="#0D99FF"
-                                    />
-                                </svg>
-                                <p class="leaderboard-table_stat">Yogyakarta</p>
-                            </div>
-                        </div>
 
-                        <div class="leaderboard-table_row">
-                            <div class="leaderboard-table_rank-number">5</div>
-                            <div class="leaderboard-table_umkm-info">
-                                <img src="./src/img/Profile Kain Kita.webp" alt="Profile Kain Kita" class="leaderboard-table_avatar" />
-                                <div class="leaderboard-table_umkm-details">
-                                    <h3 class="leaderboard-table_umkm-name">Kain Kita</h3>
-                                    <p class="leaderboard-table_umkm-category">Fabric Scrap Reuse</p>
+                            <div class="leaderboard-table_row">
+                                <div class="leaderboard-table_rank-number">5</div>
+                                <div class="leaderboard-table_umkm-info">
+                                    <img src="./src/img/Profile Kain Kita.webp" alt="Kain Kita" class="leaderboard-table_avatar" />
+                                    <div class="leaderboard-table_umkm-details">
+                                        <h3 class="leaderboard-table_umkm-name">Kain Kita</h3>
+                                        <p class="leaderboard-table_umkm-category text-sm text-[#ABABAB]">Fabric Scrap Reuse</p>
+                                    </div>
                                 </div>
+                                <div class="leaderboard-table_stat">4,320 kg</div>
+                                <div class="leaderboard-table_stat">CO<sub>2</sub> 2,9 ton</div>
+                                <div class="leaderboard-table_location">Jakarta</div>
                             </div>
-                            <div class="leaderboard-table_stat">4,320 kg</div>
-                            <div class="leaderboard-table_stat">CO<sub>2</sub> 2,9 ton</div>
-                            <div class="leaderboard-table_location">
-                                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                                    <path
-                                        d="M9.99984 5.4165C10.5524 5.4165 11.0823 5.636 11.473 6.0267C11.8637 6.4174 12.0832 6.9473 12.0832 7.49984C12.0832 7.77342 12.0293 8.04433 11.9246 8.29709C11.8199 8.54986 11.6664 8.77952 11.473 8.97298C11.2795 9.16643 11.0499 9.31989 10.7971 9.42459C10.5443 9.52928 10.2734 9.58317 9.99984 9.58317C9.4473 9.58317 8.9174 9.36368 8.5267 8.97298C8.136 8.58228 7.9165 8.05237 7.9165 7.49984C7.9165 6.9473 8.136 6.4174 8.5267 6.0267C8.9174 5.636 9.4473 5.4165 9.99984 5.4165ZM9.99984 1.6665C11.5469 1.6665 13.0307 2.28109 14.1246 3.37505C15.2186 4.46901 15.8332 5.95274 15.8332 7.49984C15.8332 11.8748 9.99984 18.3332 9.99984 18.3332C9.99984 18.3332 4.1665 11.8748 4.1665 7.49984C4.1665 5.95274 4.78109 4.46901 5.87505 3.37505C6.96901 2.28109 8.45274 1.6665 9.99984 1.6665ZM9.99984 3.33317C8.89477 3.33317 7.83496 3.77216 7.05356 4.55356C6.27216 5.33496 5.83317 6.39477 5.83317 7.49984C5.83317 8.33317 5.83317 9.99984 9.99984 15.5915C14.1665 9.99984 14.1665 8.33317 14.1665 7.49984C14.1665 6.39477 13.7275 5.33496 12.9461 4.55356C12.1647 3.77216 11.1049 3.33317 9.99984 3.33317Z"
-                                        fill="#0D99FF"
-                                    />
-                                </svg>
-                                <p class="leaderboard-table_stat">Jakarta</p>
-                            </div>
-                        </div>
 
-                        <div class="bg-[#EEEEEE] py-4 px-6 w-full h-fit flex justify-center items-center">
-                            <button class="flex items-center gap-4 w-fit h-fit cursor-pointer" title="View Full Leaderboard" aria-label="View Full Leaderboard">
-                                <span class="font-figtree font-semibold text-xl tracking-normal text-primary">View Full Leaderboard</span>
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
-                                    <path d="M4 11.0001V13.0001H16L10.5 18.5001L11.92 19.9201L19.84 12.0001L11.92 4.08008L10.5 5.50008L16 11.0001H4Z" fill="#0D99FF" />
-                                </svg>
-                            </button>
+                            <div class="bg-[#EEEEEE] py-4 px-6 w-full h-fit flex justify-center items-center">
+                                <button class="flex items-center gap-4 w-fit h-fit cursor-pointer">
+                                    <span class="font-figtree font-semibold text-lg text-primary">View Full Leaderboard</span>
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 lg:w-6 lg:h-6">
+                                        <path d="M4 11.0001V13.0001H16L10.5 18.5001L11.92 19.9201L19.84 12.0001L11.92 4.08008L10.5 5.50008L16 11.0001H4Z" fill="#0D99FF" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
                     <div class="cta-banner">
                         <div class="cta-banner_content">
-                            <img
-                                src="./src/img/an abstract illustration of partners working together inside supportive giant hands, symbolizing a community journey toward environmental impact.webp"
-                                alt="An abstract illustration of partners working together inside supportive giant hands, symbolizing a community journey toward environmental impact."
-                                class="cta-banner_image"
-                                loading="lazy"
-                            />
+                            <img src="./src/img/an abstract illustration of partners working together inside supportive giant hands, symbolizing a community journey toward environmental impact.webp" alt="Join Partner Illustration" class="cta-banner_image" loading="lazy" />
                             <div class="cta-banner_text-group">
                                 <p class="cta-banner_title">Want to be on the next leaderboard?</p>
-                                <p class="cta-banner_description">Join as a partner and start your journey toward a cleaner environment and greater impact.</p>
+                                <p class="cta-banner_description text-base lg:text-xl text-[#ABABAB]">Join as a partner and start your journey toward a cleaner environment and greater impact.</p>
                             </div>
                         </div>
                         <button class="cta-banner_button" title="Join as a Partner" aria-label="Join as a Partner">
-                            <span class="cta-banner_button-text">Join as a Partner</span>
+                            <span class="cta-banner_button-text text-white">Join as a Partner</span>
                         </button>
                     </div>
                 </div>
             </section>
         </main>
 
-        <footer class="container mx-auto py-25">
-            <div class="grid grid-cols-12 gap-x-8 gap-y-12">
-                <div class="col-span-3 pr-4">
-                    <h2 class="font-manrope font-semibold text-5xl tracking-normal text-primary mb-2">Residue</h2>
-                    <p class="font-figtree font-normal text-xl tracking-normal text-[#ABABAB] mb-3">Connecting people, technology, and resources to turn industrial residue into sustainable value.</p>
-                    <div class="flex justify-center items-center w-fit h-fit gap-4">
+        <footer class="container mx-auto py-16 lg:py-25 px-4 lg:px-0">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-12">
+                <div class="col-span-1 md:col-span-2 lg:col-span-3 pr-4">
+                    <h2 class="font-manrope font-semibold text-4xl lg:text-5xl tracking-normal text-primary mb-2">Residue</h2>
+                    <p class="font-figtree font-normal text-lg lg:text-xl tracking-normal text-[#ABABAB] mb-6 lg:mb-3">Connecting people, technology, and resources to turn industrial residue into sustainable value.</p>
+                    <div class="flex justify-start items-center w-fit h-fit gap-4">
                         <a href="#" class="p-3 w-fit h-fit border border-[#DEDEDE] rounded-full">
-                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                                <path
-                                    d="M5.8 0H14.2C17.4 0 20 2.6 20 5.8V14.2C20 15.7383 19.3889 17.2135 18.3012 18.3012C17.2135 19.3889 15.7383 20 14.2 20H5.8C2.6 20 0 17.4 0 14.2V5.8C0 4.26174 0.61107 2.78649 1.69878 1.69878C2.78649 0.61107 4.26174 0 5.8 0ZM5.6 2C4.64522 2 3.72955 2.37928 3.05442 3.05442C2.37928 3.72955 2 4.64522 2 5.6V14.4C2 16.39 3.61 18 5.6 18H14.4C15.3548 18 16.2705 17.6207 16.9456 16.9456C17.6207 16.2705 18 15.3548 18 14.4V5.6C18 3.61 16.39 2 14.4 2H5.6ZM15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.39946 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7Z"
-                                    fill="black"
-                                />
-                            </svg>
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"><path d="M5.8 0H14.2C17.4 0 20 2.6 20 5.8V14.2C20 15.7383 19.3889 17.2135 18.3012 18.3012C17.2135 19.3889 15.7383 20 14.2 20H5.8C2.6 20 0 17.4 0 14.2V5.8C0 4.26174 0.61107 2.78649 1.69878 1.69878C2.78649 0.61107 4.26174 0 5.8 0ZM5.6 2C4.64522 2 3.72955 2.37928 3.05442 3.05442C2.37928 3.72955 2 4.64522 2 5.6V14.4C2 16.39 3.61 18 5.6 18H14.4C15.3548 18 16.2705 17.6207 16.9456 16.9456C17.6207 16.2705 18 15.3548 18 14.4V5.6C18 3.61 16.39 2 14.4 2H5.6ZM15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.33496 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7Z" fill="black"/></svg>
                         </a>
                         <a href="#" class="p-3 w-fit h-fit border border-[#DEDEDE] rounded-full">
-                            <svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                                <path
-                                    d="M18 4L10 9L2 4V2L10 7L18 2M18 0H2C0.89 0 0 0.89 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H18C18.5304 16 19.0391 15.7893 19.4142 15.4142C19.7893 15.0391 20 14.5304 20 14V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
-                                    fill="black"
-                                />
-                            </svg>
+                            <svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"><path d="M18 4L10 9L2 4V2L10 7L18 2M18 0H2C0.89 0 0 0.89 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H18C18.5304 16 19.0391 15.7893 19.4142 15.4142C19.7893 15.0391 20 14.5304 20 14V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z" fill="black"/></svg>
                         </a>
                         <a href="#" class="p-3 w-fit h-fit border border-[#DEDEDE] rounded-full">
-                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                                <path
-                                    d="M9.99999 0C4.49999 0 0 4.50803 0 10.0602C0 15.0803 3.65999 19.247 8.43999 20V12.9719H5.89999V10.0602H8.43999V7.84137C8.43999 5.32129 9.92999 3.93574 12.22 3.93574C13.31 3.93574 14.45 4.12651 14.45 4.12651V6.60643H13.19C11.95 6.60643 11.56 7.37952 11.56 8.17269V10.0602H14.34L13.89 12.9719H11.56V20C13.9164 19.6264 16.0622 18.4192 17.6099 16.5964C19.1576 14.7737 20.0053 12.4555 20 10.0602C20 4.50803 15.5 0 9.99999 0Z"
-                                    fill="black"
-                                />
-                            </svg>
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"><path d="M9.99999 0C4.49999 0 0 4.50803 0 10.0602C0 15.0803 3.65999 19.247 8.43999 20V12.9719H5.89999V10.0602H8.43999V7.84137C8.43999 5.32129 9.92999 3.93574 12.22 3.93574C13.31 3.93574 14.45 4.12651 14.45 4.12651V6.60643H13.19C11.95 6.60643 11.56 7.37952 11.56 8.17269V10.0602H14.34L13.89 12.9719H11.56V20C13.9164 19.6264 16.0622 18.4192 17.6099 16.5964C19.1576 14.7737 20.0053 12.4555 20 10.0602C20 4.50803 15.5 0 9.99999 0Z" fill="black"/></svg>
                         </a>
                     </div>
                 </div>
 
-                <div class="main-footer_nav-col">
+                <div class="col-span-1 lg:col-span-2">
                     <h3 class="main-footer_nav-title">Platform</h3>
                     <ul class="main-footer_nav-list">
-                        <li><a href="#" class="main-footer_nav-link">Home</a></li>
-                        <li><a href="#" class="main-footer_nav-link">Store</a></li>
-                        <li><a href="#" class="main-footer_nav-link">Leaderboard</a></li>
-                        <li><a href="#" class="main-footer_nav-link">About</a></li>
-                        <li><a href="#" class="main-footer_nav-link">Detail</a></li>
+                        <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Home</a></li>
+                        <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Store</a></li>
+                        <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Leaderboard</a></li>
+                        <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">About</a></li>
+                        <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Detail</a></li>
                     </ul>
                 </div>
 
-                <div class="main-footer_nav-col">
+                <div class="col-span-1 lg:col-span-2">
                     <h3 class="main-footer_nav-title">Partner</h3>
                     <ul class="main-footer_nav-list">
-                        <li><a href="#" class="main-footer_nav-link">EcoCraft</a></li>
-                        <li><a href="#" class="main-footer_nav-link">Reborn Plastic</a></li>
-                        <li><a href="#" class="main-footer_nav-link">GreenLoop</a></li>
-                        <li><a href="#" class="main-footer_nav-link">Limbah Jadi Berkah</a></li>
-                        <li><a href="#" class="main-footer_nav-link">Kain Kita</a></li>
+                        <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">EcoCraft</a></li>
+                        <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Reborn Plastic</a></li>
+                        <li><a href="#" class="main-header_menu-link text-sm lg:text-xl !text-[#ABABAB] hover:!text-primary">GreenLoop</a></li>
+                        <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Limbah Jadi Berkah</a></li>
+                        <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Kain Kita</a></li>
                     </ul>
                 </div>
 
-                <div class="main-footer_nav-col">
+                <div class="col-span-1 lg:col-span-2">
                     <h3 class="main-footer_nav-title">Support</h3>
                     <ul class="main-footer_nav-list">
-                        <li><a href="#" class="main-footer_nav-link">Help Center</a></li>
-                        <li><a href="#" class="main-footer_nav-link">Contact Us</a></li>
-                        <li><a href="#" class="main-footer_nav-link">Terms of Use</a></li>
-                        <li><a href="#" class="main-footer_nav-link">Privacy</a></li>
+                        <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Help Center</a></li>
+                        <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Contact Us</a></li>
+                        <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Terms of Use</a></li>
+                        <li><a href="#" class="main-footer_nav-link text-sm lg:text-xl">Privacy</a></li>
                     </ul>
                 </div>
 
-                <div class="col-span-3">
+                <div class="col-span-1 md:col-span-2 lg:col-span-3">
                     <h3 class="main-footer_nav-title">Stay Updated</h3>
-                    <p class="font-figtree font-normal text-xl tracking-normal text-[#ABABAB] mb-5">Be one of us to get the latest updates on impact and opportunities.</p>
-                    <form class="flex justify-center w-full h-fit border-y border-l border-[#DEDEDE] rounded-2xl overflow-hidden focus-within:border-primary transition-colors">
-                        <input
-                            type="email"
-                            placeholder="Enter your email"
-                            required
-                            class="flex-1 w-full font-figtree font-normal text-xl tracking-normal text-gray-700 px-4 py-2 outline-none placeholder-[#DEDEDE]"
-                        />
-                        <button type="submit" class="bg-primary rounded-r-lg px-4 py-2 w-fit flex justify-center items-center cursor-pointer">
-                            <svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-4">
-                                <path d="M0 16V0L19 8M2 13L13.85 8L2 3V6.5L8 8L2 9.5M2 13V3V9.5V13Z" fill="#EEEEEE" />
-                            </svg>
+                    <p class="font-figtree font-normal text-lg lg:text-xl tracking-normal text-[#ABABAB] mb-5">Be one of us to get the latest updates on impact and opportunities.</p>
+                    <form class="flex justify-center w-full h-fit border border-[#DEDEDE] rounded-2xl overflow-hidden focus-within:border-primary transition-colors">
+                        <input type="email" placeholder="Enter your email" required class="flex-1 w-full font-figtree font-normal text-base lg:text-xl px-4 py-2 outline-none placeholder-[#DEDEDE]" />
+                        <button type="submit" class="bg-primary px-4 py-2 flex justify-center items-center cursor-pointer">
+                            <svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-4"><path d="M0 16V0L19 8M2 13L13.85 8L2 3V6.5L8 8L2 9.5M2 13V3V9.5V13Z" fill="#EEEEEE"/></svg>
                         </button>
                     </form>
                 </div>
             </div>
             <hr class="border-t border-[#DEDEDE] my-8" />
-            <div class="flex justify-between items-center">
-                <small class="font-figtree font-normal text-xl tracking-normal text-black">&copy; 2026 <span class="text-primary">Residue</span>. All rights reserved.</small>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <small class="font-figtree font-normal text-base lg:text-xl tracking-normal text-black text-center md:text-left">&copy; 2026 <span class="text-primary">Residue</span>. All rights reserved.</small>
                 <div class="flex justify-center items-center gap-2 w-fit h-fit">
                     <div class="bg-[#80C9FF] rounded-full p-1 w-6 h-6 flex justify-center items-center">
-                        <svg viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3.25 h-3.25">
-                            <path
-                                d="M9.6 3.2C3.84 4.48 2.496 8.4288 1.1648 11.7376L2.3744 12.16L2.9824 10.688C3.2896 10.7968 3.6096 10.88 3.84 10.88C10.88 10.88 12.8 0 12.8 0C12.16 1.28 7.68 1.44 4.48 2.08C1.28 2.72 0 5.44 0 6.72C0 8 1.12 9.12 1.12 9.12C3.2 3.2 9.6 3.2 9.6 3.2Z"
-                                fill="#085C99"
-                            />
-                        </svg>
+                        <svg viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3.25 h-3.25"><path d="M9.6 3.2C3.84 4.48 2.496 8.4288 1.1648 11.7376L2.3744 12.16L2.9824 10.688C3.2896 10.7968 3.6096 10.88 3.84 10.88C10.88 10.88 12.8 0 12.8 0C12.16 1.28 7.68 1.44 4.48 2.08C1.28 2.72 0 5.44 0 6.72C0 8 1.12 9.12 1.12 9.12C3.2 3.2 9.6 3.2 9.6 3.2Z" fill="#085C99"/></svg>
                     </div>
-                    <p class="font-figtree font-normal text-xl tracking-normal text-black">Build for a better tomorrow.</p>
+                    <p class="font-figtree font-normal text-base lg:text-xl tracking-normal text-black text-center">Build for a better tomorrow.</p>
                 </div>
             </div>
         </footer>

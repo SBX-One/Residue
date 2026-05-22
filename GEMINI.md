@@ -27,3 +27,22 @@ The project uses Tailwind CSS CLI for CSS compilation.
 - **Consistency:** Use Tailwind utility classes whenever possible. Avoid hard-coding colors or styles in HTML markup. Add new colors or design tokens to the `@theme` block in `src/css/input.css`.
 - **Architecture:** The project is organized into `src/pages` for page-specific HTML and `src/css` for styles. Global styles and components are defined in `src/css/input.css`.
 - **Formatting:** Use `.prettierrc` for consistent code formatting.
+
+# Image Optimization
+To convert images (PNG, JPG, JPEG, GIF, TIFF, BMP) into optimized WebP format for the project, use the image conversion utility:
+
+- **Convert Images (Keeping originals):**
+  ```bash
+  pnpm convert-png
+  ```
+
+- **Convert Images (Deleting original images):**
+  ```bash
+  pnpm convert-png --delete
+  ```
+
+- **Convert specific files/folders:**
+  ```bash
+  pnpm convert-png <path_to_file_or_directory>
+  ```
+

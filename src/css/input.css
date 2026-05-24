@@ -8,6 +8,8 @@
     --color-secondary: #085c99;
     --color-accent: #fafaf8;
     --color-text-default: #222222;
+    --color-border-card: #dedede;
+    --color-border-avatar: #ababab;
 }
 
 @layer components {
@@ -28,7 +30,7 @@
     .bg-gradient-default {
         @apply bg-[linear-gradient(90deg,#0D99FF4D_0%,#80C9FF_100%)];
     }
-    .bg-gradient-button{
+    .bg-gradient-button {
         @apply bg-[linear-gradient(90deg,#80C9FF_0%,#0D99FF_100%)];
     }
     .main-header {
@@ -47,13 +49,13 @@
         @apply hidden lg:flex justify-center items-center gap-6 w-fit h-fit;
     }
     .main-header_menu-link {
-        @apply font-figtree font-normal text-sm tracking-normal text-[#EEEEEE];
+        @apply font-figtree font-normal text-xl tracking-normal text-[#EEEEEE];
         animation: link-color-effect linear both;
         animation-timeline: scroll(root);
         animation-range: 0px 100px;
     }
     .main-header_menu-link-default {
-        @apply font-figtree font-normal text-sm tracking-normal text-text-default;
+        @apply font-figtree font-normal text-xl tracking-normal text-text-default;
     }
     .main-header_cta {
         @apply hidden lg:block bg-primary rounded-3xl w-fit h-fit px-6 py-3 cursor-pointer;
@@ -71,19 +73,19 @@
         @apply font-figtree font-semibold text-2xl lg:text-3xl tracking-normal text-[#EEEEEE];
     }
     .hero-section_stat-label {
-        @apply font-figtree font-normal text-sm lg:text-xl tracking-normal text-[#DEDEDE] text-center md:text-left;
+        @apply font-figtree font-normal text-sm lg:text-xl tracking-normal text-border-card text-center md:text-left;
     }
     .section-header {
         @apply flex flex-col gap-4 h-fit justify-center items-center text-center;
     }
     .section-header_title {
-        @apply font-figtree font-medium text-2xl lg:text-4xl tracking-normal text-black;
+        @apply font-figtree font-medium text-2xl lg:text-4xl tracking-normal text-text-default;
     }
     .section-header_subtitle {
-        @apply font-figtree font-normal text-base lg:text-xl tracking-normal text-[#ABABAB];
+        @apply font-figtree font-normal text-base lg:text-xl tracking-normal text-border-avatar;
     }
     .stat-card {
-        @apply flex flex-col items-center justify-center gap-3.5 p-6 w-full h-fit border border-[#DEDEDE] rounded-2xl;
+        @apply flex flex-col items-center justify-center gap-3.5 p-6 w-full h-fit border border-border-card rounded-2xl;
     }
     .stat-card_icon-wrapper {
         @apply w-12 h-12 lg:w-15.5 lg:h-15.5 bg-[#80C9FF] p-3 lg:p-3.5 rounded-full flex items-center justify-center;
@@ -95,16 +97,16 @@
         @apply flex flex-col justify-center items-center gap-2 lg:gap-3.5;
     }
     .stat-card_label {
-        @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-black;
+        @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-text-default;
     }
     .stat-card_value {
         @apply font-figtree font-medium text-2xl lg:text-4xl tracking-normal text-secondary;
     }
     .stat-card_unit {
-        @apply text-xs lg:text-sm text-black;
+        @apply text-xs lg:text-sm text-text-default;
     }
     .stat-card_desc {
-        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-black text-center;
+        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-text-default text-center;
     }
     .problem-item {
         @apply flex gap-4 items-start lg:items-center justify-center;
@@ -113,16 +115,16 @@
         @apply w-8 h-8 lg:w-10 lg:h-10 bg-[#80C9FF] rounded-full flex items-center justify-center shrink-0;
     }
     .problem-item_text-container {
-        @apply flex flex-col gap-2 lg:gap-4 pb-4 border-b border-[#DEDEDE] w-full;
+        @apply flex flex-col gap-2 lg:gap-4 pb-4 border-b border-border-card w-full;
     }
     .problem-item_title {
-        @apply font-figtree font-semibold text-lg lg:text-xl tracking-normal text-black w-full;
+        @apply font-figtree font-semibold text-lg lg:text-xl tracking-normal text-text-default w-full;
     }
     .problem-item_desc {
-        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-black w-full;
+        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-text-default w-full;
     }
     .impact-card {
-        @apply flex flex-col justify-center items-center pb-6 py-3 px-3 gap-4 border border-[#DEDEDE] rounded-2xl w-full sm:w-71.25 h-full;
+        @apply flex flex-col justify-center items-center pb-6 py-3 px-3 gap-4 border border-border-card rounded-2xl w-full sm:w-71.25 h-full;
     }
     .impact-card_image {
         @apply object-cover object-center w-full h-40 lg:h-45.5 rounded-2xl;
@@ -131,13 +133,13 @@
         @apply flex flex-col justify-center items-center gap-2 w-full h-fit text-center;
     }
     .impact-card_title {
-        @apply font-figtree font-medium text-lg lg:text-xl tracking-normal text-black w-fit;
+        @apply font-figtree font-medium text-lg lg:text-xl tracking-normal text-text-default w-fit;
     }
     .impact-card_desc {
-        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-black max-w-59.25;
+        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-text-default max-w-59.25;
     }
     .material-card {
-        @apply flex flex-col items-center gap-4 lg:gap-8 w-full h-fit border border-[#DEDEDE] rounded-2xl overflow-hidden;
+        @apply flex flex-col items-center gap-4 lg:gap-8 w-full h-fit border border-border-card rounded-2xl overflow-hidden;
     }
     .material-card_image {
         @apply w-full h-48 lg:h-full object-cover object-center;
@@ -146,22 +148,22 @@
         @apply flex flex-col gap-4 px-4 lg:px-8 pb-4 lg:pb-8 w-full h-fit;
     }
     .material-card_info {
-        @apply flex flex-col gap-2 lg:gap-4 pb-4 border-b border-[#DEDEDE] w-full h-fit;
+        @apply flex flex-col gap-2 lg:gap-4 pb-4 border-b border-border-card w-full h-fit;
     }
     .material-card_name {
-        @apply font-figtree font-normal text-xl lg:text-2xl tracking-normal text-black;
+        @apply font-figtree font-normal text-xl lg:text-2xl tracking-normal text-text-default;
     }
     .material-card_location {
         @apply flex justify-start items-center gap-2 lg:gap-4;
     }
     .material-card_location-text {
-        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-[#ABABAB];
+        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-border-avatar;
     }
     .material-card_grade-row {
         @apply flex justify-between items-center;
     }
     .material-card_label {
-        @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-[#ABABAB];
+        @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-border-avatar;
     }
     .badge-grade {
         @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-secondary px-3 lg:px-4 py-1 lg:py-2 bg-[linear-gradient(90deg,#0D99FF4D_0%,#80C9FF_100%)] rounded-2xl w-fit h-fit;
@@ -173,13 +175,13 @@
         @apply flex justify-between items-center;
     }
     .material-card_value {
-        @apply font-figtree font-semibold text-lg lg:text-xl tracking-normal text-black;
+        @apply font-figtree font-semibold text-lg lg:text-xl tracking-normal text-text-default;
     }
     .material-card_time {
-        @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-black;
+        @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-text-default;
     }
     .leaderboard-card {
-        @apply flex flex-col p-6 lg:p-8 w-full h-fit border border-[#DEDEDE] rounded-3xl transition-transform duration-300 hover:-translate-y-2;
+        @apply flex flex-col p-6 lg:p-8 w-full h-fit border border-border-card rounded-3xl transition-transform duration-300 hover:-translate-y-2;
     }
     .leaderboard-card_avatar-container {
         @apply relative flex justify-center w-full mt-4;
@@ -197,10 +199,10 @@
         @apply flex flex-col items-center gap-1 lg:gap-2 mt-6 lg:mt-8 w-full h-fit;
     }
     .leaderboard-card_name {
-        @apply font-figtree font-semibold text-lg lg:text-xl tracking-normal text-black text-center;
+        @apply font-figtree font-semibold text-lg lg:text-xl tracking-normal text-text-default text-center;
     }
     .leaderboard-card_category {
-        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-[#ABABAB] text-center;
+        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-border-avatar text-center;
     }
     .leaderboard-stats {
         @apply flex flex-col mt-6 lg:mt-8 p-4 lg:p-6 gap-3 lg:gap-4 w-full h-fit bg-[#F0F9FF] border border-[#E0F2FE] rounded-2xl;
@@ -209,7 +211,7 @@
         @apply flex justify-between items-center w-full h-fit;
     }
     .leaderboard-stats_label {
-        @apply font-figtree font-normal text-base lg:text-xl tracking-normal text-black;
+        @apply font-figtree font-normal text-base lg:text-xl tracking-normal text-text-default;
     }
     .leaderboard-stats_value {
         @apply font-figtree font-semibold text-base lg:text-xl tracking-normal text-primary;
@@ -218,28 +220,28 @@
         @apply flex items-center gap-1 lg:gap-2;
     }
     .leaderboard-table_rank-number {
-        @apply font-figtree font-semibold text-xl lg:text-3xl tracking-normal text-black text-center;
+        @apply font-figtree font-semibold text-xl lg:text-3xl tracking-normal text-text-default text-center;
     }
     .leaderboard-table_umkm-info {
         @apply flex items-center gap-4 lg:gap-8 w-full h-fit;
     }
     .leaderboard-table_avatar {
-        @apply w-12 h-12 lg:w-20.5 lg:h-20.5 object-cover object-center border border-[#ABABAB] rounded-full overflow-hidden shrink-0;
+        @apply w-12 h-12 lg:w-20.5 lg:h-20.5 object-cover object-center border border-border-avatar rounded-full overflow-hidden shrink-0;
     }
     .leaderboard-table_umkm-details {
         @apply flex flex-col gap-0.5 lg:gap-1;
     }
     .leaderboard-table_umkm-name {
-        @apply font-figtree font-semibold text-base lg:text-2xl tracking-normal text-black;
+        @apply font-figtree font-semibold text-base lg:text-2xl tracking-normal text-text-default;
     }
     .leaderboard-table_umkm-category {
-        @apply font-figtree font-normal text-xs lg:text-xl tracking-normal text-[#ABABAB];
+        @apply font-figtree font-normal text-xs lg:text-xl tracking-normal text-border-avatar;
     }
     .leaderboard-table_stat {
         @apply font-figtree font-semibold text-sm lg:text-xl tracking-normal text-primary;
     }
     .leaderboard-table_location {
-        @apply font-figtree font-normal text-sm lg:text-xl tracking-normal text-black;
+        @apply font-figtree font-normal text-sm lg:text-xl tracking-normal text-text-default;
     }
     .cta-banner {
         @apply flex flex-col lg:flex-row justify-between items-center gap-8 w-full h-fit p-6 lg:p-0;
@@ -254,10 +256,10 @@
         @apply flex flex-col gap-2 lg:gap-4 w-fit h-fit;
     }
     .cta-banner_title {
-        @apply font-figtree font-semibold text-2xl lg:text-4xl tracking-normal text-black;
+        @apply font-figtree font-semibold text-2xl lg:text-4xl tracking-normal text-text-default;
     }
     .cta-banner_description {
-        @apply font-figtree font-normal text-base lg:text-xl tracking-normal text-[#ABABAB];
+        @apply font-figtree font-normal text-base lg:text-xl tracking-normal text-border-avatar;
     }
     .cta-banner_button {
         @apply p-4 w-full lg:w-fit h-fit bg-primary rounded-2xl cursor-pointer;
@@ -265,29 +267,124 @@
     .cta-banner_button-text {
         @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-accent;
     }
+
+
+    .main-footer {
+        @apply container mx-auto my-16 lg:my-25 px-4 lg:px-0;
+    }
+    .main-footer_grid {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-12;
+    }
+    .main-footer_brand-col {
+        @apply col-span-1 md:col-span-2 lg:col-span-3 pr-4;
+    }
+    .main-footer_logo {
+        @apply font-manrope font-semibold text-4xl lg:text-5xl tracking-normal text-primary mb-2;
+    }
+    .main-footer_desc {
+        @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-border-avatar mb-6 lg:mb-3;
+    }
+    .main-footer_social-list {
+        @apply flex justify-start items-center w-fit h-fit gap-4;
+    }
+    .main-footer_social-link {
+        @apply p-3 w-fit h-fit border border-border-card rounded-full;
+    }
+    .main-footer_social-icon {
+        @apply w-5 h-5;
+    }
     .main-footer_nav-col {
-        @apply col-span-2;
+        @apply col-span-1 lg:col-span-2;
     }
     .main-footer_nav-title {
-        @apply font-figtree font-semibold text-xl tracking-normal text-black mb-5;
+        @apply font-figtree font-semibold text-xl tracking-normal text-text-default mb-5;
     }
     .main-footer_nav-list {
         @apply space-y-4;
     }
     .main-footer_nav-link {
-        @apply font-figtree font-normal text-xl tracking-normal text-[#ABABAB] hover:text-primary;
+        @apply font-figtree font-normal text-sm lg:text-xl tracking-normal text-border-avatar hover:text-primary;
     }
-    .product-card{
+    .main-footer_newsletter-col {
+        @apply col-span-1 md:col-span-2 lg:col-span-3;
+    }
+    .main-footer_form {
+        @apply flex justify-center w-full h-fit border border-border-card rounded-2xl overflow-hidden focus-within:border-primary transition-colors;
+    }
+    .main-footer_input {
+        @apply flex-1 w-full font-figtree font-normal text-base lg:text-xl px-4 py-2 outline-none placeholder-border-card;
+    }
+    .main-footer_submit {
+        @apply bg-primary px-4 py-2 flex justify-center items-center cursor-pointer;
+    }
+    .main-footer_divider {
+        @apply border-t border-border-card my-8;
+    }
+    .main-footer_bottom {
+        @apply flex flex-col md:flex-row justify-between items-center gap-4;
+    }
+    .main-footer_copyright {
+        @apply font-figtree font-normal text-base lg:text-xl tracking-normal text-text-default text-center md:text-left;
+    }
+    .main-footer_badge {
+        @apply flex justify-center items-center gap-2 w-fit h-fit;
+    }
+    .main-footer_badge-icon-wrapper {
+        @apply bg-[#80C9FF] rounded-full p-1 w-6 h-6 flex justify-center items-center;
+    }
+    .main-footer_badge-icon {
+        @apply w-3.25 h-3.25;
+    }
+    .main-footer_badge-text {
+        @apply font-figtree font-normal text-base lg:text-xl tracking-normal text-text-default text-center;
+    }
+
+    
+    .product-card {
         @apply p-4 border border-[#DEDEDE] rounded-2xl flex flex-col gap-2 lg:gap-4 cursor-pointer w-full h-fit;
     }
-    .product-card_title{
+    .product-card_title {
         @apply text-2xl text-text-default font-semibold;
     }
-    .product-card_button{
+    .product-card_button {
         @apply p-4 rounded-4xl bg-primary text-white text-lg w-full flex items-center justify-center mt-4;
+    }
+
+    .partner-card {
+        @apply flex flex-col justify-center items-center gap-4 p-4 border border-border-card rounded-2xl w-full;
+    }
+    .partner-card_avatar-wrapper {
+        @apply w-25 h-25 rounded-full border border-border-avatar overflow-hidden;
+    }
+    .partner-card_avatar {
+        @apply w-full h-full object-cover object-center;
+    }
+    .partner-card_name {
+        @apply font-figtree font-normal text-xl tracking-normal text-text-default;
+    }
+    .founder-card {
+        @apply px-6 py-4 border border-border-card rounded-2xl flex flex-col justify-center items-center gap-6;
+    }
+    .founder-card_avatar-wrapper {
+        @apply w-58 h-58 rounded-full border border-border-avatar overflow-hidden;
+    }
+    .founder-card_avatar {
+        @apply w-full h-full object-cover object-center overflow-hidden;
+    }
+    .founder-card_content {
+        @apply flex flex-col justify-center items-center gap-4;
+    }
+    .founder-card_name {
+        @apply font-figtree font-semibold text-4xl text-text-default tracking-normal;
+    }
+    .founder-card_role {
+        @apply font-figtree font-normal text-xl text-text-default tracking-normal;
+    }
+    .founder-card_quote {
+        @apply font-figtree font-normal text-xl text-[#7E7E7E] tracking-normal text-center;
     }
 }
 
-body{
+body {
     font-family: 'Figtree', sans-serif;
 }

@@ -31,10 +31,12 @@ The Residue platform has a strong visual foundation and clear mission, but it is
 
 | Issue | Impact | Evidence | Fix | Priority |
 | :--- | :--- | :--- | :--- | :--- |
-| **Generic Title Tags** | High | Homepage title is "Residue"; About is "Document". | Update titles to include primary keywords (see plan below). | High |
-| **Missing Meta Descriptions** | High | All pages lack `<meta name="description">`. | Add unique, keyword-rich descriptions (150-160 chars). | High |
-| **Heading Hierarchy** | Medium | Multiple H1s on Store/Leaderboard; H3 used for hero titles. | Ensure one H1 per page; use H2 for major sections. | Medium |
-| **Alt Text Optimization** | Low | Alt text is present but generic. | Enrich alt text with keywords like "UMKM waste recycling". | Low |
+| **Generic Title Tags** | High | Homepage: "Residue"; Store: "Store"; About: "Document". | Update to descriptive, keyword-rich titles for all pages. | High |
+| **Missing Meta Descriptions** | High | 100% missing across all analyzing pages. | Add unique descriptions (150-160 chars) to every page. | High |
+| **H1 Logo Conflict** | Medium | Sticky header uses `<h1>` for the logo on every page. | Change logo to `<div>` or `<p>` to avoid competing with page content. | Medium |
+| **Hero Title Weight** | High | Index hero uses `<h3>`; Leaderboard/Store use `<h1>` correctly but secondary to logo. | Elevate index hero to `<h1>` and ensure it's the primary H1. | High |
+| **Heading Hierarchy** | Medium | Some sections skip levels or use `<p>` for subheaders. | Align headings (H1 → H2 → H3) to create a logical document outline. | Medium |
+| **Social Metadata** | Low | No Open Graph (OG) or Twitter cards implemented. | Add social meta tags to improve visual sharing on platforms. | Low |
 
 ---
 
@@ -49,18 +51,23 @@ The Residue platform has a strong visual foundation and clear mission, but it is
 
 ### 1. Critical Technical Fixes (Immediate)
 *   **Create `robots.txt`**: Allow all crawlers and point to the sitemap.
-*   **Create `sitemap.xml`**: List `/`, `/about`, `/store`, and `/leaderboard`.
+*   **Create `sitemap.xml`**: List `/`, `/src/pages/about.html`, `/src/pages/store.html`, and `/src/pages/leaderboard.html`.
 
-### 2. On-Page Optimization (High Impact)
-*   **Homepage:**
-    *   **Title:** `Residue | Industrial Waste Marketplace & UMKM Recycling Indonesia`
-    *   **Meta Description:** `Residue connects UMKM, communities, and recyclers to turn industrial waste into sustainable resources. Join our circular marketplace to sell and buy recycled materials.`
-    *   **Headings:** Change Hero title from `h3` to `h1`. Change logo from `h1` to `p` or `div`.
-*   **Store Page:**
-    *   **Title:** `Sustainable Materials Marketplace | Buy & Sell Industrial Residue`
-    *   **Meta Description:** `Discover high-quality industrial residue, from PET flakes to cotton offcuts. Support the circular economy by sourcing recycled materials from trusted UMKM.`
-*   **About Page:**
-    *   **Title:** `About Residue | Transforming Industrial Waste into Sustainable Value`
+### 2. Detailed On-Page & Meta Updates
+Apply the following to the `<head>` of each page:
+
+| Page | Proposed Title Tag | Proposed Meta Description |
+| :--- | :--- | :--- |
+| **index.html** | `Residue | Industrial Waste Marketplace & UMKM Recycling` | `Connect with recyclers and UMKM to transform industrial residue into sustainable resources. Join Indonesia's leading circular economy marketplace.` |
+| **store.html** | `Sustainable Materials Marketplace | Buy Recycled Industrial Waste` | `Browse and buy industrial residue like PET flakes, fabric scraps, and wood offcuts. Sourced from sustainable UMKM partners across Indonesia.` |
+| **leaderboard.html**| `Sustainability Leaderboard | Top UMKM Recycling Impact` | `See the top-performing UMKM and communities reducing CO2 and diverting waste. Track real-time environmental impact data.` |
+| **about.html** | `About Residue | Mission for a Circular Economy in Indonesia` | `Learn how Residue connects businesses and communities to manage industrial micro-waste and create sustainable economic opportunities.` |
+
+### 3. Semantic HTML Refactoring
+*   **Global Fix:** In all files, change `<h1 class="main-header_logo">Residue</h1>` to `<div class="main-header_logo">Residue</div>`.
+*   **Index.html:** Change the Hero section `<h3>` ("Turning Industrial Residue...") to `<h1>`.
+*   **Store/Leaderboard:** Ensure the main banner text is the only `<h1>` on the page.
+*   **Accessibility:** Use `<h2>` for all major section headers (e.g., "How Residue Creates Sustainable Impact").
 
 ### 3. Image & Performance
 *   **Background Images:** Since background images can't have alt text, ensure the surrounding text is highly descriptive.

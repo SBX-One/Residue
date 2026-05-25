@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="../css/output.css" />
     </head>
     <body>
@@ -39,16 +40,16 @@
                         <img src="/src/img/image-header-leaderboard.webp" alt="" class="w-full max-w-sm lg:max-w-fit h-fit" />
                     </div>
                 </div>
-                <div class="flex justify-between items-center px-16 py-4 border border-border-card rounded-2xl">
-                    <div class="flex flex-col gap-6 max-w-147.5">
-                        <h3 class="font-figtree font-semibold text-4xl tracking-normal">Who Is Residue</h3>
-                        <p class="font-figtree font-normal text-xl tracking-normal">
+                <div class="flex flex-col lg:flex-row justify-between items-center px-6 lg:px-16 py-8 lg:py-4 border border-border-card rounded-2xl gap-8 lg:gap-0">
+                    <div class="flex flex-col gap-6 max-w-147.5 items-center lg:items-start text-center lg:text-left">
+                        <h3 class="font-figtree font-semibold text-2xl lg:text-4xl tracking-normal">Who Is Residue</h3>
+                        <p class="font-figtree font-normal text-base lg:text-xl tracking-normal">
                             Residue was born from a concern over the growing amount of industrial micro-waste produced by UMKM and creative industries in Indonesia. Many reusable materials, such as
                             fabric scraps and wood offcuts, often end up discarded or burned because there is no proper system to manage them.<br /><br />Through circular collaboration, Residue
                             connects businesses, recyclers, and communities to transform industrial residue into sustainable opportunities and environmental impact.
                         </p>
                     </div>
-                    <div class="w-96.25 h-96.25 rounded-full">
+                    <div class="w-64 h-64 lg:w-96.25 lg:h-96.25 rounded-full shrink-0">
                         <img src="/src/img/recycle_signs.webp" alt="Recycle Signs" class="object-cover object-center w-full h-full" />
                     </div>
                 </div>
@@ -121,42 +122,56 @@
                     </div>
                 </div>
 
-                <div class="flex gap-8 w-full">
-                    <div class="partner-card">
-                        <div class="partner-card_avatar-wrapper">
-                            <img src="/src/img/profile/kain-kita.webp" alt="Profile Kain Kita" class="partner-card_avatar" />
+                <div class="swiper partner-swiper w-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide h-auto!">
+                            <div class="partner-card">
+                                <div class="partner-card_avatar-wrapper">
+                                    <img src="/src/img/profile/kain-kita.webp" alt="Profile Kain Kita" class="partner-card_avatar" />
+                                </div>
+                                <p class="partner-card_name">EcoCraft Indonesia</p>
+                            </div>
                         </div>
-                        <p class="partner-card_name">EcoCraft Indonesia</p>
-                    </div>
-                    <div class="partner-card">
-                        <div class="partner-card_avatar-wrapper">
-                            <img src="/src/img/profile/reborn-plastic.webp" alt="Profile Reborn Plastic" class="partner-card_avatar" />
+                        <div class="swiper-slide h-auto!">
+                            <div class="partner-card">
+                                <div class="partner-card_avatar-wrapper">
+                                    <img src="/src/img/profile/reborn-plastic.webp" alt="Profile Reborn Plastic" class="partner-card_avatar" />
+                                </div>
+                                <p class="partner-card_name">Reborn Plastic</p>
+                            </div>
                         </div>
-                        <p class="partner-card_name">Reborn Plastic</p>
-                    </div>
-                    <div class="partner-card">
-                        <div class="partner-card_avatar-wrapper">
-                            <img src="/src/img/profile/greenloop-studio.webp" alt="Profile GreenLoop Studio" class="partner-card_avatar" />
+                        <div class="swiper-slide h-auto!">
+                            <div class="partner-card">
+                                <div class="partner-card_avatar-wrapper">
+                                    <img src="/src/img/profile/greenloop-studio.webp" alt="Profile GreenLoop Studio" class="partner-card_avatar" />
+                                </div>
+                                <p class="partner-card_name">GreenLoop Studio</p>
+                            </div>
                         </div>
-                        <p class="partner-card_name">GreenLoop Studio</p>
-                    </div>
-                    <div class="partner-card">
-                        <div class="partner-card_avatar-wrapper">
-                            <img src="/src/img/profile/kain-kita.webp" alt="Profile Kain Kita" class="partner-card_avatar" />
+                        <div class="swiper-slide h-auto!">
+                            <div class="partner-card">
+                                <div class="partner-card_avatar-wrapper">
+                                    <img src="/src/img/profile/kain-kita.webp" alt="Profile Kain Kita" class="partner-card_avatar" />
+                                </div>
+                                <p class="partner-card_name">Kain Kita</p>
+                            </div>
                         </div>
-                        <p class="partner-card_name">Kain Kita</p>
-                    </div>
-                    <div class="partner-card">
-                        <div class="partner-card_avatar-wrapper">
-                            <img src="/src/img/profile/limbah-jadi-berkah.webp" alt="Profile Limbah Jadi Berkah" class="partner-card_avatar" />
+                        <div class="swiper-slide h-auto!">
+                            <div class="partner-card">
+                                <div class="partner-card_avatar-wrapper">
+                                    <img src="/src/img/profile/limbah-jadi-berkah.webp" alt="Profile Limbah Jadi Berkah" class="partner-card_avatar" />
+                                </div>
+                                <p class="partner-card_name">Limbah Jadi Berkah</p>
+                            </div>
                         </div>
-                        <p class="partner-card_name">Limbah Jadi Berkah</p>
-                    </div>
-                    <div class="partner-card">
-                        <div class="partner-card_avatar-wrapper">
-                            <img src="/src/img/profile/limbah-jadi-berkah.webp" alt="Profile Recyclira" class="partner-card_avatar" />
+                        <div class="swiper-slide h-auto!">
+                            <div class="partner-card">
+                                <div class="partner-card_avatar-wrapper">
+                                    <img src="/src/img/profile/limbah-jadi-berkah.webp" alt="Profile Recyclira" class="partner-card_avatar" />
+                                </div>
+                                <p class="partner-card_name">Recyclira</p>
+                            </div>
                         </div>
-                        <p class="partner-card_name">Recyclira</p>
                     </div>
                 </div>
             </section>
@@ -166,7 +181,7 @@
                     <h3 class="section-header_title">Meet the Founder</h3>
                     <p class="section-header_subtitle">The vision and mission behind Residue's sustainable movement.</p>
                 </div>
-                <div class="grid grid-cols-2 gap-38.5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-38.5">
                     <div class="founder-card">
                         <div class="founder-card_avatar-wrapper">
                             <img src="/src/img/profile/adi-wiraguna.webp" alt="Profile Adi Wiraguna" class="founder-card_avatar" />
@@ -345,5 +360,27 @@
                 </div>
             </div>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.partner-swiper', {
+                slidesPerView: 2,
+                spaceBetween: 24,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 24,
+                    },
+                    1024: {
+                        slidesPerView: 6,
+                        spaceBetween: 32,
+                    },
+                },
+            });
+        </script>
     </body>
 </html>

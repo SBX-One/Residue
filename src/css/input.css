@@ -360,13 +360,13 @@
         @apply w-full h-full object-cover object-center;
     }
     .partner-card_name {
-        @apply font-figtree font-normal text-xl tracking-normal text-text-default;
+        @apply font-figtree font-normal text-lg lg:text-xl tracking-normal text-text-default;
     }
     .founder-card {
-        @apply px-6 py-4 border border-border-card rounded-2xl flex flex-col justify-center items-center gap-6;
+        @apply p-6 lg:px-6 lg:py-4 border border-border-card rounded-2xl flex flex-col justify-center items-center gap-6;
     }
     .founder-card_avatar-wrapper {
-        @apply w-58 h-58 rounded-full border border-border-avatar overflow-hidden;
+        @apply w-48 h-48 lg:w-58 lg:h-58 rounded-full border border-border-avatar overflow-hidden;
     }
     .founder-card_avatar {
         @apply w-full h-full object-cover object-center overflow-hidden;
@@ -375,13 +375,13 @@
         @apply flex flex-col justify-center items-center gap-4;
     }
     .founder-card_name {
-        @apply font-figtree font-semibold text-4xl text-text-default tracking-normal;
+        @apply font-figtree font-semibold text-2xl lg:text-4xl text-text-default tracking-normal;
     }
     .founder-card_role {
-        @apply font-figtree font-normal text-xl text-text-default tracking-normal;
+        @apply font-figtree font-normal text-lg lg:text-xl text-text-default tracking-normal;
     }
     .founder-card_quote {
-        @apply font-figtree font-normal text-xl text-[#7E7E7E] tracking-normal text-center;
+        @apply font-figtree font-normal text-base lg:text-xl text-[#7E7E7E] tracking-normal text-center;
     }
 }
 

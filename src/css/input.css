@@ -121,7 +121,7 @@
         @apply font-figtree font-semibold text-lg lg:text-xl tracking-normal text-text-default w-full;
     }
     .problem-item_desc {
-        @apply font-figtree font-normal text-xs lg:text-sm tracking-normal text-text-default w-full;
+        @apply font-figtree font-normal text-xs lg:text-base tracking-normal text-text-default w-full;
     }
     .impact-card {
         @apply flex flex-col justify-center items-center pb-6 py-3 px-3 gap-4 border border-border-card rounded-2xl w-full sm:w-71.25 h-full;

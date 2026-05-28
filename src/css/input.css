@@ -124,7 +124,7 @@
         @apply font-figtree font-normal text-xs lg:text-base tracking-normal text-text-default w-full;
     }
     .impact-card {
-        @apply flex flex-col justify-center items-center pb-6 py-3 px-3 gap-4 border border-border-card rounded-2xl w-full sm:w-71.25 h-full;
+        @apply flex flex-col justify-center items-center pb-6 py-3 px-3 gap-4 border border-border-card rounded-2xl w-full h-full;
     }
     .impact-card_image {
         @apply object-cover object-center w-full h-40 lg:h-45.5 rounded-2xl;

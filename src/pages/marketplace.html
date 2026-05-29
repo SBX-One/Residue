@@ -3,17 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Store</title>
+        <title>Sustainable Materials Marketplace | Buy Recycled Industrial Waste</title>
+        <meta name="description" content="Browse and buy industrial residue like PET flakes, fabric scraps, and wood offcuts. Sourced from sustainable UMKM partners across Indonesia." />
         <link rel="stylesheet" href="../css/output.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     </head>
     <body class="overflow-x-hidden">
         <header class="main-header">
             <nav class="main-header_nav">
-                <p class="main-header_logo">Residue</p>
+                <div class="main-header_logo">Residue</div>
                 <ul class="main-header_menu">
                     <li><a href="/index.html" class="main-header_menu-link-default">Home</a></li>
-                    <li><a href="/src/pages/store.html" class="main-header_menu-link-default">Store</a></li>
+                    <li><a href="/src/pages/marketplace.html" class="main-header_menu-link-default">Store</a></li>
                     <li><a href="/src/pages/leaderboard.html" class="main-header_menu-link-default">Leaderboard</a></li>
                     <li><a href="/src/pages/about.html" class="main-header_menu-link-default">About</a></li>
                 </ul>
@@ -37,14 +38,18 @@
                     <p class="text-base lg:text-lg font-normal">Dicvover industrial residue and give it a second life through circular collaborations.</p>
                 </div>
                 <div class="flex justify-center lg:justify-end items-center flex-3 mt-8 lg:mt-0">
-                    <img src="/src/img/image-header.webp" alt="" class="w-full max-w-sm lg:max-w-fit h-fit" />
+                    <img
+                        src="/src/img/banners/eco-recycling-illustration.webp"
+                        alt="Illustration of two people holding red hearts in front of a globe with a leaf recycling symbol, representing care and love for the environment"
+                        class="w-full max-w-sm lg:max-w-fit h-fit"
+                    />
                 </div>
             </section>
             <section class="container mx-auto px-4 lg:px-0">
                 <!-- Search landing -->
-                <div class="flex flex-col lg:flex-row gap-4 items-center px-4 lg:px-8 py-6 border border-[#DEDEDE] rounded-2xl">
+                <div class="flex flex-col lg:flex-row gap-4 items-center px-4 lg:px-8 py-6 border border-border-card rounded-2xl">
                     <div class="w-full lg:flex-1 relative">
-                        <input type="text" id="searchInput" class="rounded-2xl w-full py-4 pl-14 pr-4 border border-[#DEDEDE]" placeholder="Search materials, waste type or location" />
+                        <input type="text" id="searchInput" class="rounded-2xl w-full py-4 pl-14 pr-4 border border-border-card" placeholder="Search materials, waste type or location" />
                         <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -55,7 +60,7 @@
                         </div>
                     </div>
                     <div class="w-full lg:w-auto relative">
-                        <select name="select" id="locationSearch" class="appearance-none w-full lg:w-auto pl-6 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer">
+                        <select name="select" id="locationSearch" class="appearance-none w-full lg:w-auto pl-6 pr-12 py-4 rounded-2xl border border-border-card bg-white cursor-pointer">
                             <option value="">All Location</option>
                             <option value="Bandung">Bandung</option>
                             <option value="Jakarta">Jakarta</option>
@@ -91,7 +96,7 @@
                             </div>
                             <select
                                 id="filterCategory"
-                                class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                                class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-border-card bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                             >
                                 <option value="">Category</option>
                                 <option value="Resin">Resin</option>
@@ -115,7 +120,7 @@
                             </div>
                             <select
                                 id="filterGrade"
-                                class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                                class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-border-card bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                             >
                                 <option value="">Grade</option>
                                 <option value="Grade A">Grade A</option>
@@ -142,7 +147,7 @@
                             </div>
                             <select
                                 id="filterVolume"
-                                class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                                class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-border-card bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                             >
                                 <option value="">Volume</option>
                                 <option value="small">0 - 100 kg</option>
@@ -165,7 +170,7 @@
                             </div>
                             <select
                                 id="filterLocation"
-                                class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-[#DEDEDE] bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                                class="appearance-none w-full pl-12 pr-12 py-4 rounded-2xl border border-border-card bg-white cursor-pointer shadow-sm transition-all hover:shadow-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                             >
                                 <option value="">Location</option>
                                 <option value="Bandung">Bandung</option>
@@ -185,7 +190,7 @@
             <!-- Featured Product -->
             <section class="my-25 container mx-auto px-4 lg:px-0">
                 <div class="flex justify-between items-center">
-                    <h3 class="text-2xl text-text-default">Featured Product</h3>
+                    <h2 class="text-2xl text-text-default">Featured Product</h2>
                     <div class="flex gap-4 items-center cursor-pointer group">
                         <p class="text-xl lg:text-2xl text-primary font-medium">See All</p>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform group-hover:translate-x-1">
@@ -195,11 +200,16 @@
                 </div>
                 <div id="productGrid" class="py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-4">
                     <div class="product-card" data-name="Cotton Fabric Offcut" data-category="Fabric" data-location="Bandung" data-grade="Grade C" data-volume="150">
-                        <img src="/src/img/product/cutton-fabric.webp" alt="" />
+                        <img src="/src/img/products/cotton-fabric-offcut.webp" alt="Cotton Fabric Offcut" />
                         <div class="flex flex-col gap-3 justify-center text-center">
                             <p class="product-card_title">Cotton Fabric Offcut</p>
                             <div class="flex gap-4 justify-center items-center">
-                                <img src="/src/img/profile/ecocraft-indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-border-card rounded-full" loading="lazy" />
+                                <img
+                                    src="/src/img/profiles/partners/ecocraft-indonesia.webp"
+                                    alt="Profile EcoCraft Indonesia"
+                                    class="h-10 w-10 border border-border-card rounded-full"
+                                    loading="lazy"
+                                />
                                 <p class="text-lg text-text-default">Kain Kita</p>
                             </div>
                             <div class="flex gap-4 justify-center items-center">
@@ -216,11 +226,16 @@
                         <div class="product-card_button">Buy Product</div>
                     </div>
                     <div class="product-card" data-name="PET Flakes Mix Color" data-category="Plastic" data-location="Bandung" data-grade="Grade A" data-volume="512">
-                        <img src="/src/img/product/pet-flakes.webp" alt="" />
+                        <img src="/src/img/products/pet-flakes-mix-color.webp" alt="PET Flakes Mix Color" />
                         <div class="flex flex-col gap-3 justify-center text-center">
                             <p class="product-card_title">PET Flakes Mix Color</p>
                             <div class="flex gap-4 justify-center items-center">
-                                <img src="/src/img/profile/ecocraft-indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-border-card rounded-full" loading="lazy" />
+                                <img
+                                    src="/src/img/profiles/partners/ecocraft-indonesia.webp"
+                                    alt="Profile EcoCraft Indonesia"
+                                    class="h-10 w-10 border border-border-card rounded-full"
+                                    loading="lazy"
+                                />
                                 <p class="text-lg text-text-default">EcoCraft Indonesia</p>
                             </div>
                             <div class="flex gap-4 justify-center items-center">
@@ -237,11 +252,16 @@
                         <div class="product-card_button">Buy Product</div>
                     </div>
                     <div class="product-card" data-name="Wood Offcut" data-category="Wood" data-location="Bandung" data-grade="Grade B" data-volume="313">
-                        <img src="/src/img/product/wood-offcut.webp" alt="" />
+                        <img src="/src/img/products/wood-offcut.webp" alt="Wood Offcut" />
                         <div class="flex flex-col gap-3 justify-center text-center">
                             <p class="product-card_title">Wood Offcut</p>
                             <div class="flex gap-4 justify-center items-center">
-                                <img src="/src/img/profile/ecocraft-indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-border-card rounded-full" loading="lazy" />
+                                <img
+                                    src="/src/img/profiles/partners/ecocraft-indonesia.webp"
+                                    alt="Profile EcoCraft Indonesia"
+                                    class="h-10 w-10 border border-border-card rounded-full"
+                                    loading="lazy"
+                                />
                                 <p class="text-lg text-text-default">EcoCraft Indonesia</p>
                             </div>
                             <div class="flex gap-4 justify-center items-center">
@@ -258,11 +278,16 @@
                         <div class="product-card_button">Buy Product</div>
                     </div>
                     <div class="product-card" data-name="Resin Waste" data-category="Resin" data-location="Jakarta" data-grade="Grade A" data-volume="240">
-                        <img src="/src/img/product/resin-waste.webp" alt="" />
+                        <img src="/src/img/products/resin-waste.webp" alt="Resin Waste" />
                         <div class="flex flex-col gap-3 justify-center text-center">
                             <p class="product-card_title">Resin Waste</p>
                             <div class="flex gap-4 justify-center items-center">
-                                <img src="/src/img/profile/ecocraft-indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-border-card rounded-full" loading="lazy" />
+                                <img
+                                    src="/src/img/profiles/partners/ecocraft-indonesia.webp"
+                                    alt="Profile EcoCraft Indonesia"
+                                    class="h-10 w-10 border border-border-card rounded-full"
+                                    loading="lazy"
+                                />
                                 <p class="text-lg text-text-default">CV. Makmur Jaya</p>
                             </div>
                             <div class="flex gap-4 justify-center items-center">
@@ -279,11 +304,16 @@
                         <div class="product-card_button">Buy Product</div>
                     </div>
                     <div class="product-card" data-name="Denim Fabric Offcut" data-category="Fabric" data-location="Surabaya" data-grade="Grade C" data-volume="80">
-                        <img src="/src/img/product/denim-fabric.webp" alt="" />
+                        <img src="/src/img/products/denim-fabric.webp" alt="Denim Fabric Offcut" />
                         <div class="flex flex-col gap-3 justify-center text-center">
                             <p class="product-card_title">Denim Fabric Offcut</p>
                             <div class="flex gap-4 justify-center items-center">
-                                <img src="/src/img/profile/ecocraft-indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-border-card rounded-full" loading="lazy" />
+                                <img
+                                    src="/src/img/profiles/partners/ecocraft-indonesia.webp"
+                                    alt="Profile EcoCraft Indonesia"
+                                    class="h-10 w-10 border border-border-card rounded-full"
+                                    loading="lazy"
+                                />
                                 <p class="text-lg text-text-default">CV. Makmur Jaya</p>
                             </div>
                             <div class="flex gap-4 justify-center items-center">
@@ -300,11 +330,16 @@
                         <div class="product-card_button">Buy Product</div>
                     </div>
                     <div class="product-card" data-name="Aluminium Scraps" data-category="Metal" data-location="Semarang" data-grade="Grade A" data-volume="600">
-                        <img src="/src/img/product/aluminium.webp" alt="" />
+                        <img src="/src/img/products/aluminium.webp" alt="Aluminium Scraps" />
                         <div class="flex flex-col gap-3 justify-center text-center">
                             <p class="product-card_title">Aluminium Scraps</p>
                             <div class="flex gap-4 justify-center items-center">
-                                <img src="/src/img/profile/ecocraft-indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-border-card rounded-full" loading="lazy" />
+                                <img
+                                    src="/src/img/profiles/partners/ecocraft-indonesia.webp"
+                                    alt="Profile EcoCraft Indonesia"
+                                    class="h-10 w-10 border border-border-card rounded-full"
+                                    loading="lazy"
+                                />
                                 <p class="text-lg text-text-default">PT. Yudha Berencana</p>
                             </div>
                             <div class="flex gap-4 justify-center items-center">
@@ -325,7 +360,7 @@
             <!-- browse by category -->
             <section class="container mx-auto px-4 lg:px-0">
                 <div class="text-center space-y-3">
-                    <h3 class="text-2xl lg:text-4xl text-text-default font-semibold">Discover Sustainable Materials for Every Creative Need</h3>
+                    <h2 class="text-2xl lg:text-4xl text-text-default font-semibold">Discover Sustainable Materials for Every Creative Need</h2>
                     <p class="text-base text-text-default font-normal">Browse categorized industrial residue and reusable materials from trusted UMKM and sustainability partners across Indonesia.</p>
                 </div>
                 <div class="flex flex-wrap items-center gap-4 mt-14 justify-center">
@@ -351,11 +386,16 @@
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
                             <div class="product-card" data-name="Cotton Fabric Offcut" data-category="Fabric" data-location="Bandung" data-grade="Grade C" data-volume="150">
-                                <img src="/src/img/product/cutton-fabric.webp" alt="" />
+                                <img src="/src/img/products/cotton-fabric-offcut.webp" alt="Cotton Fabric Offcut" />
                                 <div class="flex flex-col gap-3 justify-center text-center">
                                     <p class="product-card_title">Cotton Fabric Offcut</p>
                                     <div class="flex gap-4 justify-center items-center">
-                                        <img src="/src/img/profile/ecocraft-indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-border-card rounded-full" loading="lazy" />
+                                        <img
+                                            src="/src/img/profiles/partners/ecocraft-indonesia.webp"
+                                            alt="Profile EcoCraft Indonesia"
+                                            class="h-10 w-10 border border-border-card rounded-full"
+                                            loading="lazy"
+                                        />
                                         <p class="text-lg text-text-default">Kain Kita</p>
                                     </div>
                                     <div class="flex gap-4 justify-center items-center">
@@ -375,11 +415,16 @@
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
                             <div class="product-card" data-name="PET Flakes Mix Color" data-category="Plastic" data-location="Bandung" data-grade="Grade A" data-volume="512">
-                                <img src="/src/img/product/pet-flakes.webp" alt="" />
+                                <img src="/src/img/products/pet-flakes-mix-color.webp" alt="PET Flakes Mix Color" />
                                 <div class="flex flex-col gap-3 justify-center text-center">
                                     <p class="product-card_title">PET Flakes Mix Color</p>
                                     <div class="flex gap-4 justify-center items-center">
-                                        <img src="/src/img/profile/ecocraft-indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-border-card rounded-full" loading="lazy" />
+                                        <img
+                                            src="/src/img/profiles/partners/ecocraft-indonesia.webp"
+                                            alt="Profile EcoCraft Indonesia"
+                                            class="h-10 w-10 border border-border-card rounded-full"
+                                            loading="lazy"
+                                        />
                                         <p class="text-lg text-text-default">EcoCraft Indonesia</p>
                                     </div>
                                     <div class="flex gap-4 justify-center items-center">
@@ -399,11 +444,16 @@
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
                             <div class="product-card" data-name="Wood Offcut" data-category="Wood" data-location="Bandung" data-grade="Grade B" data-volume="313">
-                                <img src="/src/img/product/wood-offcut.webp" alt="" />
+                                <img src="/src/img/products/wood-offcut.webp" alt="Wood Offcut" />
                                 <div class="flex flex-col gap-3 justify-center text-center">
                                     <p class="product-card_title">Wood Offcut</p>
                                     <div class="flex gap-4 justify-center items-center">
-                                        <img src="/src/img/profile/ecocraft-indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-border-card rounded-full" loading="lazy" />
+                                        <img
+                                            src="/src/img/profiles/partners/ecocraft-indonesia.webp"
+                                            alt="Profile EcoCraft Indonesia"
+                                            class="h-10 w-10 border border-border-card rounded-full"
+                                            loading="lazy"
+                                        />
                                         <p class="text-lg text-text-default">EcoCraft Indonesia</p>
                                     </div>
                                     <div class="flex gap-4 justify-center items-center">
@@ -423,11 +473,16 @@
                         <!-- Slide 4 -->
                         <div class="swiper-slide">
                             <div class="product-card" data-name="Resin Waste" data-category="Resin" data-location="Jakarta" data-grade="Grade A" data-volume="240">
-                                <img src="/src/img/product/resin-waste.webp" alt="" />
+                                <img src="/src/img/products/resin-waste.webp" alt="Resin Waste" />
                                 <div class="flex flex-col gap-3 justify-center text-center">
                                     <p class="product-card_title">Resin Waste</p>
                                     <div class="flex gap-4 justify-center items-center">
-                                        <img src="/src/img/profile/ecocraft-indonesia.webp" alt="EcoCraft Indonesia" class="h-10 w-10 border border-border-card rounded-full" loading="lazy" />
+                                        <img
+                                            src="/src/img/profiles/partners/ecocraft-indonesia.webp"
+                                            alt="Profile EcoCraft Indonesia"
+                                            class="h-10 w-10 border border-border-card rounded-full"
+                                            loading="lazy"
+                                        />
                                         <p class="text-lg text-text-default">CV. Makmur Jaya</p>
                                     </div>
                                     <div class="flex gap-4 justify-center items-center">
@@ -454,7 +509,7 @@
         <footer class="main-footer">
             <div class="main-footer_grid">
                 <div class="main-footer_brand-col">
-                    <h2 class="main-footer_logo">Residue</h2>
+                    <div class="main-footer_logo">Residue</div>
                     <p class="main-footer_desc">Connecting people, technology, and resources to turn industrial residue into sustainable value.</p>
                     <div class="main-footer_social-list">
                         <a href="#" class="main-footer_social-link">
@@ -485,18 +540,18 @@
                 </div>
 
                 <div class="main-footer_nav-col">
-                    <h3 class="main-footer_nav-title">Platform</h3>
+                    <h2 class="main-footer_nav-title">Platform</h2>
                     <ul class="main-footer_nav-list">
-                        <li><a href="#" class="main-footer_nav-link">Home</a></li>
-                        <li><a href="#" class="main-footer_nav-link">Store</a></li>
-                        <li><a href="#" class="main-footer_nav-link">Leaderboard</a></li>
-                        <li><a href="#" class="main-footer_nav-link">About</a></li>
-                        <li><a href="#" class="main-footer_nav-link">Detail</a></li>
+                        <li><a href="/" class="main-footer_nav-link">Home</a></li>
+                        <li><a href="/marketplace" class="main-footer_nav-link">Store</a></li>
+                        <li><a href="/leaderboard" class="main-footer_nav-link">Leaderboard</a></li>
+                        <li><a href="/about" class="main-footer_nav-link">About</a></li>
+                        <li><a href="/material-detail" class="main-footer_nav-link">Detail</a></li>
                     </ul>
                 </div>
 
                 <div class="main-footer_nav-col">
-                    <h3 class="main-footer_nav-title">Partner</h3>
+                    <h2 class="main-footer_nav-title">Partner</h2>
                     <ul class="main-footer_nav-list">
                         <li><a href="#" class="main-footer_nav-link">EcoCraft</a></li>
                         <li><a href="#" class="main-footer_nav-link">Reborn Plastic</a></li>
@@ -507,7 +562,7 @@
                 </div>
 
                 <div class="main-footer_nav-col">
-                    <h3 class="main-footer_nav-title">Support</h3>
+                    <h2 class="main-footer_nav-title">Support</h2>
                     <ul class="main-footer_nav-list">
                         <li><a href="#" class="main-footer_nav-link">Help Center</a></li>
                         <li><a href="#" class="main-footer_nav-link">Contact Us</a></li>
@@ -517,7 +572,7 @@
                 </div>
 
                 <div class="main-footer_newsletter-col">
-                    <h3 class="main-footer_nav-title">Stay Updated</h3>
+                    <h2 class="main-footer_nav-title">Stay Updated</h2>
                     <p class="main-footer_desc mb-5">Be one of us to get the latest updates on impact and opportunities.</p>
                     <form class="main-footer_form">
                         <input type="email" placeholder="Enter your email" required class="main-footer_input" />
@@ -531,7 +586,7 @@
             </div>
             <hr class="main-footer_divider" />
             <div class="main-footer_bottom">
-                <small class="main-footer_copyright">&copy; 2026 <span class="text-primary">Residue</span>. All rights reserved.</small>
+                <small class="main-footer_copyright">&copy; <span id="year"></span> <span class="text-primary">Residue</span>. All rights reserved.</small>
                 <div class="main-footer_badge">
                     <div class="main-footer_badge-icon-wrapper">
                         <svg viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="main-footer_badge-icon">
@@ -545,6 +600,63 @@
                 </div>
             </div>
         </footer>
+
+        <div id="mobile-menu-backdrop" class="mobile-menu-backdrop"></div>
+
+        <div id="mobile-menu" class="mobile-menu-panel">
+            <div class="mobile-menu-header">
+                <span class="mobile-menu-logo">Residue</span>
+
+                <button id="close-menu-btn" class="mobile-menu-close" aria-label="Close Menu">
+                    <svg class="mobile-menu-close-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="mobile-menu-nav">
+                <a href="/index.html" class="mobile-nav-link group">
+                    <span class="mobile-menu-link-text">Home</span>
+                    <svg class="mobile-menu-link-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                    </svg>
+                </a>
+                <a href="/src/pages/marketplace.html" class="mobile-nav-link group">
+                    <span class="mobile-menu-link-text">Store</span>
+                    <svg class="mobile-menu-link-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                    </svg>
+                </a>
+                <a href="/src/pages/leaderboard.html" class="mobile-nav-link group">
+                    <span class="mobile-menu-link-text">Leaderboard</span>
+                    <svg class="mobile-menu-link-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                    </svg>
+                </a>
+                <a href="/src/pages/about.html" class="mobile-nav-link group">
+                    <span class="mobile-menu-link-text">About</span>
+                    <svg class="mobile-menu-link-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                    </svg>
+                </a>
+            </nav>
+
+            <div class="mobile-menu-footer">
+                <button class="mobile-menu-cta">
+                    <span class="mobile-menu-cta-text">Get In Touch</span>
+                    <svg class="mobile-menu-cta-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                    </svg>
+                </button>
+
+                <div class="mobile-menu-copyright">
+                    <span>&copy; Residue Indonesia</span>
+                    <span>Build for a better tomorrow.</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
             // Swiper Initialization
